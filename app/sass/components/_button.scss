@@ -1,0 +1,45 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+
+.btn{
+  background-color: transparent;
+  border: 0px solid transparent;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.25;
+  padding: 8px 54px;
+  border-radius: 4px;
+  background-color: #ffffff;
+  border: solid 1px #a4a4a4;
+  cursor: pointer;
+  &:active{
+    transform: translateY(1px);
+  }
+  &.btn--medium{
+    padding: 16px 54px;
+    font-size: 15px;
+  }
+  &.btn--blue{
+    background-color: #5b8ef4;
+    border: solid 1px #4d7cda;
+    color: white
+  }
+  &.btn--orange{
+    background-color: #ffb757;
+    border: solid 1px #f0a643;
+    color: white;
+  }
+  &.btn-add{
+    border:  1px #5b8ef4;
+    border-style: dashed;
+    background-color: white;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1;
+    padding: 16px;
+    i{
+
+    }
+  }
+}
