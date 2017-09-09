@@ -22,8 +22,15 @@
 
 
 // This part is for using tachyon, uncomment this if you are want to use it
-// @import
-//   'tachyon';
+@import
+  'tachyon/clears',
+  'tachyon/box-sizing',
+  'tachyon/box-shadow',
+  'tachyon/forms',
+  'tachyon/links',
+  'tachyon/lists',
+  'tachyon/normalize',
+  'tachyon/position';
 
 // 4. Layout-related sections
 @import
@@ -32,7 +39,8 @@
 
 // 5. Components
 @import
-  'components/button';
+  'components/button',
+  'components/forms';
 
 // 6. Page-specific styles
 @import

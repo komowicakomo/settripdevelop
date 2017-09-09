@@ -8,5 +8,8 @@ var lists = [
   } , {
         "name": "Styleguide Buttons",
         "path": "index.html?view=styleguide_buttons"
+  } , {
+        "name": "Styleguide Forms",
+        "path": "index.html?view=styleguide_form"
   }
 ];
