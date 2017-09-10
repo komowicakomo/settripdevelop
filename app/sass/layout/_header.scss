@@ -1,3 +1,82 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the header of the site/application.
 // -----------------------------------------------------------------------------
+.header-container{
+  width: 100%;
+  .container{
+    height: 60px;
+    text-align: right;
+  }
+  &.solid{
+    background-color: white;
+    box-shadow: inset 0 -1px 0 0 #dfe4e8;
+  }
+  .header-logo{
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .header-menu{
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    a {
+      display: inline-block;
+      vertical-align: middle;
+      li{
+        color: white;
+        padding: 10px 16px;
+        padding-top: 12px;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 3px;
+        text-align: center;
+        text-transform: uppercase;
+        button{
+          margin-top: -2px;
+          border: 1px solid #ffb757 ;
+          color: #ffb757;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}
+
+.footer-container{
+  width: 100%;
+  background-color: #282834;
+  padding: 38px 0px;
+  .footer-body{
+    padding-top: 32px;
+    padding-bottom: 22px;
+    ul{
+      display: inline-block;
+      width: 100%;
+      li{
+        display: block;
+        margin-bottom: 12px;
+        font-size: 12px;
+        letter-spacing: 1px;
+        text-align: left;
+        color: #a4a4a4;
+        line-height: 1.25em;
+      }
+      & > li {
+        color: #ffffff;
+        letter-spacing: 2px;
+      }
+    }
+  }
+  .footer-breadcrumbs{
+    padding-top: 32px;
+    border-top: solid 1px #3a3a4b;
+  }
+  .copyright{
+    font-size: 12px;
+    font-weight: 400;
+    color: #a4a4a4;
+  }
+}

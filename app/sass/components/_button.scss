@@ -14,6 +14,12 @@
   border: solid 1px #a4a4a4;
   cursor: pointer;
   text-transform: uppercase;
+  &.small{
+    padding: 8px 20px;
+  }
+  &.transparent{
+    background-color: transparent; 
+  }
   &:active{
     transform: translateY(1px);
     outline: none ;

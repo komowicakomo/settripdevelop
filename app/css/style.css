@@ -480,6 +480,26 @@ a:hover, a:active, a:focus {
   text-decoration: underline;
 }
 
+ul {
+  padding: 0px;
+}
+
+ul li {
+  list-style: none;
+}
+
+.tl {
+  text-align: left;
+}
+
+.tr {
+  text-align: right;
+}
+
+.tc {
+  text-align: center;
+}
+
 /**
  * Basic typography style for copy text
  */
@@ -569,6 +589,10 @@ span {
   /* 3 */
   width: 100%;
   /* 1 */
+}
+
+.container.container-body {
+  min-height: 100vh;
 }
 
 .container.container--full {
@@ -1380,6 +1404,99 @@ template {
   position: fixed;
 }
 
+.header-container {
+  width: 100%;
+}
+
+.header-container .container {
+  height: 60px;
+  text-align: right;
+}
+
+.header-container.solid {
+  background-color: white;
+  box-shadow: inset 0 -1px 0 0 #dfe4e8;
+}
+
+.header-container .header-logo {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.header-container .header-menu {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.header-container .header-menu a {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.header-container .header-menu a li {
+  color: white;
+  padding: 10px 16px;
+  padding-top: 12px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.header-container .header-menu a li button {
+  margin-top: -2px;
+  border: 1px solid #ffb757;
+  color: #ffb757;
+  text-transform: uppercase;
+}
+
+.footer-container {
+  width: 100%;
+  background-color: #282834;
+  padding: 38px 0px;
+}
+
+.footer-container .footer-body {
+  padding-top: 32px;
+  padding-bottom: 22px;
+}
+
+.footer-container .footer-body ul {
+  display: inline-block;
+  width: 100%;
+}
+
+.footer-container .footer-body ul li {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-align: left;
+  color: #a4a4a4;
+  line-height: 1.25em;
+}
+
+.footer-container .footer-body ul > li {
+  color: #ffffff;
+  letter-spacing: 2px;
+}
+
+.footer-container .footer-breadcrumbs {
+  padding-top: 32px;
+  border-top: solid 1px #3a3a4b;
+}
+
+.footer-container .copyright {
+  font-size: 12px;
+  font-weight: 400;
+  color: #a4a4a4;
+}
+
 .btn {
   background-color: transparent;
   border: 0px solid transparent;
@@ -1392,6 +1509,14 @@ template {
   border: solid 1px #a4a4a4;
   cursor: pointer;
   text-transform: uppercase;
+}
+
+.btn.small {
+  padding: 8px 20px;
+}
+
+.btn.transparent {
+  background-color: transparent;
 }
 
 .btn:active {
@@ -1791,6 +1916,64 @@ template {
   transform: translateY(-50%) rotate(45deg) scale(1);
   opacity: 1;
   transition: 0.4s ease;
+}
+
+.transparent-form {
+  white-space: nowrap;
+  vertical-align: middle;
+  min-height: 50px;
+  border-radius: 2px;
+  background-color: #3a3a4b;
+  border: solid 1px #424253;
+  padding: 5px;
+  width: 100%;
+}
+
+.transparent-form input {
+  border: 1px solid transparent;
+  background-color: transparent;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 40px;
+  width: calc(100% - 62px);
+  font-size: 16px;
+  color: #a3a3a3;
+}
+
+.transparent-form input:focus {
+  outline: none;
+  border: 0px solid transparent;
+}
+
+.transparent-form button {
+  display: inline-block;
+  vertical-align: middle;
+  height: 40px;
+  border-radius: 2px;
+  background-color: #282834;
+  width: 52px;
+  padding: 0px;
+  border: 0px solid transparent;
+}
+
+.transparent-form ::-webkit-input-placeholder {
+  /* Chrome */
+  color: #a3a3a3;
+}
+
+.transparent-form :-ms-input-placeholder {
+  /* IE 10+ */
+  color: #a3a3a3;
+}
+
+.transparent-form ::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #a3a3a3;
+}
+
+.transparent-form :-moz-placeholder {
+  /* Firefox 4 - 18 */
+  color: #a3a3a3;
 }
 
 .qty-form {

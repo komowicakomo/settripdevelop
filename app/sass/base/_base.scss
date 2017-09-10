@@ -25,9 +25,19 @@ html {
 a {
   color: $brand-color;
   text-decoration: none;
-
   @include on-event {
     color: $text-color;
     text-decoration: underline;
   }
 }
+
+ul{
+  padding: 0px;
+  li{
+    list-style: none;
+  }
+}
+
+.tl  { text-align: left; }
+.tr  { text-align: right; }
+.tc  { text-align: center; }
