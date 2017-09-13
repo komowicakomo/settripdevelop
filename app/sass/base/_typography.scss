@@ -19,6 +19,14 @@ body{
 //   font: normal 125% / 1.4 $text-font-stack;
 // }
 
+@mixin popins  {
+  font-family: 'Poppins', sans-serif;
+}
+
+@mixin guntur {
+  font-family: 'Hind Guntur', sans-serif;
+}
+
 h1{
   font-family: 'Poppins', sans-serif;
   font-size: 32px;

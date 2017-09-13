@@ -1,0 +1,98 @@
+.plan-destinasi-board{
+   background-color: #ffffff;
+   padding: 16px 0px;
+   box-shadow: inset 0 -1px 0 0 #dfe4e8;
+   position: fixed;
+   left: 0;
+   right: 0;
+   top: 60px;
+   z-index: 3;
+   .plan-destinasi-board-box{
+     display: inline-block;
+     margin-right: 120px;
+     vertical-align: middle;
+     .label{
+       font-size: 12px;
+       font-weight: 700;
+       line-height: 1;
+       color: #5b8ef4;
+       margin-bottom: 8px;
+       text-transform: uppercase;
+     }
+     .value{
+       font-size: 24px;
+       line-height: 1;
+       color: #3d3d3d;
+       text-transform: capitalize;
+     }
+   }
+   .plan-destinasi-board-action{
+     position: absolute;
+     font-size: 15px;
+     font-weight: 700;
+     text-align: left;
+     color: #5b8ef4;
+     right: 20px;
+     top: 50%;
+     transform: translateY(-50%);
+     text-transform: uppercase;
+   }
+}
+
+.plan-destinasi{
+  padding-top: 110px;
+  & > h3 {
+    margin-bottom: 35px;
+  }
+  .row{
+    margin: 0px;
+    align-items: flex-start;
+  }
+  .plan-destinasi-date{
+    width: 60px;
+    margin-right: 16px;
+  }
+  .pd-date-block{
+    display: block;
+    width: 100%;
+    height: 60px;
+    text-align: center;
+    padding-top: 10px;
+    background-color: #efefef;
+    border-bottom: solid 1px #DDDDDD;
+    position: relative;
+    z-index: 1;
+    &:last-child{
+      border-bottom: 1px solid transparent;
+    }
+    &.active{
+      background-color: #ffffff;
+      box-shadow: 0 1px 3px 0 rgba(63, 63, 68, 0.15), 0 0 0 1px rgba(63, 63, 68, 0.05);
+      z-index: 2;
+    }
+  }
+  .pd-date-days{
+    @include popins ;
+    font-size: 22px;
+    line-height: 1.09;
+    color: #3d3d3d;
+    margin-bottom: 6px;
+  }
+  .pd-date-month{
+    font-size: 15px;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+    color: #3d3d3d;
+    text-transform: uppercase;
+  }
+  .plan-destinasi-main-body{
+    width: calc(60% - 16px);
+
+  }
+  .plan-destinasi-mb-inner{
+    width: 100%;
+    display: block;
+    background-color: #ffffff;
+    box-shadow: 0 1px 3px 0 rgba(63, 63, 68, 0.15), 0 0 0 1px rgba(63, 63, 68, 0.05);
+  }
+}

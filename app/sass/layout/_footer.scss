@@ -1,3 +1,69 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the footer of the site/application.
 // -----------------------------------------------------------------------------
+
+.footer-container{
+  width: 100%;
+  background-color: #282834;
+  padding: 38px 0px;
+  .footer-body{
+    padding-top: 32px;
+    padding-bottom: 22px;
+    ul{
+      display: inline-block;
+      width: 100%;
+      li{
+        display: block;
+        margin-bottom: 12px;
+        font-size: 12px;
+        letter-spacing: 1px;
+        text-align: left;
+        color: #a4a4a4;
+        line-height: 1.25em;
+        transition: 0.3s ease ;
+      }
+      & > li {
+        color: #ffffff;
+        letter-spacing: 2px;
+      }
+      a{
+        &:hover{
+          li{
+            color: $orange ;
+          }
+        }
+      }
+    }
+  }
+  .footer-breadcrumbs{
+    padding-top: 32px;
+    border-top: solid 1px #3a3a4b;
+  }
+  .copyright{
+    font-size: 12px;
+    font-weight: 400;
+    color: #a4a4a4;
+  }
+  .social-media-container{
+    display: inline-block;
+    white-space: nowrap;
+    .social-media-circle{
+      display: inline-block;
+      width: 36px;
+      height: 36px;
+      background-color: #3a3a4b;
+      border-radius: 50%;
+      color: white;
+      text-align: center;
+      cursor: pointer;
+      margin-left: 21px;
+      transition: 0.3s ease ;
+      span{
+        line-height: 40px;
+      }
+      &:hover{
+        color: $orange ;
+      }
+    }
+  }
+}

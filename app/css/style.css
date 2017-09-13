@@ -500,6 +500,46 @@ ul li {
   text-align: center;
 }
 
+.container {
+  max-width: 1180px;
+  /* 1 */
+  margin-left: auto;
+  /* 2 */
+  margin-right: auto;
+  /* 2 */
+  padding-left: 20px;
+  /* 3 */
+  padding-right: 20px;
+  /* 3 */
+  width: 100%;
+  /* 1 */
+}
+
+.container.container-body {
+  min-height: 100vh;
+}
+
+.container.container--full {
+  max-width: 100%;
+  padding: 0px;
+}
+
+.container.container--full.grey {
+  background-color: #f9f9fb;
+}
+
+.pad-h-24 {
+  padding: 24px 0px;
+}
+
+.pad-v-24 {
+  padding: 0px 24px;
+}
+
+.pad-24 {
+  padding: 24px;
+}
+
 /**
  * Basic typography style for copy text
  */
@@ -576,42 +616,6 @@ span {
  * 2. Center it in the viewport
  * 3. Leave some space on the edges, especially valuable on small screens
  */
-.container {
-  max-width: 1180px;
-  /* 1 */
-  margin-left: auto;
-  /* 2 */
-  margin-right: auto;
-  /* 2 */
-  padding-left: 20px;
-  /* 3 */
-  padding-right: 20px;
-  /* 3 */
-  width: 100%;
-  /* 1 */
-}
-
-.container.container-body {
-  min-height: 100vh;
-}
-
-.container.container--full {
-  max-width: 100%;
-  padding: 0px;
-}
-
-.pad-h-24 {
-  padding: 24px 0px;
-}
-
-.pad-v-24 {
-  padding: 0px 24px;
-}
-
-.pad-24 {
-  padding: 24px;
-}
-
 /**
  * Hide text while making it readable for screen readers
  * 1. Needed in WebKit-based browsers because of an implementation bug;
@@ -1404,6 +1408,18 @@ template {
   position: fixed;
 }
 
+header.fixed-header {
+  height: 60px;
+}
+
+header.fixed-header .header-container {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 4;
+}
+
 .header-container {
   width: 100%;
 }
@@ -1413,16 +1429,16 @@ template {
   text-align: right;
 }
 
-.header-container.solid {
-  background-color: white;
-  box-shadow: inset 0 -1px 0 0 #dfe4e8;
-}
-
-.header-container .header-logo {
+.header-container .header-logo, .header-container .header-logo-dark {
   position: absolute;
   left: 20px;
   top: 50%;
   transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.header-container .header-logo-dark {
+  display: none;
 }
 
 .header-container .header-menu {
@@ -1435,6 +1451,10 @@ template {
 .header-container .header-menu a {
   display: inline-block;
   vertical-align: middle;
+}
+
+.header-container .header-menu a:last-child li {
+  padding-right: 0px;
 }
 
 .header-container .header-menu a li {
@@ -1453,6 +1473,32 @@ template {
   border: 1px solid #ffb757;
   color: #ffb757;
   text-transform: uppercase;
+}
+
+.header-container.solid {
+  background-color: white;
+  box-shadow: inset 0 -1px 0 0 #dfe4e8;
+}
+
+.header-container.solid .header-logo-dark {
+  display: block;
+}
+
+.header-container.solid .header-logo {
+  display: none;
+}
+
+.header-container.solid .header-menu a {
+  text-decoration: none;
+}
+
+.header-container.solid .header-menu a li {
+  color: #3d3d3d;
+  transition: 0.3s ease;
+}
+
+.header-container.solid .header-menu a li:hover {
+  color: #ffb757;
 }
 
 .footer-container {
@@ -1479,11 +1525,16 @@ template {
   text-align: left;
   color: #a4a4a4;
   line-height: 1.25em;
+  transition: 0.3s ease;
 }
 
 .footer-container .footer-body ul > li {
   color: #ffffff;
   letter-spacing: 2px;
+}
+
+.footer-container .footer-body ul a:hover li {
+  color: #ffb757;
 }
 
 .footer-container .footer-breadcrumbs {
@@ -1495,6 +1546,32 @@ template {
   font-size: 12px;
   font-weight: 400;
   color: #a4a4a4;
+}
+
+.footer-container .social-media-container {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.footer-container .social-media-container .social-media-circle {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  background-color: #3a3a4b;
+  border-radius: 50%;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  margin-left: 21px;
+  transition: 0.3s ease;
+}
+
+.footer-container .social-media-container .social-media-circle span {
+  line-height: 40px;
+}
+
+.footer-container .social-media-container .social-media-circle:hover {
+  color: #ffb757;
 }
 
 .btn {
@@ -1953,6 +2030,7 @@ template {
   background-color: #282834;
   width: 52px;
   padding: 0px;
+  transition: 0.3s ease;
   border: 0px solid transparent;
 }
 
@@ -2045,6 +2123,119 @@ template {
   font-size: 15px;
   font-weight: 700;
   color: #3d3d3d;
+}
+
+.plan-destinasi-board {
+  background-color: #ffffff;
+  padding: 16px 0px;
+  box-shadow: inset 0 -1px 0 0 #dfe4e8;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 60px;
+  z-index: 3;
+}
+
+.plan-destinasi-board .plan-destinasi-board-box {
+  display: inline-block;
+  margin-right: 120px;
+  vertical-align: middle;
+}
+
+.plan-destinasi-board .plan-destinasi-board-box .label {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+  color: #5b8ef4;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.plan-destinasi-board .plan-destinasi-board-box .value {
+  font-size: 24px;
+  line-height: 1;
+  color: #3d3d3d;
+  text-transform: capitalize;
+}
+
+.plan-destinasi-board .plan-destinasi-board-action {
+  position: absolute;
+  font-size: 15px;
+  font-weight: 700;
+  text-align: left;
+  color: #5b8ef4;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  text-transform: uppercase;
+}
+
+.plan-destinasi {
+  padding-top: 110px;
+}
+
+.plan-destinasi > h3 {
+  margin-bottom: 35px;
+}
+
+.plan-destinasi .row {
+  margin: 0px;
+  -ms-flex-align: start;
+      align-items: flex-start;
+}
+
+.plan-destinasi .plan-destinasi-date {
+  width: 60px;
+  margin-right: 16px;
+}
+
+.plan-destinasi .pd-date-block {
+  display: block;
+  width: 100%;
+  height: 60px;
+  text-align: center;
+  padding-top: 10px;
+  background-color: #efefef;
+  border-bottom: solid 1px #DDDDDD;
+  position: relative;
+  z-index: 1;
+}
+
+.plan-destinasi .pd-date-block:last-child {
+  border-bottom: 1px solid transparent;
+}
+
+.plan-destinasi .pd-date-block.active {
+  background-color: #ffffff;
+  box-shadow: 0 1px 3px 0 rgba(63, 63, 68, 0.15), 0 0 0 1px rgba(63, 63, 68, 0.05);
+  z-index: 2;
+}
+
+.plan-destinasi .pd-date-days {
+  font-family: 'Poppins', sans-serif;
+  font-size: 22px;
+  line-height: 1.09;
+  color: #3d3d3d;
+  margin-bottom: 6px;
+}
+
+.plan-destinasi .pd-date-month {
+  font-size: 15px;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+  color: #3d3d3d;
+  text-transform: uppercase;
+}
+
+.plan-destinasi .plan-destinasi-main-body {
+  width: calc(60% - 16px);
+}
+
+.plan-destinasi .plan-destinasi-mb-inner {
+  width: 100%;
+  display: block;
+  background-color: #ffffff;
+  box-shadow: 0 1px 3px 0 rgba(63, 63, 68, 0.15), 0 0 0 1px rgba(63, 63, 68, 0.05);
 }
 
 /*# sourceMappingURL=style.css.map */

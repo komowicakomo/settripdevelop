@@ -4,12 +4,15 @@ var lists = [
         "path": "index.html"
   } , {
         "name": "Styleguide Typhography",
-        "path": "index.html?view=styleguide_typography"
+        "path": "index-solid.html?view=styleguide_typography"
   } , {
         "name": "Styleguide Buttons",
-        "path": "index.html?view=styleguide_buttons"
+        "path": "index-solid.html?view=styleguide_buttons"
   } , {
         "name": "Styleguide Forms",
-        "path": "index.html?view=styleguide_form"
+        "path": "index-solid.html?view=styleguide_form"
+  } , {
+        "name": "Plan Destinasi",
+        "path": "index-solid.html?view=plan_destinasi"
   }
 ];

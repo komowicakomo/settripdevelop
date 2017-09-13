@@ -1,21 +1,35 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the header of the site/application.
 // -----------------------------------------------------------------------------
+header{
+  &.fixed-header
+  {
+    height: 60px;
+    .header-container{
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: 0;
+      z-index: 4;
+    }
+  }
+}
+
 .header-container{
   width: 100%;
   .container{
     height: 60px;
     text-align: right;
   }
-  &.solid{
-    background-color: white;
-    box-shadow: inset 0 -1px 0 0 #dfe4e8;
-  }
-  .header-logo{
+  .header-logo , .header-logo-dark{
     position: absolute;
     left: 20px;
     top: 50%;
     transform: translateY(-50%);
+    cursor: pointer;
+  }
+  .header-logo-dark{
+    display: none;
   }
   .header-menu{
     position: absolute;
@@ -25,6 +39,11 @@
     a {
       display: inline-block;
       vertical-align: middle;
+      &:last-child{
+        li {
+          padding-right: 0px;
+        }
+      }
       li{
         color: white;
         padding: 10px 16px;
@@ -43,40 +62,26 @@
       }
     }
   }
-}
-
-.footer-container{
-  width: 100%;
-  background-color: #282834;
-  padding: 38px 0px;
-  .footer-body{
-    padding-top: 32px;
-    padding-bottom: 22px;
-    ul{
-      display: inline-block;
-      width: 100%;
-      li{
-        display: block;
-        margin-bottom: 12px;
-        font-size: 12px;
-        letter-spacing: 1px;
-        text-align: left;
-        color: #a4a4a4;
-        line-height: 1.25em;
-      }
-      & > li {
-        color: #ffffff;
-        letter-spacing: 2px;
+  &.solid{
+    background-color: white;
+    box-shadow: inset 0 -1px 0 0 #dfe4e8;
+    .header-logo-dark{
+      display: block;
+    }
+    .header-logo{
+      display: none;
+    }
+    .header-menu{
+      a{
+        text-decoration: none;
+        li{
+          color: #3d3d3d;
+          transition: 0.3s ease ;
+          &:hover{
+            color: $orange;
+          }
+        }
       }
     }
-  }
-  .footer-breadcrumbs{
-    padding-top: 32px;
-    border-top: solid 1px #3a3a4b;
-  }
-  .copyright{
-    font-size: 12px;
-    font-weight: 400;
-    color: #a4a4a4;
   }
 }
