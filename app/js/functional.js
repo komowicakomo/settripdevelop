@@ -1,3 +1,15 @@
+function overlayin (){
+    jQuery('body').css('height', '100vh').css('overflow-y', 'hidden');
+   /* disableScrolling();*/
+
+}
+
+function overlayout (){
+    jQuery('body').css('height', 'auto').css('overflow-y', 'scroll');
+  /*  enableScrolling();*/
+
+}
+
 $(document).on('click','.radio-area label',function(){
     $('.radio-area label').removeClass('active')
     $(this).addClass('active')
@@ -61,30 +73,52 @@ $(document).on('click','.qtyminus',function (e) {
     }
 })
 
-$('img.svg-image').each(function(){
-    var $img = $(this)
-    var imgID = $img.attr('id')
-    var imgClass = $img.attr('class')
-    var imgURL = $img.attr('src')
+function svgToImage(){
+  $('img.svg-image').each(function(){
+      var $img = $(this)
+      var imgID = $img.attr('id')
+      var imgClass = $img.attr('class')
+      var imgURL = $img.attr('src')
 
-    $.get(imgURL, function(data) {
-        // Get the SVG tag, ignore the rest
-        var $svg = $(data).find('svg')
+      $.get(imgURL, function(data) {
+          // Get the SVG tag, ignore the rest
+          var $svg = $(data).find('svg')
 
-        // Add replaced image's ID to the new SVG
-        if(typeof imgID !== 'undefined') {
-            $svg = $svg.attr('id', imgID)
-        }
-        // Add replaced image's classes to the new SVG
-        if(typeof imgClass !== 'undefined') {
-            $svg = $svg.attr('class', imgClass+' replaced-svg')
-        }
+          // Add replaced image's ID to the new SVG
+          if(typeof imgID !== 'undefined') {
+              $svg = $svg.attr('id', imgID)
+          }
+          // Add replaced image's classes to the new SVG
+          if(typeof imgClass !== 'undefined') {
+              $svg = $svg.attr('class', imgClass+' replaced-svg')
+          }
 
-        // Remove any invalid XML tags as per http://validator.w3.org
-        $svg = $svg.removeAttr('xmlns:a')
+          // Remove any invalid XML tags as per http://validator.w3.org
+          $svg = $svg.removeAttr('xmlns:a')
 
-        // Replace image with new SVG
-        $img.replaceWith($svg)
+          // Replace image with new SVG
+          $img.replaceWith($svg)
 
-    }, 'xml')
+      }, 'xml')
+  })
+}
+
+$(document).on('click','.btn-js-action' , function(){
+  var action = $(this).attr('data-action')
+  console.log(action)
+  if( action === 'open-modal'){
+    overlayin()
+  }
+  if( action === 'close-modal'){
+    overlayout()
+    $(this).parents('.modal-overlay').removeClass('active')
+  }
 })
+
+jQuery.fn.removeClassExcept = function (val) {
+    return this.each(function () {
+        $(this).removeClass().addClass(val);
+    });
+};
+
+svgToImage()

@@ -540,6 +540,62 @@ ul li {
   padding: 24px;
 }
 
+.middle-both {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(30, 48, 97, 0.6);
+  opacity: 0;
+  z-index: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+}
+
+.modal-overlay.active {
+  visibility: visible;
+  opacity: 1;
+  z-index: 5;
+}
+
+.modal-overlay .close-btn {
+  width: 62px;
+  height: 62px;
+  background-color: white;
+  border-radius: 100%;
+  position: absolute;
+  transform: rotate(-45deg);
+  cursor: pointer;
+}
+
+.modal-overlay .close-btn:after, .modal-overlay .close-btn:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 1px;
+  width: 20px;
+  background-color: #3d3d3d;
+  transition: 0.3s ease;
+}
+
+.modal-overlay .close-btn:before {
+  transform: translate(-50%, -50%) rotate(-90deg);
+}
+
+.modal-overlay .close-btn:hover:after, .modal-overlay .close-btn:hover:before {
+  background-color: #ffb757 !important;
+}
+
 /**
  * Basic typography style for copy text
  */
@@ -2228,7 +2284,8 @@ header.fixed-header .header-container {
 }
 
 .plan-destinasi .plan-destinasi-main-body {
-  width: calc(60% - 16px);
+  width: calc(65% - 16px);
+  margin-right: 16px;
 }
 
 .plan-destinasi .plan-destinasi-mb-inner {
@@ -2236,6 +2293,439 @@ header.fixed-header .header-container {
   display: block;
   background-color: #ffffff;
   box-shadow: 0 1px 3px 0 rgba(63, 63, 68, 0.15), 0 0 0 1px rgba(63, 63, 68, 0.05);
+}
+
+.plan-destinasi .pd-mb-head {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  width: 100%;
+  counter-reset: section;
+}
+
+.plan-destinasi .pd-mb-step {
+  background-color: #f9f9fb;
+  border-right: solid 1px #e9e9eb;
+  -ms-flex-positive: 1;
+      flex-grow: 1;
+  padding: 10px;
+  cursor: default;
+}
+
+.plan-destinasi .pd-mb-step:last-child {
+  border-right: 0px solid transparent;
+}
+
+.plan-destinasi .pd-mb-step:before {
+  content: attr(step);
+  width: 32px;
+  height: 32px;
+  border: solid 2px #9e9e9e;
+  color: #9e9e9e;
+  border-radius: 100%;
+  display: block;
+  margin: auto;
+  font-size: 15px;
+  text-align: center;
+  line-height: 24px;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 10px;
+}
+
+.plan-destinasi .pd-mb-step p {
+  line-height: 0.93;
+  text-align: center;
+  color: #9e9e9e;
+  text-transform: uppercase;
+  margin: 0px;
+}
+
+.plan-destinasi .pd-mb-step.active {
+  background-color: #ffffff;
+  border-bottom: 4px solid #5b8ef4;
+}
+
+.plan-destinasi .pd-mb-step.active p {
+  color: #5b8ef4;
+}
+
+.plan-destinasi .pd-mb-step.active:before {
+  border: solid 4px #5b8ef4;
+  color: #5b8ef4;
+}
+
+.plan-destinasi .pd-mb-body {
+  padding: 16px;
+  min-height: 240px;
+}
+
+.plan-destinasi .pd-mb-body .empty-state {
+  width: 100%;
+  height: 240px;
+  background-color: #f9f9fb;
+  position: relative;
+}
+
+.plan-destinasi .pd-mb-body .empty-state h5 {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -0.6px;
+  text-align: center;
+  color: #3d3d3d;
+}
+
+.plan-destinasi .pd-mb-body .btn-add {
+  width: 100%;
+  margin-top: 24px;
+}
+
+.plan-destinasi .pd-mb-body .btn-add p {
+  color: #3d3d3d;
+}
+
+.plan-destinasi .plan-destinasi-cart-price {
+  width: calc(35% - 76px);
+  background-color: #ffffff;
+  box-shadow: 0 1px 3px 0 rgba(63, 63, 68, 0.15), 0 0 0 1px rgba(63, 63, 68, 0.05);
+}
+
+.plan-destinasi .pd-cp-box {
+  width: 100%;
+  background-color: white;
+  text-align: center;
+  padding: 16px;
+  padding-top: 20px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  border-bottom: solid 1px #e9e9eb;
+  padding-bottom: 12px;
+}
+
+.plan-destinasi .pd-cp-box p {
+  font-weight: 600;
+  line-height: 1;
+  text-transform: uppercase;
+  margin: 0px;
+}
+
+.plan-destinasi .pd-cp-box.label {
+  background-color: #5b8ef4;
+}
+
+.plan-destinasi .pd-cp-box.label p {
+  color: #ffffff;
+}
+
+.plan-destinasi .pd-cp-box > div {
+  -ms-flex-positive: 1;
+      flex-grow: 1;
+}
+
+.plan-destinasi .pd-cp-box > div.pd-cp-text-label {
+  font-size: 14px;
+  font-weight: 600;
+  text-align: left;
+  color: #3d3d3d;
+}
+
+.plan-destinasi .pd-cp-box > div.pd-cp-text-number {
+  font-size: 14px;
+  font-weight: 600;
+  text-align: right;
+  color: #a4a4a4;
+}
+
+.plan-destinasi .pd-cp-box.subtotal {
+  display: block;
+}
+
+.plan-destinasi .pd-cp-box.subtotal .pd-cp-text-label {
+  font-size: 15px;
+  margin-bottom: 48px;
+}
+
+.plan-destinasi .pd-cp-box.subtotal button {
+  width: 100%;
+}
+
+.modal-plan-destinasi .close-modal-container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 20%;
+}
+
+.modal-plan-destinasi .close-modal-container .close-btn {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.modal-plan-destinasi .modal-plan-destinasi-ov-body {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 80%;
+  background-color: #f9f9fb;
+  transform: translateY(100%);
+  will-change: transform;
+}
+
+.modal-plan-destinasi.active .modal-plan-destinasi-ov-body {
+  transform: translate(0);
+  transition: transform 0.4s ease 0.3s;
+}
+
+.modal-plan-destinasi .modal-pd-head {
+  width: 100%;
+  background-color: white;
+  padding-top: 24px;
+  padding-bottom: 16px;
+}
+
+.modal-plan-destinasi .modal-pd-head > .container {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+}
+
+.modal-plan-destinasi .modal-pd-head .modal-pd-description {
+  width: 70%;
+}
+
+.modal-plan-destinasi .modal-pd-head .modal-pd-description span {
+  font-size: 15px;
+  line-height: 1;
+  text-align: left;
+  color: #a4a4a4;
+}
+
+.modal-plan-destinasi .modal-pd-head .modal-pd-desc-label {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1;
+  text-align: left;
+  color: #3d3d3d;
+  margin-bottom: 8px;
+}
+
+.modal-plan-destinasi .modal-pd-head .modal-pd-filter {
+  width: 30%;
+  text-align: right;
+}
+
+.modal-plan-destinasi .modal-pd-head .modal-pd-filter .modal-pd-filter-inner {
+  background-color: #ffffff;
+  border: solid 1px #e9e9e9;
+  display: inline-block;
+  white-space: nowrap;
+  text-align: right;
+}
+
+.modal-plan-destinasi .modal-pd-head .modal-pd-filter .modal-pd-filter-inner li {
+  display: inline-block;
+  padding: 10px 10px 10px 16px;
+  border-right: 1px solid #e9e9e9;
+  cursor: pointer;
+  margin: 0px;
+}
+
+.modal-plan-destinasi .modal-pd-head .modal-pd-filter .modal-pd-filter-inner li p {
+  font-size: 15px;
+  line-height: 1;
+  color: #3d3d3d;
+  margin: 0px;
+  margin-bottom: -5px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+.modal-plan-destinasi .modal-pd-head .modal-pd-filter .modal-pd-filter-inner li img {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.modal-plan-destinasi .modal-pd-head .modal-pd-filter .modal-pd-filter-inner li img + img {
+  padding-left: 8px;
+  border-left: 1px solid #e9e9e9;
+}
+
+.modal-plan-destinasi .modal-pd-head .modal-pd-filter .modal-pd-filter-inner li:last-child {
+  border-right: 1px solid transparent;
+}
+
+.modal-plan-destinasi .modal-pd-head .modal-pd-filter .modal-pd-filter-inner li.modal-pd-double {
+  padding-left: 12px;
+}
+
+.modal-plan-destinasi .modal-pd-head .modal-pd-filter .modal-pd-filter-inner li.modal-pd-double img {
+  padding-right: 4px;
+}
+
+.modal-plan-destinasi .modal-pd-head .modal-pd-filter .modal-pd-filter-inner li.modal-pd-double img + img {
+  padding-right: 0px;
+}
+
+.modal-plan-destinasi .modal-pd-body {
+  padding: 40px;
+  position: relative;
+  height: calc(100% - 102px);
+  position: relative;
+}
+
+.modal-plan-destinasi .nav-btn {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+  border: solid 1px #e4e4e4;
+  border-radius: 50%;
+  top: 44%;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.modal-plan-destinasi .nav-btn i {
+  position: absolute;
+  font-size: 18px;
+  transition: 0.3s ease;
+}
+
+.modal-plan-destinasi .nav-btn:hover i {
+  color: #ffb757;
+}
+
+.modal-plan-destinasi .nav-btn.nav-btn-left {
+  transform: translate(-50%, -50%);
+  left: 0;
+}
+
+.modal-plan-destinasi .nav-btn.nav-btn-right {
+  right: 0;
+  transform: translate(50%, -50%);
+}
+
+.modal-plan-destinasi .modal-pd-planbox {
+  width: 100%;
+  background-color: #ffffff;
+  border: solid 1px #e4e4e4;
+  will-change: transform;
+  margin-bottom: 32px;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.modal-plan-destinasi .modal-pd-planbox .planbox-description {
+  padding: 8px;
+  width: 100%;
+  border-bottom: solid 1px #e4e4e4;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+}
+
+.modal-plan-destinasi .modal-pd-planbox .planbox-img {
+  width: 30%;
+  border-radius: 2px;
+  position: relative;
+  overflow: hidden;
+}
+
+.modal-plan-destinasi .modal-pd-planbox .planbox-img img {
+  width: 100%;
+}
+
+.modal-plan-destinasi .modal-pd-planbox .planbox-img:after {
+  content: '';
+  display: block;
+  padding-top: 100%;
+}
+
+.modal-plan-destinasi .modal-pd-planbox .planbox-text {
+  padding-left: 8px;
+  padding-top: 4px;
+  position: relative;
+}
+
+.modal-plan-destinasi .modal-pd-planbox .planbox-text .planbox-destination span {
+  font-size: 10px;
+  line-height: 1.2;
+  color: #3d3d3d;
+  margin-bottom: 4px;
+  display: block;
+}
+
+.modal-plan-destinasi .modal-pd-planbox .planbox-text .planbox-destination p {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1;
+  color: #3d3d3d;
+  margin: 0px;
+}
+
+.modal-plan-destinasi .modal-pd-planbox .planbox-text .planbox-rating {
+  position: absolute;
+  bottom: 0px;
+  left: 8px;
+}
+
+.modal-plan-destinasi .modal-pd-planbox .planbox-text .planbox-rating span {
+  color: #3c3c3c;
+}
+
+.modal-plan-destinasi .modal-pd-planbox:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.modal-plan-destinasi .planbox-action {
+  padding: 8px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+}
+
+.modal-plan-destinasi .planbox-action .planbox-price {
+  font-size: 22px;
+  line-height: 1;
+  text-align: left;
+  color: #3d3d3d;
+  width: 40%;
+  padding-top: 8px;
+}
+
+.modal-plan-destinasi .planbox-action .planbox-button-action {
+  width: 60%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+}
+
+.modal-plan-destinasi .planbox-action .planbox-button-action > button {
+  -ms-flex-positive: 1;
+      flex-grow: 1;
+  text-transform: capitalize;
+  padding: 8px;
+  font-size: 12px;
+  line-height: 1.25;
+  text-align: center;
+  color: #3d3d3d;
+}
+
+.modal-plan-destinasi .planbox-action .planbox-button-action > button + button {
+  margin-left: 4px;
+  color: white;
 }
 
 /*# sourceMappingURL=style.css.map */
