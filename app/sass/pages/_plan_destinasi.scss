@@ -304,12 +304,17 @@
             margin-bottom: -5px;
             display: inline-block;
             vertical-align: middle;
-            margin-right: 8px;
+            margin-right: 4px;
+            transition: 0.3s ease ;
           }
-          img{
+          img , svg{
             display: inline-block;
             vertical-align: middle;
-            & + img{
+            width: 30px;
+            g{
+              transition: 0.3s ease ;
+            }
+            & + img , & + svg{
               padding-left:  8px;
               border-left: 1px solid #e9e9e9;
             }
@@ -326,15 +331,26 @@
               }
             }
           }
+          &:hover{
+            p{
+              color: $orange ;
+            }
+            g{
+              stroke : $orange ;
+            }
+          }
         }
       }
     }
   }
   .modal-pd-body{
-    padding : 40px ;
     position: relative;
     height: calc(100% - 102px);
     position: relative;
+  }
+  .modal-pd-box-container{
+    position: absolute;
+    width: calc(100% - 80px);
   }
   .nav-btn{
     position: absolute;
@@ -344,7 +360,7 @@
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.06);
     border: solid 1px #e4e4e4;
     border-radius: 50%;
-    top: 44%;
+    top: 50%;
     cursor: pointer;
     z-index: 2;
     i{

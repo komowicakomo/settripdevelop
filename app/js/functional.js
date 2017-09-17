@@ -121,4 +121,7 @@ jQuery.fn.removeClassExcept = function (val) {
     });
 };
 
-svgToImage()
+
+$(window).on('load',function(){
+  svgToImage()
+})
