@@ -331,6 +331,18 @@
       padding: 0px;
       transition: 0.3s ease ;
       border:0px solid transparent;
+      g{
+        transition: 0.3s ease ; 
+      }
+      &:hover{
+        svg{
+          g {
+            g{
+              fill : $orange ;
+            }
+          }
+        }
+      }
     }
     ::-webkit-input-placeholder { /* Chrome */
       color: #a3a3a3;
