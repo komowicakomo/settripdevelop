@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="26px" height="11px" viewBox="0 0 26 11" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>wave</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="LANDING" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+        <g id="landing_01" transform="translate(-742.000000, -823.000000)" stroke="#1D93E1" stroke-width="2">
+            <g id="wave" transform="translate(743.000000, 824.000000)">
+                <path d="M0.0857765067,8.95972393 C2.68086129,9.19299083 3.42253793,6.81490267 6.30886172,6.81490267 C9.19518551,6.81490267 9.72004842,9.35073171 12.2059832,8.95972393 C14.691918,8.56871615 15.0735774,6.81490267 17.7828592,6.81490267 C20.4921411,6.81490267 20.6088398,8.74766095 23.8158663,8.66573778" id="Path-2"></path>
+                <path d="M0.0857765067,2.95972393 C2.68086129,3.19299083 3.42253793,0.814902672 6.30886172,0.814902672 C9.19518551,0.814902672 9.72004842,3.35073171 12.2059832,2.95972393 C14.691918,2.56871615 15.0735774,0.814902672 17.7828592,0.814902672 C20.4921411,0.814902672 20.6088398,2.74766095 23.8158663,2.66573778" id="Path-2"></path>
+            </g>
+        </g>
+    </g>
+</svg>

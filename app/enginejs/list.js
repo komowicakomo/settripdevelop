@@ -1,7 +1,7 @@
 var lists = [
   {
         "name": "Homepage",
-        "path": "index.html"
+        "path": "index.html?view=home"
   } , {
         "name": "Styleguide Typhography",
         "path": "index-solid.html?view=styleguide_typography"
