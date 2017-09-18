@@ -596,6 +596,10 @@ ul li {
   background-color: #ffb757 !important;
 }
 
+.row {
+  margin: 0;
+}
+
 /**
  * Basic typography style for copy text
  */
@@ -2385,6 +2389,7 @@ header.fixed-header .header-container {
   padding: 30px 15px;
   transform: translateY(0);
   transition: transform 0.3s ease;
+  will-change: transform;
 }
 
 .home-biggrid__hover {
@@ -2397,6 +2402,7 @@ header.fixed-header .header-container {
   background-color: rgba(30, 30, 30, 0.8);
   transform: translateY(-100%);
   transition: transform 0.3s ease;
+  will-change: transform;
 }
 
 .home-biggrid__hover p {
@@ -2503,6 +2509,7 @@ header.fixed-header .header-container {
   padding: 15px;
   transform: translateY(0);
   transition: transform 0.3s ease;
+  will-change: transform;
 }
 
 .home-smallgrid__hover {
@@ -2515,6 +2522,7 @@ header.fixed-header .header-container {
   background-color: rgba(30, 30, 30, 0.8);
   transform: translateY(-100%);
   transition: transform 0.3s ease;
+  will-change: transform;
 }
 
 .home-smallgrid__wrapper {
@@ -2525,6 +2533,181 @@ header.fixed-header .header-container {
 .home-smallgrid__wrapper h5 {
   color: #fff;
   letter-spacing: 1.1px;
+}
+
+.home-shadow__left {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 20%;
+  height: 100%;
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 );
+  /* IE6-9 */
+  z-index: 1;
+}
+
+.home-shadow__left img {
+  display: inline-block;
+  width: 54px;
+  height: 54px;
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  transform: translate(-20%, -50%);
+  cursor: pointer;
+}
+
+.home-shadow__right {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 20%;
+  height: 100%;
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, white 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=1 );
+  /* IE6-9 */
+  z-index: 1;
+}
+
+.home-shadow__right img {
+  display: inline-block;
+  width: 54px;
+  height: 54px;
+  position: absolute;
+  top: 50%;
+  left: 80%;
+  transform: translate(-80%, -50%);
+  cursor: pointer;
+}
+
+.home-overflowview {
+  width: 100%;
+  padding: 20px 0;
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+
+.home-overflowview__allwidth {
+  width: 3410px;
+}
+
+.home-card {
+  display: inline-block;
+  width: 450px;
+  margin: 0 10px;
+  box-shadow: 0 1px 3px 0 rgba(63, 63, 68, 0.15), 0 0 0 1px rgba(63, 63, 68, 0.05);
+}
+
+.home-card__slider img {
+  width: 100%;
+}
+
+.home-card__location {
+  padding: 15px 0;
+  margin: 0;
+}
+
+.home-card__map {
+  width: 100%;
+}
+
+.home-card__infowrap h5 {
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.home-card__infowrap .home-card__desc {
+  color: #637381;
+  height: 45px;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.home-card__info {
+  color: #a4a4a4;
+}
+
+.home-card__info span, .home-card__info p {
+  display: inline-block;
+  color: #a4a4a4;
+}
+
+.home-card__info span {
+  margin-right: 5px;
+}
+
+.home-card__pricewrap {
+  width: 100%;
+  padding: 15px;
+  border-top: solid 1px #e4e4e4;
+  border-bottom: solid 1px #e4e4e4;
+}
+
+.home-card__pricewrap h2 {
+  color: #ffb757;
+  margin: 0;
+  font-weight: bold;
+}
+
+.home-card__pricewrap span {
+  color: #637381;
+  font-size: 15px;
+  vertical-align: middle;
+  font-weight: normal;
+}
+
+.home-card__pricewrap img {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+}
+
+.home-wrapper__plan {
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: none;
+}
+
+.home-plan__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(91, 142, 244, 0.86);
+}
+
+.home-plan__image {
+  text-align: right;
+}
+
+.home-plan__text {
+  padding-top: 30px;
+  max-width: 300px;
+}
+
+.home-plan__text h2 {
+  color: #fff;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.home-plan__text p {
+  font-size: 15px;
+  line-height: 1.67;
+  color: #fff;
+  margin-bottom: 20px;
 }
 
 .plan-destinasi-board {
