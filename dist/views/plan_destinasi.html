@@ -1,0 +1,361 @@
+<script src="js/view/plan_destinasi.js" charset="utf-8"></script>
+<div class="container container--full grey">
+  <div class="plan-destinasi-board">
+    <div class="container">
+      <div class="plan-destinasi-boardbox-container">
+        <div class="plan-destinasi-board-box">
+          <div class="label">
+            kota
+          </div>
+          <div class="value">
+            bandung
+          </div>
+        </div>
+        <div class="plan-destinasi-board-box">
+          <div class="label">
+            tanggal
+          </div>
+          <div class="value">
+            21 April - 23 April
+          </div>
+        </div>
+        <div class="plan-destinasi-board-box">
+          <div class="label">
+            peserta
+          </div>
+          <div class="value">
+            2 Orang
+          </div>
+        </div>
+      </div>
+      <div class="plan-destinasi-board-action">
+        ubah
+      </div>
+    </div>
+  </div>
+  <div class="container container-body plan-destinasi">
+    <h3>Buat Plan</h3>
+    <div class="plan-destinasi-body">
+      <div class="row">
+        <div class="plan-destinasi-date">
+          <div class="pd-date-block active">
+            <div class="pd-date-days">
+              21
+            </div>
+            <div class="pd-date-month">
+              apr
+            </div>
+          </div>
+          <div class="pd-date-block ">
+            <div class="pd-date-days">
+              22
+            </div>
+            <div class="pd-date-month">
+              apr
+            </div>
+          </div>
+          <div class="pd-date-block ">
+            <div class="pd-date-days">
+              23
+            </div>
+            <div class="pd-date-month">
+              apr
+            </div>
+          </div>
+        </div>
+        <div class="plan-destinasi-main-body">
+          <div class="plan-destinasi-mb-inner">
+            <div class="pd-mb-head">
+              <div class="pd-mb-step active" step="1">
+                <p>destinasi</p>
+              </div>
+              <div class="pd-mb-step" step="2">
+                <p>penginapan</p>
+              </div>
+              <div class="pd-mb-step" step="3">
+                <p>transport</p>
+              </div>
+              <div class="pd-mb-step" step="4">
+                <p>pemandu</p>
+              </div>
+            </div>
+            <div class="pd-mb-body">
+              <div class="empty-state">
+                <div class="middle-both">
+                  <h5>Kamu belum memilih destinasi</h5>
+                </div>
+              </div>
+              <button class="btn btn-add btn-js-action" data-action="open-modal" data-actionFor="modal-plan-destinasi">
+                <span class="ico--plus"></span>
+                <p class="btn--text">Tambah Destinasi</p>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="plan-destinasi-cart-price">
+          <div class="pd-cp-inner">
+            <div class="pd-cp-box label">
+              <p>Rincian</p>
+            </div>
+            <div class="pd-cp-box">
+              <div class="pd-cp-text-label">
+                21 APR
+              </div>
+              <div class="pd-cp-text-number">
+                Rp. 0
+              </div>
+            </div>
+            <div class="pd-cp-box">
+              <div class="pd-cp-text-label">
+                21 APR
+              </div>
+              <div class="pd-cp-text-number">
+                Rp. 0
+              </div>
+            </div>
+            <div class="pd-cp-box">
+              <div class="pd-cp-text-label">
+                21 APR
+              </div>
+              <div class="pd-cp-text-number">
+                Rp. 0
+              </div>
+            </div>
+            <div class="pd-cp-box subtotal">
+              <div class="pd-cp-text-label">
+                SUB TOTAL
+              </div>
+              <button class="btn btn--orange btn--medium" >PESAN</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="modal-overlay modal-plan-destinasi active">
+  <div class="close-modal-container">
+    <div class=" btn-js-action close-btn" data-action="close-modal">
+
+    </div>
+  </div>
+  <div class="modal-plan-destinasi-ov-body">
+    <div class="modal-pd-head">
+      <div class="container">
+        <div class="modal-pd-description">
+          <div class="modal-pd-desc-label">
+            Bandung
+          </div>
+          <span>Showing 6 of 120 destinations</span>
+        </div>
+        <div class="modal-pd-filter">
+          <ul class="modal-pd-filter-inner">
+              <li><p>FILTER</p><img src="images/icon/ic-filter.svg" alt="filter icon" class="svg-image"></li>
+              <li><p>SORT</p><img src="images/icon/ic-sort.svg" alt="sort icon" class="svg-image"></li>
+              <li class="modal-pd-double">
+                <img src="images/icon/ic-hamburger.svg" alt="sort icon" class="svg-image">
+                <img src="images/icon/ic-map.svg" alt="sort icon" class="svg-image">
+              </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="modal-pd-body container">
+        <div class="nav-btn nav-btn-left">
+          <i class="fa fa-angle-left middle-both" aria-hidden="true"></i>
+        </div>
+        <div class="nav-btn nav-btn-right">
+          <i class="fa fa-angle-right middle-both" aria-hidden="true"></i>
+        </div>
+      <div class="modal-pd-box-container middle-both">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="modal-pd-planbox">
+              <div class="planbox-description">
+                <div class="planbox-img">
+                  <img class="middle-both" src="images/dummy/dummy.jpg" alt="dummy img">
+                </div>
+                <div class="planbox-text">
+                  <div class="planbox-destination">
+                    <span>ATRAKSI</span>
+                    <p>Ranca Upas</p>
+                  </div>
+                  <div class="planbox-rating star-rating" data-star="5" >
+                    <div class="rating-container">
+
+                    </div>
+                    <span>240 reviews</span>
+                  </div>
+                </div>
+              </div>
+              <div class="planbox-action">
+                <div class="planbox-price">
+                  Rp 2.000.000
+                </div>
+                <div class="planbox-button-action">
+                  <button class="btn small">Lihat Detail</button>
+                  <button class="btn btn--orange small">Tambahkan</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="modal-pd-planbox">
+              <div class="planbox-description">
+                <div class="planbox-img">
+                  <img class="middle-both" src="images/dummy/dummy.jpg" alt="dummy img">
+                </div>
+                <div class="planbox-text">
+                  <div class="planbox-destination">
+                    <span>ATRAKSI</span>
+                    <p>Ranca Upas</p>
+                  </div>
+                  <div class="planbox-rating star-rating" data-star="5" >
+                    <div class="rating-container">
+
+                    </div>
+                    <span>240 reviews</span>
+                  </div>
+                </div>
+              </div>
+              <div class="planbox-action">
+                <div class="planbox-price">
+                  Rp 2.000.000
+                </div>
+                <div class="planbox-button-action">
+                  <button class="btn small">Lihat Detail</button>
+                  <button class="btn btn--orange small">Tambahkan</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="modal-pd-planbox">
+              <div class="planbox-description">
+                <div class="planbox-img">
+                  <img class="middle-both" src="images/dummy/dummy.jpg" alt="dummy img">
+                </div>
+                <div class="planbox-text">
+                  <div class="planbox-destination">
+                    <span>ATRAKSI</span>
+                    <p>Ranca Upas</p>
+                  </div>
+                  <div class="planbox-rating star-rating" data-star="5" >
+                    <div class="rating-container">
+
+                    </div>
+                    <span>240 reviews</span>
+                  </div>
+                </div>
+              </div>
+              <div class="planbox-action">
+                <div class="planbox-price">
+                  Rp 2.000.000
+                </div>
+                <div class="planbox-button-action">
+                  <button class="btn small">Lihat Detail</button>
+                  <button class="btn btn--orange small">Tambahkan</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="modal-pd-planbox">
+              <div class="planbox-description">
+                <div class="planbox-img">
+                  <img class="middle-both" src="images/dummy/dummy.jpg" alt="dummy img">
+                </div>
+                <div class="planbox-text">
+                  <div class="planbox-destination">
+                    <span>ATRAKSI</span>
+                    <p>Ranca Upas</p>
+                  </div>
+                  <div class="planbox-rating star-rating" data-star="5" >
+                    <div class="rating-container">
+
+                    </div>
+                    <span>240 reviews</span>
+                  </div>
+                </div>
+              </div>
+              <div class="planbox-action">
+                <div class="planbox-price">
+                  Rp 2.000.000
+                </div>
+                <div class="planbox-button-action">
+                  <button class="btn small">Lihat Detail</button>
+                  <button class="btn btn--orange small">Tambahkan</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="modal-pd-planbox">
+              <div class="planbox-description">
+                <div class="planbox-img">
+                  <img class="middle-both" src="images/dummy/dummy.jpg" alt="dummy img">
+                </div>
+                <div class="planbox-text">
+                  <div class="planbox-destination">
+                    <span>ATRAKSI</span>
+                    <p>Ranca Upas</p>
+                  </div>
+                  <div class="planbox-rating star-rating" data-star="5" >
+                    <div class="rating-container">
+
+                    </div>
+                    <span>240 reviews</span>
+                  </div>
+                </div>
+              </div>
+              <div class="planbox-action">
+                <div class="planbox-price">
+                  Rp 2.000.000
+                </div>
+                <div class="planbox-button-action">
+                  <button class="btn small">Lihat Detail</button>
+                  <button class="btn btn--orange small">Tambahkan</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="modal-pd-planbox">
+              <div class="planbox-description">
+                <div class="planbox-img">
+                  <img class="middle-both" src="images/dummy/dummy.jpg" alt="dummy img">
+                </div>
+                <div class="planbox-text">
+                  <div class="planbox-destination">
+                    <span>ATRAKSI</span>
+                    <p>Ranca Upas</p>
+                  </div>
+                  <div class="planbox-rating star-rating" data-star="5" >
+                    <div class="rating-container">
+
+                    </div>
+                    <span>240 reviews</span>
+                  </div>
+                </div>
+              </div>
+              <div class="planbox-action">
+                <div class="planbox-price">
+                  Rp 2.000.000
+                </div>
+                <div class="planbox-button-action">
+                  <button class="btn small">Lihat Detail</button>
+                  <button class="btn btn--orange small">Tambahkan</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

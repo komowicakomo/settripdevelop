@@ -1,0 +1,83 @@
+
+<div class="container pad-h-24 styleguide container-body">
+  <div class="row">
+    <div class="form-group col-sm-6">
+      <div class="input-group select with-label">
+        <label for="">Kategori</label>
+        <select class="" name="">
+          <option value="">Content</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group col-sm-6">
+      <label for="">Dropdown Tittle</label>
+      <div class="input-group select">
+        <select class="" name="">
+          <option value="">Content</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group col-sm-6">
+      <label for="">Dropdown With icon</label>
+      <div class="input-group select with-icon">
+        <div class="input-icon">
+          <img src="images/icon/ic-calendar-default.svg" alt="Calendar icon">
+        </div>
+        <select class="" name="">
+          <option value="">Content</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group col-sm-6">
+      <label for="">Tittle</label>
+      <div class="input-group">
+        <input type="text" placeholder="Placeholder">
+      </div>
+    </div>
+    <div class="form-group col-sm-6">
+      <label for="">Tittle With caption</label>
+      <div class="input-group">
+        <input type="text" placeholder="Placeholder">
+        <span>Caption goes here</span>
+      </div>
+    </div>
+    <div class="form-group col-sm-6">
+      <label for="">disabled</label>
+      <div class="input-group">
+        <input type="text" placeholder="Placeholder" disabled>
+        <span>Caption goes here</span>
+      </div>
+    </div>
+    <div class="form-group col-sm-6">
+      <label for="">disabled</label>
+      <div class="input-group">
+        <textarea name="name" placeholder="placeholder"></textarea>
+      </div>
+    </div>
+    <div class="form-group col-sm-6">
+      <div class="input-group upload-box">
+        <input id="file1" type="file">
+        <label class="btn" for="file1">Choose File</label>
+        <input type="text" class="file_name" disabled placeholder="No file selected">
+      </div>
+      <span>MAX file size is 500kb</span>
+    </div>
+    <div class="radio-area col-sm-6">
+        <input type="radio" name="pengiriman" id="sicepat" required="" data-parsley-multiple="pengiriman" data-parsley-id="23">
+        <input type="radio" name="pengiriman" id="dhl" required="" data-parsley-multiple="pengiriman">
+        <label for="sicepat" class="">Si Cepat ( Rp 8.000,00) </label>
+        <label for="dhl" class="active">DHL ( Rp 15.000,00) </label>
+    </div>
+    <div class="checkbox-area col-sm-6">
+        <input type="checkbox" name="address" id="billing" data-parsley-multiple="address" data-parsley-id="46">
+        <label for="billing" class="">Ship to this address</label>
+    </div>
+    <div class="quantity col-sm-6">
+        <div class="qty-form">
+          <button class="qtyminus"></button>
+          <input type="text" name="quantity" value="0" class="qty" readonly="readonly">
+          <button  class="qtyplus"></button>
+        </div>
+    </div>
+  </div>
+</div>
