@@ -600,6 +600,16 @@ ul li {
   margin: 0;
 }
 
+.star-rating .rating-container {
+  white-space: nowrap;
+}
+
+.star-rating em {
+  display: inline-block;
+  color: #ffb757;
+  margin-right: 3px;
+}
+
 /**
  * Basic typography style for copy text
  */

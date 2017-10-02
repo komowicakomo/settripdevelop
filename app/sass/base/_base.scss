@@ -91,7 +91,7 @@ ul{
   opacity: 0;
   z-index: 0;
   visibility: hidden;
-  transition: opacity 0.3s ease ; 
+  transition: opacity 0.3s ease ;
   &.active{
     visibility: visible;
     opacity: 1;
@@ -130,4 +130,15 @@ ul{
 // overwrite row bootstrap
 .row{
   margin: 0;
+}
+
+.star-rating{
+  .rating-container {
+    white-space: nowrap;
+  }
+  em{
+    display: inline-block;
+    color: $orange;
+    margin-right: 3px;
+  }
 }

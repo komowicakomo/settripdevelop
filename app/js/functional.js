@@ -122,6 +122,25 @@ jQuery.fn.removeClassExcept = function (val) {
 };
 
 
+var renderStar = function() {
+  var container = $('.planbox-rating.star-rating')
+
+  container.each(function(){
+    var Star = '<em class="fa fa-star" aria-hidden="true"></em>'
+    var Count = $(this).attr('data-star')
+    var StarContainer = $(this).find('.rating-container')
+    var StarTemp = ''
+    for( var x = 0 ; x < Count ; x++ ){
+      StarTemp = StarTemp + Star
+    }
+    console.log(StarTemp)
+    StarContainer.append(StarTemp)
+  })
+}
+
 $(window).on('load',function(){
+
+  renderStar()
+
   svgToImage()
 })
