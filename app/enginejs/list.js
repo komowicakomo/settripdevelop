@@ -1,8 +1,5 @@
 var lists = [
   {
-        "name": "Homepage",
-        "path": "index.html?view=home"
-  } , {
         "name": "Styleguide Typhography",
         "path": "index-solid.html?view=styleguide_typography"
   } , {
@@ -11,6 +8,12 @@ var lists = [
   } , {
         "name": "Styleguide Forms",
         "path": "index-solid.html?view=styleguide_form"
+  } , {
+        "name": "Homepage",
+        "path": "index.html?view=home"
+  } , {
+        "name": "Recomended Plan",
+        "path": "index-solid.html?view=recomended_plan"
   } , {
         "name": "Plan Destinasi",
         "path": "index-solid.html?view=plan_destinasi"

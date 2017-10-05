@@ -1765,6 +1765,111 @@ header.fixed-header .header-container {
   background-color: #5b8ef4;
 }
 
+.card {
+  display: inline-block;
+  width: 450px;
+  margin: 0 10px;
+  box-shadow: 0 1px 3px 0 rgba(63, 63, 68, 0.15), 0 0 0 1px rgba(63, 63, 68, 0.05);
+}
+
+.card--full {
+  width: 100%;
+  margin: 0;
+  transition: transform 0.3s ease;
+}
+
+.card--full .card__slider {
+  height: 250px;
+}
+
+.card--full:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 6px 10px 0px rgba(63, 63, 68, 0.15);
+}
+
+.card--full:hover .card__pricewrap img circle, .card--full:hover .card__pricewrap svg circle {
+  fill: #5b8ef4;
+  stroke: #fff;
+}
+
+.card--full:hover .card__pricewrap img path, .card--full:hover .card__pricewrap svg path {
+  stroke: #fff;
+}
+
+.card__slider {
+  width: 100%;
+  height: 200px;
+}
+
+.card__slider img {
+  width: 100%;
+  height: 100%;
+}
+
+.card__location {
+  padding: 15px 0;
+  margin: 0;
+}
+
+.card__map {
+  width: 100%;
+}
+
+.card__infowrap h5 {
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.card__infowrap .card__desc {
+  color: #637381;
+  height: 45px;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card__info {
+  color: #a4a4a4;
+}
+
+.card__info span, .card__info p {
+  display: inline-block;
+  color: #a4a4a4;
+}
+
+.card__info span {
+  margin-right: 5px;
+}
+
+.card__pricewrap {
+  width: 100%;
+  padding: 15px;
+  border-top: solid 1px #e4e4e4;
+  border-bottom: solid 1px #e4e4e4;
+}
+
+.card__pricewrap h2 {
+  color: #ffb757;
+  margin: 0;
+  font-weight: bold;
+}
+
+.card__pricewrap span {
+  color: #637381;
+  font-size: 15px;
+  vertical-align: middle;
+  font-weight: normal;
+}
+
+.card__pricewrap img, .card__pricewrap svg {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+}
+
 .form-group {
   display: block;
 }
@@ -2628,81 +2733,6 @@ header.fixed-header .header-container {
   width: 3410px;
 }
 
-.home-card {
-  display: inline-block;
-  width: 450px;
-  margin: 0 10px;
-  box-shadow: 0 1px 3px 0 rgba(63, 63, 68, 0.15), 0 0 0 1px rgba(63, 63, 68, 0.05);
-}
-
-.home-card__slider img {
-  width: 100%;
-}
-
-.home-card__location {
-  padding: 15px 0;
-  margin: 0;
-}
-
-.home-card__map {
-  width: 100%;
-}
-
-.home-card__infowrap h5 {
-  font-weight: bold;
-  margin-bottom: 15px;
-}
-
-.home-card__infowrap .home-card__desc {
-  color: #637381;
-  height: 45px;
-  display: block;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.home-card__info {
-  color: #a4a4a4;
-}
-
-.home-card__info span, .home-card__info p {
-  display: inline-block;
-  color: #a4a4a4;
-}
-
-.home-card__info span {
-  margin-right: 5px;
-}
-
-.home-card__pricewrap {
-  width: 100%;
-  padding: 15px;
-  border-top: solid 1px #e4e4e4;
-  border-bottom: solid 1px #e4e4e4;
-}
-
-.home-card__pricewrap h2 {
-  color: #ffb757;
-  margin: 0;
-  font-weight: bold;
-}
-
-.home-card__pricewrap span {
-  color: #637381;
-  font-size: 15px;
-  vertical-align: middle;
-  font-weight: normal;
-}
-
-.home-card__pricewrap img {
-  position: absolute;
-  width: 35px;
-  height: 35px;
-  top: 50%;
-  right: 15px;
-  transform: translateY(-50%);
-}
-
 .home-wrapper__plan {
   background-size: cover;
   background-repeat: no-repeat;
@@ -2738,6 +2768,63 @@ header.fixed-header .header-container {
   line-height: 1.67;
   color: #fff;
   margin-bottom: 20px;
+}
+
+.rp {
+  padding-top: 110px;
+}
+
+.rp__filter {
+  padding: 10px 0;
+}
+
+.rp__filter h3 {
+  margin: 0;
+}
+
+.rp__filter-wrapper {
+  text-align: right;
+}
+
+.rp__filter-wrap {
+  display: inline-block;
+  width: 100%;
+  text-align: left;
+  clear: both;
+}
+
+.rp__filter-content {
+  width: 50%;
+  display: inline-block;
+  border: 1px solid #e9e9e9;
+  background-color: #fff;
+  padding: 15px;
+  float: left;
+}
+
+.rp__filter-p {
+  display: block;
+  width: 100%;
+  font-size: 12px;
+  margin: 0 0 5px;
+}
+
+.rp__wrapper {
+  border-top: 1px solid #e4e4e4;
+  padding: 10px;
+}
+
+.rp__wrap {
+  margin: 0 -20px;
+}
+
+.rp__content {
+  padding: 10px;
+}
+
+.rp__btn {
+  text-align: center;
+  margin: 50px 0 150px;
 }
 
 .plan-destinasi-board {
