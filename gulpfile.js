@@ -97,7 +97,9 @@ gulp.task('jshint', function(){
 gulp.task('scripts', ['jshint'], function(){
   //used to make sure the sources is in order
   var source = [
-    config.path.src + '/js/plugins/fastclick.js'
+    config.path.src + '/js/plugins/fastclick.js',
+    config.path.src + '/js/plugins/parsley.min.js',
+    config.path.src + '/js/plugins/nouislider.min.js'
   ]
   //return gulp.src(config.path.src + '/js/plugins/*.js')
   return gulp.src(source)

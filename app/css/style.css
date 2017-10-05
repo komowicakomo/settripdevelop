@@ -610,6 +610,18 @@ ul li {
   margin-right: 3px;
 }
 
+.middle-v {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.noUi-target {
+  height: 3px;
+  border-radius: 100px;
+  background-color: #d8d8d8;
+}
+
 /**
  * Basic typography style for copy text
  */
@@ -2998,6 +3010,73 @@ header.fixed-header .header-container {
   width: 100%;
 }
 
+.pd-maps-box {
+  position: relative;
+  width: 100%;
+  height: 240px;
+}
+
+.plan-cart-box {
+  margin-top: 16px;
+  border-radius: 4px;
+  background-color: #ffffff;
+  border: solid 1px #e4e4e4;
+  padding: 8px;
+  width: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+}
+
+.plan-cart-box .planbox-img {
+  width: 20%;
+  border-radius: 2px;
+  position: relative;
+  overflow: hidden;
+}
+
+.plan-cart-box .planbox-img img {
+  width: 100%;
+}
+
+.plan-cart-box .planbox-img:after {
+  content: '';
+  display: block;
+  padding-top: 100%;
+}
+
+.plan-cart-box .planbox-text {
+  padding-left: 8px;
+  padding-top: 4px;
+  position: relative;
+}
+
+.plan-cart-box .planbox-text .planbox-destination span {
+  font-size: 10px;
+  line-height: 1.2;
+  color: #3d3d3d;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.plan-cart-box .planbox-text .planbox-destination p {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1;
+  color: #3d3d3d;
+  margin: 0px;
+}
+
+.plan-cart-box .planbox-text .planbox-rating {
+  margin-top: 4px;
+}
+
+.plan-cart-box .planbox-text .planbox-rating span {
+  margin-top: 6px;
+  color: #3c3c3c;
+}
+
 .modal-plan-destinasi .close-modal-container {
   position: absolute;
   left: 0;
@@ -3021,6 +3100,21 @@ header.fixed-header .header-container {
   background-color: #f9f9fb;
   transform: translateY(100%);
   will-change: transform;
+  overflow: hidden;
+}
+
+.modal-plan-destinasi .modal-plan-destinasi-ov-body.filter-show .modal-pd-body {
+  opacity: 0.3;
+}
+
+.modal-plan-destinasi .modal-plan-destinasi-ov-body.filter-show .modal-filter-body {
+  transform: scale(1);
+  transition: 0.4s ease;
+}
+
+.modal-plan-destinasi .modal-plan-destinasi-ov-body.filter-show .modal-filter-body > .container {
+  opacity: 1;
+  transition: 0.4s ease 0.4s;
 }
 
 .modal-plan-destinasi.active .modal-plan-destinasi-ov-body {
@@ -3032,10 +3126,11 @@ header.fixed-header .header-container {
   width: 100%;
   background-color: white;
   padding-top: 24px;
-  padding-bottom: 16px;
 }
 
 .modal-plan-destinasi .modal-pd-head > .container {
+  position: relative;
+  z-index: 3;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: row;
@@ -3081,6 +3176,12 @@ header.fixed-header .header-container {
   border-right: 1px solid #e9e9e9;
   cursor: pointer;
   margin: 0px;
+  transition: 0.4s ease;
+}
+
+.modal-plan-destinasi .modal-pd-head .modal-pd-filter .modal-pd-filter-inner li.active {
+  color: #5c8ef3;
+  border-color: #5c8ef3;
 }
 
 .modal-plan-destinasi .modal-pd-head .modal-pd-filter .modal-pd-filter-inner li p {
@@ -3138,6 +3239,7 @@ header.fixed-header .header-container {
   position: relative;
   height: calc(100% - 102px);
   position: relative;
+  transition: 0.4s ease;
 }
 
 .modal-plan-destinasi .modal-pd-box-container {
@@ -3291,6 +3393,198 @@ header.fixed-header .header-container {
 .modal-plan-destinasi .planbox-action .planbox-button-action > button + button {
   margin-left: 4px;
   color: white;
+}
+
+.modal-filter-body {
+  position: absolute;
+  background-color: white;
+  width: 100%;
+  z-index: 4;
+  border-top: solid 1px #e4e4e4;
+  border-bottom: solid 1px #e4e4e4;
+  transform-origin: top;
+  will-change: transform;
+  transform: scaleY(0);
+  transition: 0.4s ease 0.4s;
+}
+
+.modal-filter-body > .container {
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.modal-filter-body .modal-primary-filter {
+  min-height: 90px;
+  position: relative;
+  padding-top: 10px;
+  width: 100%;
+}
+
+.modal-filter-body .modal-primary-filter .filter-reset {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.modal-filter-body .modal-primary-filter .filter-reset button {
+  padding-top: 13px;
+  padding-bottom: 13px;
+  padding-left: 10px;
+  padding-right: 13px;
+  font-size: 15px;
+  text-transform: capitalize;
+}
+
+.modal-filter-body .modal-primary-filter .filter-reset button i {
+  margin-right: 8px;
+}
+
+.modal-filter-body .filter-menu-box {
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding: 10px 20px;
+  border: 1px solid #e4e4e4;
+  border-top: 0px solid transparent;
+  border-bottom: 0px solid transparent;
+  position: relative;
+  margin-right: -5px;
+  cursor: pointer;
+}
+
+.modal-filter-body .filter-menu-box:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  height: 4px;
+  left: -1px;
+  right: -1px;
+  background-color: #5c8ef3;
+  opacity: 0;
+  transition: 0.3s ease;
+}
+
+.modal-filter-body .filter-menu-box:before {
+  content: '';
+  background: linear-gradient(to bottom, white 20%, rgba(255, 255, 255, 0) 100%);
+  position: absolute;
+  top: 0;
+  left: -1px;
+  right: -1px;
+  height: 100%;
+  z-index: 1;
+}
+
+.modal-filter-body .filter-menu-box .fmb-inner {
+  transition: 0.4s ease;
+  opacity: 0.3;
+  position: relative;
+  z-index: 2;
+}
+
+.modal-filter-body .filter-menu-box .fmb-img {
+  width: 48px;
+  height: 48px;
+}
+
+.modal-filter-body .filter-menu-box .fmb-img path, .modal-filter-body .filter-menu-box .fmb-img text {
+  fill: #292b2c;
+  transition: 0.3s ease;
+}
+
+.modal-filter-body .filter-menu-box .fmb-img circle {
+  stroke: #292b2c;
+  transition: 0.3s ease;
+}
+
+.modal-filter-body .filter-menu-box .fmb-label {
+  margin-top: 8px;
+  font-weight: 600;
+  text-align: center;
+  width: 100%;
+}
+
+.modal-filter-body .filter-menu-box .fmb-label span {
+  display: block;
+}
+
+.modal-filter-body .filter-menu-box:hover .fmb-inner {
+  opacity: 1;
+}
+
+.modal-filter-body .filter-menu-box.active:after {
+  opacity: 1;
+}
+
+.modal-filter-body .filter-menu-box.active .fmb-inner {
+  opacity: 1;
+}
+
+.modal-filter-body .filter-menu-box.active .fmb-label span {
+  color: #5c8ef3;
+}
+
+.modal-filter-body .filter-menu-box.active .fmb-img path, .modal-filter-body .filter-menu-box.active .fmb-img text {
+  fill: #5c8ef3;
+}
+
+.modal-filter-body .filter-menu-box.active .fmb-img circle {
+  stroke: #5c8ef3;
+}
+
+.modal-filter-body .modal-child-filter {
+  width: 100%;
+  height: 94.9px;
+  background-color: #f9f9fb;
+  border-top: solid 1px #e4e4e4;
+  border-bottom: solid 1px #e4e4e4;
+  position: relative;
+}
+
+.modal-filter-body .modal-child-filter .mcf-action {
+  width: 100%;
+  opacity: 0;
+  z-index: 0;
+  visibility: hidden;
+}
+
+.modal-filter-body .modal-child-filter .mcf-action.active {
+  opacity: 1;
+  z-index: 1;
+  visibility: visible;
+}
+
+.modal-filter-body .modal-child-filter .mcf-action .form-group {
+  margin-bottom: 0px;
+}
+
+.modal-filter-body .modal-child-filter .mcf-action .middle-v {
+  top: 70%;
+  width: calc(100% - 40px);
+}
+
+.modal-filter-body .modal-child-filter > .row {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.modal-filter-body .modal-filter-footer {
+  position: relative;
+  width: 100%;
+  height: 70px;
+}
+
+.modal-filter-body .modal-filter-footer .close-filter {
+  position: absolute;
+  right: 0;
+  top: 14px;
+  cursor: pointer;
+}
+
+.modal-filter-body .modal-filter-footer .close-filter p {
+  color: #5c8ef3;
+  font-weight: 600;
 }
 
 /*# sourceMappingURL=style.css.map */
