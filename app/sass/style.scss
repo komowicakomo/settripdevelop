@@ -40,11 +40,13 @@
 // 5. Components
 @import
   'components/button',
+  'components/cards',
   'components/forms';
 
 // 6. Page-specific styles
 @import
   'pages/home',
+  'pages/recomended_plan',
   'pages/plan_destinasi';
 
 // 7. Themes
