@@ -3050,6 +3050,7 @@ header.fixed-header .header-container {
   padding-left: 8px;
   padding-top: 4px;
   position: relative;
+  width: calc(100% - 20%);
 }
 
 .plan-cart-box .planbox-text .planbox-destination span {
@@ -3075,6 +3076,16 @@ header.fixed-header .header-container {
 .plan-cart-box .planbox-text .planbox-rating span {
   margin-top: 6px;
   color: #3c3c3c;
+}
+
+.plan-cart-box .planbox-text .planbox-price {
+  width: 100%;
+  position: absolute;
+  left: 8px;
+  bottom: 0px;
+  font-size: 24px;
+  line-height: 1;
+  color: #3d3d3d;
 }
 
 .modal-plan-destinasi .close-modal-container {

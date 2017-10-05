@@ -257,6 +257,7 @@
     padding-left: 8px;
     padding-top: 4px;
     position: relative;
+    width: calc(100% - 20%);
     .planbox-destination{
       span{
         font-size: 10px;
@@ -279,6 +280,15 @@
         margin-top: 6px;
         color: #3c3c3c;
       }
+    }
+    .planbox-price{
+      width: 100%;
+      position: absolute;
+      left : 8px;
+      bottom: 0px;
+      font-size: 24px;
+      line-height: 1;
+      color: #3d3d3d;
     }
   }
 }
