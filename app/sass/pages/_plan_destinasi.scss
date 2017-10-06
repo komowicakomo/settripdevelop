@@ -104,6 +104,7 @@
   .pd-mb-step{
     background-color: #f9f9fb;
     border-right: solid 1px #e9e9eb;
+    border-bottom: solid 1px #e9e9eb;
     flex-grow: 1;
     padding: 10px;
     cursor: default;
@@ -121,7 +122,7 @@
       margin: auto;
       font-size: 15px;
       text-align: center;
-      line-height: 24px;
+      line-height: 28px;
       @include popins ;
       margin-bottom: 10px;
     }
@@ -141,6 +142,15 @@
       &:before{
         border: solid 4px #5b8ef4;
         color: #5b8ef4;
+        line-height: 24px;
+      }
+    }
+    &.done{
+      background-color: #ffffff;
+      &:before{
+        font : normal normal normal 14px/1 FontAwesome ;
+        content: "\f00c";
+        line-height: 30px;
       }
     }
   }
@@ -149,15 +159,26 @@
     min-height: 240px;
     .empty-state{
       width: 100%;
-      height: 240px;
+      min-height: 240px;
       background-color: #f9f9fb;
       position: relative;
+      text-align: center;
       h5{
         font-weight: 300;
         line-height: 1;
         letter-spacing: -0.6px;
         text-align: center;
         color: #3d3d3d;
+        & + button {
+          margin-top: 25px;
+          margin-bottom: 24px;
+        }
+      }
+      a{
+        font-size: 15px;
+        line-height: 1;
+        color: #5b8ef4;
+        font-weight: 300;
       }
     }
     .btn-add{
@@ -183,6 +204,24 @@
     flex-direction: row;
     border-bottom: solid 1px #e9e9eb;
     padding-bottom: 12px;
+    &.child{
+      background-color: #f9f9fb;
+      box-shadow: 0 1px 0 0 #e4e4e4, inset 0 0 0 0 #e4e4e4;
+      & > div {
+        &.pd-cp-text-label{
+          font-size: 12px;
+          text-align: left;
+          color: #3d3d3d;
+          font-weight: 300;
+        }
+        &.pd-cp-text-number{
+          font-size: 12px;
+          text-align: right;
+          color: #a4a4a4;
+          font-weight: 300;
+        }
+      }
+    }
     p{
       font-weight: 600;
       line-height: 1;
@@ -215,7 +254,25 @@
       display: block;
       .pd-cp-text-label{
         font-size: 15px;
+        text-align: left;
+        font-weight: 600;
+      }
+      .pd-cp-text-number{
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 1;
+        text-align: right;
+        color: #73bd67;
+      }
+      .pd-cp-container{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
         margin-bottom: 48px;
+        & > div{
+          flex-grow: 1;
+        }
       }
       button{
         width: 100%;
@@ -235,10 +292,21 @@
   border-radius: 4px;
   background-color: #ffffff;
   border: solid 1px #e4e4e4;
-  padding: 8px;
   width: 100%;
-  display: flex;
-  flex-direction: row ;
+  position: relative;
+  .btn-delete{
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    z-index: 3;
+  }
+  .planbox-head{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: row ;
+    padding: 8px;
+  }
   .planbox-img{
     width: 20% ;
     border-radius: 2px;
@@ -251,6 +319,91 @@
       content: '';
       display: block;
       padding-top: 100% ;
+    }
+  }
+  .pcb-body{
+    background-color: #f9f9fb;
+    padding: 14px;
+    box-shadow: 0 1px 0 0 #e4e4e4, 0 -1px 0 0 #e4e4e4;
+    position: relative;
+    display: none;
+    .pcbb-head{
+      height: 58px;
+      line-height: 58px;
+      font-size: 18px;
+      font-weight: 300;
+      border-bottom: solid 1px #e4e4e4;
+      text-transform: uppercase;
+    }
+    .pcbb-box{
+      display: flex;
+      flex-direction: row;
+      border-bottom: solid 1px #e4e4e4;
+      padding: 8px;
+      position: relative;
+      h5{
+        margin-top: 8px;
+        & + h5{
+          font-size: 15px;
+          margin-bottom: 0px;
+        }
+      }
+      p{
+        font-size: 15px;
+        line-height: 1.33;
+        text-align: left;
+        color: #637381;
+        font-weight: 300;
+        & + h5{
+          font-size: 15px;
+          margin-bottom: 0px;
+        }
+      }
+      &:last-child{
+        border-bottom: 0px solid transparent;
+      }
+      .pcbbb-input{
+        position: absolute;
+        left:8px;
+        .checkbox-area label{
+          height: 24px;
+        }
+        & > div{
+          width: 100%;
+        }
+      }
+      .pcbbb-label{
+        padding-left: 52px;
+      }
+    }
+  }
+  .planbox-body-action{
+    width: 100%;
+    height: 52px;
+    border-top: solid 1px #e4e4e4;
+    position: relative;
+      cursor: pointer;
+    .pba-label{
+      white-space: nowrap;
+      right: 16px;
+      position: absolute;
+      p{
+        font-size: 15px;
+        line-height: 24px;
+        color: #3d3d3d;
+        display: inline-block;
+        margin: 0px;
+        margin-right: 8px;
+      }
+    }
+    .pba-label-ico{
+      width: 24px;
+      height: 24px;
+      background-color: #F9F9FB;
+      border-radius: 100%;
+      text-align: center;
+      line-height: 30px;
+      display: inline-block;
     }
   }
   .planbox-text{
@@ -567,6 +720,8 @@
     }
   }
 }
+
+
 .modal-filter-body{
   position: absolute;
   background-color: white;

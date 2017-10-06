@@ -20,5 +20,8 @@ var lists = [
   } , {
         "name": "Plan Destinasi Next",
         "path": "index-solid.html?view=plan_destinasi_next"
+  } , {
+        "name": "Plan penginapan ",
+        "path": "index-solid.html?view=plan_penginapan"
   }
 ];

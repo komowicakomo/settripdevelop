@@ -97,3 +97,7 @@ inputs.forEach(function(input, handle) {
 });
 
 initMap({lat: -25.363, lng: 131.044})
+
+$(document).on('click','.planbox-body-action',function(){
+  $(this).parents('.plan-cart-box').find('.pcb-body').slideToggle()
+})
