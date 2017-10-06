@@ -15,6 +15,9 @@ var lists = [
         "name": "Recomended Plan",
         "path": "index-solid.html?view=recomended_plan"
   } , {
+        "name": "Choose Plan",
+        "path": "index-solid.html?view=choose_plan"
+  } , {
         "name": "Plan Destinasi",
         "path": "index-solid.html?view=plan_destinasi"
   } , {
