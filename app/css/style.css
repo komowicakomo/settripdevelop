@@ -746,7 +746,7 @@ span {
   transform: translateY(-50%);
 }
 
-.vcenter {
+.vhcenter {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -2770,6 +2770,107 @@ header.fixed-header .header-container {
   margin-bottom: 20px;
 }
 
+.cp {
+  padding-top: 75px;
+}
+
+.cp__banner {
+  position: relative;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.cp__banner:before {
+  content: '';
+  position: relative;
+  display: inline-block;
+  padding-top: 15%;
+}
+
+.cp__banner h1, .cp__banner h3 {
+  color: #fff;
+}
+
+.cp__banner h1 {
+  margin-bottom: 30px;
+}
+
+.cp__banner span {
+  font-size: 32px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.cp__banner h3 {
+  margin-bottom: 0;
+  font-weight: normal;
+}
+
+.cp__banner-text {
+  position: absolute;
+  top: 40%;
+  left: 0;
+  right: 0;
+  transform: translateY(-40%);
+  margin: auto;
+}
+
+.cp__container {
+  margin: -50px 0 100px;
+}
+
+.cp__wrapper {
+  margin: 0 -20px;
+}
+
+.cp__content {
+  padding: 0 20px;
+}
+
+.cp__content-wrap {
+  text-align: center;
+  border-radius: 4px;
+  background-color: #ffffff;
+  box-shadow: 0 1px 3px 0 rgba(63, 63, 68, 0.15), 0 0 0 1px rgba(63, 63, 68, 0.05);
+  padding: 30px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.cp__content-wrap:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 6px 10px 0px rgba(63, 63, 68, 0.15);
+}
+
+.cp__content-wrap:hover .card__pricewrap svg circle {
+  fill: #5b8ef4;
+  stroke: #fff;
+}
+
+.cp__content-wrap:hover .card__pricewrap svg path {
+  stroke: #fff;
+}
+
+.cp__content-wrap h3 {
+  margin: 15px 0 10px;
+}
+
+.cp__content-wrap p {
+  display: block;
+  font-size: 15px;
+  max-width: 80%;
+  margin: 0 auto 10px;
+  color: #637381;
+  line-height: 1.33;
+}
+
+.cp__icon {
+  width: 80px;
+  height: 80px;
+}
+
 .rp {
   padding-top: 80px;
 }
@@ -2809,30 +2910,12 @@ header.fixed-header .header-container {
 .rp__filter-content {
   width: 50%;
   display: inline-block;
-  border: 1px solid #e9e9e9;
-  background-color: #fff;
-  padding: 15px;
   float: left;
+  margin-bottom: 0;
 }
 
-.rp__filter-content:last-child {
+.rp__filter-content:last-child select {
   border-left: none;
-}
-
-.rp__filter-p {
-  display: block;
-  width: 100%;
-  font-size: 12px;
-  margin: 0 0 5px;
-}
-
-.rp__filter-select {
-  width: 100%;
-  border: none;
-  font-size: 16px;
-  outline: none;
-  color: #3d3d3d;
-  margin: 0 -5px;
 }
 
 .rp__wrapper {
