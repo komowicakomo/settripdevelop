@@ -222,6 +222,7 @@ $(document).on('click','.qtyplus',function (e) {
         // Otherwise put a 0 there
         $(fieldName).val(max)
     }
+    $(fieldName).change();
 })
 // This button will decrement the value till 0
 $(document).on('click','.qtyminus',function (e) {
@@ -232,13 +233,14 @@ $(document).on('click','.qtyminus',function (e) {
     // Get its current value
     var currentVal = parseInt($(fieldName).val())
     // If it isn't undefined or its greater than 0
-    if (!isNaN(currentVal) && currentVal > 0) {
+    if (!isNaN(currentVal) && currentVal > 1) {
         // Decrement one
         $(fieldName).val(currentVal - 1)
     } else {
         // Otherwise put a 0 there
-        $(fieldName).val(0)
+        $(fieldName).val(1)
     }
+    $(fieldName).change();
 })
 
 function svgToImage(){

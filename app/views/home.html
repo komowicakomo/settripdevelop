@@ -7,7 +7,50 @@
 		<h1 class="home-banner__title container">Temukan tempat wisata <div class="home-banner__subtitle"><span>terbaik</span></div></h1>
 		<div class="home-datetime container">
 			<p class="home-datetime__p">Pilih tanggal dan destinasi kamu</p>
-			<!-- datepicker option goes here -->
+			<div class="row">
+				<div class="home-datetime__choose col-md-4">
+					<div class="form-group">
+						<div class="input-group select with-icon">
+					        <div class="input-icon">
+					          <img src="images/icon/ic-location.svg" alt="Location icon">
+					        </div>
+					        <select class="" name="">
+					          <option value="" disabled selected>Kemana?</option>
+					        </select>
+					    </div>
+					</div>
+				</div>
+				<div class="home-datetime__choose home-datetime__choose--middle col-md-4">
+					<div class="form-group">
+						<div class="input-group select with-icon">
+					        <div class="input-icon">
+					          <img src="images/icon/ic-calendar-default.svg" alt="Calendar icon">
+					        </div>
+					        <input type="text" mode="daterange">
+					    </div>
+					</div>
+				</div>
+				<div class="home-datetime__choose home-datetime__choose--last col-md-4">
+					<div class="form-group">
+						<div class="input-group select with-icon">
+					        <div class="input-icon">
+					          <img src="images/icon/ic-person.svg" alt="Person icon">
+					        </div>
+					        <input type="text" mode="increment" readonly value="Peserta?">
+					    </div>
+					</div>
+					<div id="qty" class="home-datetime__qty">
+						<div class="qty-form">
+				          <button class="qtyminus"></button>
+				          <input type="text" name="quantity" value="1" class="qty home-datetime__qty-form" readonly="readonly">
+				          <button  class="qtyplus"></button>
+				          <div class="btn home-datetime__qty-btn">
+				          	Tutup
+				          </div>
+				        </div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 	<!-- slider section -->
@@ -409,3 +452,6 @@
 		</div>
 	</div>
 </div>
+<script src="js/plugins/moment.min.js" charset="utf-8"></script>
+<script src="js/plugins/daterangepicker.js" charset="utf-8"></script>
+<script src="js/view/home.js" charset="utf-8"></script>
