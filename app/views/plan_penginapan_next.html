@@ -1,6 +1,5 @@
 <script src="js/view/plan_destinasi.js" charset="utf-8"></script>
 <div class="container container--full grey">
-
   <div class="plan-destinasi-board">
     <div class="container">
       <div class="plan-destinasi-boardbox-container">
@@ -91,12 +90,12 @@
                 </div>
                 <div class="planbox-head">
                   <div class="planbox-img">
-                    <img class="middle-both" src="images/dummy/dummy.jpg" alt="dummy img">
+                    <img class="middle-both" src="images/dummy/hotel.jpg" alt="hotel img">
                   </div>
                   <div class="planbox-text">
                     <div class="planbox-destination">
-                      <span>ATRAKSI</span>
-                      <p>Ranca Upas</p>
+                      <span>PENGINAPAN</span>
+                      <p>Hotel Santika Bandung</p>
                     </div>
                     <div class="planbox-rating star-rating" data-star="5" >
                       <div class="rating-container">
@@ -109,49 +108,93 @@
                     </div>
                 </div>
                 </div>
-                <div class="pcb-body">
+                <div class="pcb-body show">
                   <div class="pcbb-head">
-                    Aktifitas
+                    Kamar
                   </div>
                   <div class="pcbb-box">
-                    <div class="pcbbb-input middle-v">
-
-                    </div>
-                    <div class="pcbbb-label">
-                      <h5>2 Tiket Masuk</h5>
-                      <h5>IDR 40.000</h5>
-                    </div>
-                  </div>
-                  <div class="pcbb-box">
-                    <div class="pcbbb-input middle-v">
-                      <div class="checkbox-area">
-                        <input type="checkbox" name="address" id="billing" data-parsley-multiple="address" data-parsley-id="46">
-                        <label for="billing" class=""></label>
+                    <div class="row">
+                      <div class="form-group col-sm-4">
+                        <label for="">Checkin</label>
+                        <div class="input-group select with-icon">
+                          <div class="input-icon">
+                            <img src="images/icon/ic-calendar-default.svg" alt="Calendar icon">
+                          </div>
+                          <select class="" name="">
+                            <option value="">Content</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="form-group col-sm-4">
+                        <label for="">Durasi</label>
+                        <div class="input-group select">
+                          <select class="" name="">
+                            <option value="">Content</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="form-group col-sm-4">
+                        <label for="">Kamar</label>
+                        <div class="input-group select">
+                          <select class="" name="">
+                            <option value="">Content</option>
+                          </select>
+                        </div>
                       </div>
                     </div>
-                    <div class="pcbbb-label">
-                      <h5>Highrope outbound</h5>
-                      <p>Yaitu jenis paket outbound berupa permainan di ketinggian. Beberapa permainan highrope yang tersedia antara lain : flying fox, jembatan tali dua</p>
-                      <h5>Rp 40.000</h5>
-                    </div>
                   </div>
-                </div>
-                <div class="planbox-body-action">
-                  <div class="pba-label middle-v">
-                    <p>LIHAT DETAIL</p>
-                    <div class="pba-label-ico">
-                      <i class="fa fa-angle-down" aria-hidden="true"></i>
+                  <div class="pcbb-box">
+                    <div class="pcbbb-label">
+                      <div class="pcbbb-input middle-v">
+                        <div class="checkbox-area">
+                          <input type="checkbox" name="address" id="billing" data-parsley-multiple="address" data-parsley-id="46">
+                          <label for="billing" class=""></label>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-3">
+                          <div class="pcbb-img">
+                            <img src="images/dummy/hotel.jpg" alt="">
+                          </div>
+                        </div>
+                        <div class="col-sm-9">
+                          <h5>Smart room twin</h5>
+                          <p>Yaitu jenis paket outbound berupa permainan di ketinggian. Beberapa permainan highrope yang tersedia antara lain : flying fox, jembatan tali dua</p>
+                          <h5>Rp 40.000</h5>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="pcbb-extra">
+                      <h5>Fasilitas Tambahan</h5>
+                      <div class="pcbb-extra-input">
+                        <div class="checkbox-area ">
+                          <input type="checkbox" name="address" id="billing" data-parsley-multiple="address" data-parsley-id="46">
+                          <label for="billing" class="">
+                            Lunch
+                            <span class="price">
+                              + Rp 120.000
+                            </span>
+                          </label>
+                      </div>
+                      </div>
+                      <div class="pcbb-extra-input">
+                        <div class="checkbox-area ">
+                          <input type="checkbox" name="address" id="billing" data-parsley-multiple="address" data-parsley-id="46">
+                          <label for="billing" class="">
+                            Dinner
+                            <span class="price">
+                              + Rp 120.000
+                            </span>
+                          </label>
+                      </div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-
               <div class="row button-place">
                 <div class="col-md-9">
-                  <button class="btn btn-add btn-js-action" data-action="open-modal" data-actionFor="modal-plan-destinasi">
-                    <span class="ico--plus"></span>
-                    <p class="btn--text">Tambah Destinasi</p>
-                  </button>
+
                 </div>
                 <div class="col-md-3">
                     <button class="btn btn--blue btn--medium">LANJUTKAN</button>
@@ -214,6 +257,7 @@
       </div>
     </div>
   </div>
+
 </div>
 
 <div class="modal-overlay modal-plan-destinasi">
@@ -377,12 +421,12 @@
             <div class="modal-pd-planbox">
               <div class="planbox-description">
                 <div class="planbox-img">
-                  <img class="middle-both" src="images/dummy/dummy.jpg" alt="dummy img">
+                  <img class="middle-both" src="images/dummy/hotel.jpg" alt="hotel img">
                 </div>
                 <div class="planbox-text">
                   <div class="planbox-destination">
-                    <span>ATRAKSI</span>
-                    <p>Ranca Upas</p>
+                    <span>PENGINAPAN</span>
+                    <p>Hotel Santika Bandung</p>
                   </div>
                   <div class="planbox-rating star-rating" data-star="5" >
                     <div class="rating-container">
@@ -407,12 +451,12 @@
             <div class="modal-pd-planbox">
               <div class="planbox-description">
                 <div class="planbox-img">
-                  <img class="middle-both" src="images/dummy/dummy.jpg" alt="dummy img">
+                  <img class="middle-both" src="images/dummy/hotel.jpg" alt="hotel img">
                 </div>
                 <div class="planbox-text">
                   <div class="planbox-destination">
-                    <span>ATRAKSI</span>
-                    <p>Ranca Upas</p>
+                    <span>PENGINAPAN</span>
+                    <p>Hotel Santika Bandung</p>
                   </div>
                   <div class="planbox-rating star-rating" data-star="5" >
                     <div class="rating-container">
@@ -437,12 +481,12 @@
             <div class="modal-pd-planbox">
               <div class="planbox-description">
                 <div class="planbox-img">
-                  <img class="middle-both" src="images/dummy/dummy.jpg" alt="dummy img">
+                  <img class="middle-both" src="images/dummy/hotel.jpg" alt="hotel img">
                 </div>
                 <div class="planbox-text">
                   <div class="planbox-destination">
-                    <span>ATRAKSI</span>
-                    <p>Ranca Upas</p>
+                    <span>PENGINAPAN</span>
+                    <p>Hotel Santika Bandung</p>
                   </div>
                   <div class="planbox-rating star-rating" data-star="5" >
                     <div class="rating-container">
@@ -469,12 +513,12 @@
             <div class="modal-pd-planbox">
               <div class="planbox-description">
                 <div class="planbox-img">
-                  <img class="middle-both" src="images/dummy/dummy.jpg" alt="dummy img">
+                  <img class="middle-both" src="images/dummy/hotel.jpg" alt="hotel img">
                 </div>
                 <div class="planbox-text">
                   <div class="planbox-destination">
-                    <span>ATRAKSI</span>
-                    <p>Ranca Upas</p>
+                    <span>PENGINAPAN</span>
+                    <p>Hotel Santika Bandung</p>
                   </div>
                   <div class="planbox-rating star-rating" data-star="2" >
                     <div class="rating-container">
@@ -499,12 +543,12 @@
             <div class="modal-pd-planbox">
               <div class="planbox-description">
                 <div class="planbox-img">
-                  <img class="middle-both" src="images/dummy/dummy.jpg" alt="dummy img">
+                  <img class="middle-both" src="images/dummy/hotel.jpg" alt="hotel img">
                 </div>
                 <div class="planbox-text">
                   <div class="planbox-destination">
-                    <span>ATRAKSI</span>
-                    <p>Ranca Upas</p>
+                    <span>PENGINAPAN</span>
+                    <p>Hotel Santika Bandung</p>
                   </div>
                   <div class="planbox-rating star-rating" data-star="4" >
                     <div class="rating-container">
@@ -529,12 +573,12 @@
             <div class="modal-pd-planbox">
               <div class="planbox-description">
                 <div class="planbox-img">
-                  <img class="middle-both" src="images/dummy/dummy.jpg" alt="dummy img">
+                  <img class="middle-both" src="images/dummy/hotel.jpg" alt="hotel img">
                 </div>
                 <div class="planbox-text">
                   <div class="planbox-destination">
-                    <span>ATRAKSI</span>
-                    <p>Ranca Upas</p>
+                    <span>PENGINAPAN</span>
+                    <p>Hotek Santika Bandung</p>
                   </div>
                   <div class="planbox-rating star-rating" data-star="5" >
                     <div class="rating-container">

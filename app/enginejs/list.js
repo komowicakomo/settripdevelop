@@ -26,5 +26,23 @@ var lists = [
   } , {
         "name": "Plan penginapan ",
         "path": "index-solid.html?view=plan_penginapan"
+  } , {
+        "name": "Plan penginapan Next ",
+        "path": "index-solid.html?view=plan_penginapan_next"
+  } , {
+        "name": "Plan Transportasi ",
+        "path": "index-solid.html?view=plan_transportasi"
+  } , {
+        "name": "Plan Transportasi Next ",
+        "path": "index-solid.html?view=plan_transportasi_next"
+  } , {
+        "name": "Plan Pemandu ",
+        "path": "index-solid.html?view=plan_pemandu"
+  } , {
+        "name": "Plan Pemandu Next ",
+        "path": "index-solid.html?view=plan_pemandu_next"
+  } , {
+        "name": "Itinerary ",
+        "path": "index-solid.html?view=itinerary"
   }
 ];
