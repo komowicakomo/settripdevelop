@@ -10,7 +10,7 @@ var lists = [
         "path": "index-solid.html?view=styleguide_form"
   } , {
         "name": "Homepage",
-        "path": "index.html?view=home"
+        "path": "index-solid.html?view=home"
   } , {
         "name": "Recomended Plan",
         "path": "index-solid.html?view=recomended_plan"
