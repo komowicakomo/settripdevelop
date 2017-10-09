@@ -4327,6 +4327,17 @@ header.fixed-header .header-container {
   color: white;
 }
 
+.container--full .ccw-body {
+  max-width: 400px;
+  width: 100%;
+}
+
+.container--full .ccw-body p, .container--full .ccw-body h5 {
+  line-height: 1.33;
+  text-align: left;
+  color: #ffffff;
+}
+
 .plan-destinasi-board {
   background-color: #ffffff;
   padding: 16px 0px;
