@@ -363,4 +363,23 @@ $(window).on('load',function(){
   renderStar()
 
   svgToImage()
+
+  $('.point-square-bottom').each(function(){
+
+    var Connector = '<div class="point-connector"></div>'
+    var Parents = $(this).parents('.itn-body-box')
+    var Index = Parents.index() + 1
+    var NextPoint = $('.itn-body-box').eq(Index)
+    var CurPos = $(this).offset()
+    var NextPos = NextPoint.find('.point-square-top').offset()
+
+    if(NextPos !== undefined){
+      var ConnectorH = NextPos.top - CurPos.top
+      $(this).append(Connector)
+
+      $(this).find('.point-connector').css('height' , ConnectorH)
+    }
+
+  })
+
 })

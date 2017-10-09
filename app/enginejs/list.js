@@ -44,5 +44,11 @@ var lists = [
   } , {
         "name": "Itinerary ",
         "path": "index-solid.html?view=itinerary"
+  } , {
+        "name": "Pembayaran ",
+        "path": "index-solid.html?view=pembayaran"
+  } , {
+        "name": "Pembayaran Thankyou",
+        "path": "index-solid.html?view=pembayaran_thankyou"
   }
 ];

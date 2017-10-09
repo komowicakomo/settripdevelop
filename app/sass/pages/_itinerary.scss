@@ -180,3 +180,37 @@
     }
   }
 }
+
+.point-square{
+  position: relative;
+  margin: auto;
+  display: block;
+  width: 6px;
+  height: 6px;
+  &:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 6px;
+    height: 6px;
+    z-index: 2;
+    background-color: #ffffff;
+    border: solid 1px #5b8ef4;
+    border-radius: 50%;
+  }
+  &.point-square-top{
+    transform: translateY(-24px);
+    z-index: 3;
+  }
+}
+
+.point-connector{
+  position: absolute;
+  top: 3px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  width: 3px;
+  background-color: #5b8ef4;
+}

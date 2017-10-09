@@ -9,6 +9,7 @@ html {
   box-sizing: border-box;
 }
 
+
 /**
  * Make all elements from the DOM inherit from the parent box-sizing
  * Since `*` has a specificity of 0, it does not override the `html` value
@@ -52,6 +53,7 @@ ul{
 
   &.container-body{
     min-height: 100vh ;
+    padding-bottom: 48px;
   }
   &.container--full{
     max-width: 100%;
@@ -150,9 +152,33 @@ ul{
 }
 
 .noUi-target{
-  height: 3px;
+  height: 4px;
   border-radius: 100px;
+  border: 0px solid transparent;
+  box-shadow: none ;
   background-color: #d8d8d8;
+  .noUi-connect{
+     background-color: #5c8ff3;
+  }
+  .noUi-background{
+    background-color: #d8d8d8;
+    box-shadow: none;
+  }
+  .noUi-handle{
+    width: 12px;
+    height: 12px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+    border: solid 1px #e4e4e4;
+    border-radius: 100%;
+    left: -1px;
+    top: -4px;
+    right: 0px;
+    cursor: pointer;
+    &:after , &:before{
+      display: none;
+    }
+  }
 }
 
 .btn-delete{
@@ -179,6 +205,37 @@ ul{
   &:hover{
     &:after , &:before{
       background-color: $orange !important;
+    }
+  }
+}
+
+.social-share-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 24px;
+  .social-circle{
+    width: 28px;
+    height: 28px;
+    background-color: #ffffff;
+    border: solid 1px #e4e4e4;
+    line-height: 32px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 12px;
+    margin-right: 16px;
+    cursor: pointer;
+    &.facebook{
+      color: #49639e;
+    }
+    &.twitter{
+      color: #1da1f2;
+    }
+    &.pinterest{
+      color: #bd081c;
+    }
+    &.instagram{
+      color: #8a3ab9 ;
     }
   }
 }
