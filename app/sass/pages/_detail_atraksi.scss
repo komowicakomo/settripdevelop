@@ -147,11 +147,6 @@
         width: 100%;
         max-width: 680px;
         border-top: solid 1px #e4e4e4;
-        .ccw-ico{
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-        }
         img{
           display: inline-flex;
         }
@@ -176,6 +171,15 @@
             list-style: circle;
           }
         }
+      }
+    }
+    .ccw-ico{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      p{
+        margin-bottom: 0px;
+        margin-left: 8px;
       }
     }
   }
@@ -280,17 +284,33 @@
 
 .container--full{
   &.maps{
+    position: relative;
+    .maps-container{
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 50%;
+      position: absolute !important;
+    }
     h1{
       color: white;
     }
-  }
-  .ccw-body{
-    max-width: 400px;
-    width: 100%;
-    p , h5{
-      line-height: 1.33;
-      text-align: left;
-      color: #ffffff;
+    .ccw-ico{
+      & + .ccw-ico{
+        margin-top: 16px;
+      }
+    }
+    .ccw-body{
+      max-width: 400px;
+      width: 100%;
+      h5{
+        margin-bottom: 18px;
+      }
+      p , h5{
+        line-height: 1.33;
+        text-align: left;
+        color: #ffffff;
+      }
     }
   }
 }

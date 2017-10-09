@@ -4190,15 +4190,6 @@ header.fixed-header .header-container {
   border-top: solid 1px #e4e4e4;
 }
 
-.detail-container .container--full.white .ccw-body .ccw-ico {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: row;
-      flex-direction: row;
-  -ms-flex-align: center;
-      align-items: center;
-}
-
 .detail-container .container--full.white .ccw-body img {
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -4224,6 +4215,20 @@ header.fixed-header .header-container {
   font-weight: 300;
   margin-bottom: 16px;
   list-style: circle;
+}
+
+.detail-container .container--full .ccw-ico {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+.detail-container .container--full .ccw-ico p {
+  margin-bottom: 0px;
+  margin-left: 8px;
 }
 
 .ddesc-top {
@@ -4323,16 +4328,36 @@ header.fixed-header .header-container {
   margin-left: calc(-40% - 5px);
 }
 
+.container--full.maps {
+  position: relative;
+}
+
+.container--full.maps .maps-container {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 50%;
+  position: absolute !important;
+}
+
 .container--full.maps h1 {
   color: white;
 }
 
-.container--full .ccw-body {
+.container--full.maps .ccw-ico + .ccw-ico {
+  margin-top: 16px;
+}
+
+.container--full.maps .ccw-body {
   max-width: 400px;
   width: 100%;
 }
 
-.container--full .ccw-body p, .container--full .ccw-body h5 {
+.container--full.maps .ccw-body h5 {
+  margin-bottom: 18px;
+}
+
+.container--full.maps .ccw-body p, .container--full.maps .ccw-body h5 {
   line-height: 1.33;
   text-align: left;
   color: #ffffff;
@@ -4720,7 +4745,7 @@ header.fixed-header .header-container {
 }
 
 .plan-cart-box.transport .form-group {
-  padding: 0px;
+  padding-left: 0px;
 }
 
 .plan-cart-box.transport .planbox-img {
