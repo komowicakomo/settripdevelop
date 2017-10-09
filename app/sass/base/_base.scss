@@ -61,6 +61,12 @@ ul{
     &.grey{
       background-color: #f9f9fb;
     }
+    &.white{
+      background-color: white;
+    }
+    &.blue{
+      background-color: $blue;
+    }
   }
  }
 

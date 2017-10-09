@@ -50,5 +50,8 @@ var lists = [
   } , {
         "name": "Pembayaran Thankyou",
         "path": "index-solid.html?view=pembayaran_thankyou"
+  } , {
+        "name": "Detail Atraksi",
+        "path": "index-solid.html?view=detail_atraksi"
   }
 ];

@@ -99,6 +99,7 @@ gulp.task('scripts', ['jshint'], function(){
   var source = [
     config.path.src + '/js/plugins/fastclick.js',
     config.path.src + '/js/plugins/parsley.min.js',
+    config.path.src + '/js/plugins/swiper.min.js',
     config.path.src + '/js/plugins/nouislider.min.js'
   ]
   //return gulp.src(config.path.src + '/js/plugins/*.js')
