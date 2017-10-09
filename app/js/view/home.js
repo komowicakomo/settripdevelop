@@ -24,6 +24,12 @@
       slidesPerView: 4,
 	  centeredSlides: true,
 	  spaceBetween: 30,
+
+	  breakpoints: {
+	  	1440: {
+	  		slidesPerView: 3,
+	  	}
+	  },
 	    
 	  // Navigation arrows
 	  nextButton: '.home-shadow__right',
@@ -179,7 +185,7 @@ $('input[mode="daterange"]').daterangepicker({
 	"autoApply": true
 });
 
-$('input[mode="daterange"]').val('Kepan?');
+$('input[mode="daterange"]').val('Kapan?');
 
 $('input[mode="daterange"]').on('apply.daterangepicker', function(ev, picker) {
 	var start = picker.startDate.format('MMM, D');
@@ -194,11 +200,15 @@ $('input[mode="daterange"]').on('apply.daterangepicker', function(ev, picker) {
 $('input[mode="daterange"]').on('hide.daterangepicker', function(ev, picker) {
 	var start = picker.startDate.format('MMM, D');
 	var end = picker.endDate.format('MMM, D');
+
 	if(start == end){
 		$(this).val(start);
 	} else{
 		$(this).val(start +' - '+ end);
 	}
+
+	var parent = $(this).parent();
+	parent.find('.input-icon').removeClass('active');
 });
 
 $('input[mode="increment"]').on('click', function(){
