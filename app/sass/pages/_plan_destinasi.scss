@@ -38,7 +38,7 @@
      text-transform: uppercase;
    }
 }
-
+ 
 .plan-destinasi{
   padding-top: 110px;
   & > h3 {
@@ -172,9 +172,12 @@
         & + button {
           margin-top: 25px;
           margin-bottom: 24px;
+          padding-left: 24px;
+          padding-right: 24px;
         }
       }
       a{
+        display: block;
         font-size: 15px;
         line-height: 1;
         color: #5b8ef4;
@@ -191,8 +194,11 @@
   }
   .plan-destinasi-cart-price{
     width: calc(35% - 76px) ;
-    background-color: #ffffff;
-    box-shadow: 0 1px 3px 0 rgba(63, 63, 68, 0.15), 0 0 0 1px rgba(63, 63, 68, 0.05);
+    .pd-cp-inner{
+      background-color: #ffffff;
+      box-shadow: 0 1px 3px 0 rgba(63, 63, 68, 0.15), 0 0 0 1px rgba(63, 63, 68, 0.05);
+      margin-bottom: 16px;
+    }
   }
   .pd-cp-box{
     width: 100%;
@@ -279,6 +285,23 @@
       }
     }
   }
+  .button-place{
+    margin-top: 24px;
+    .btn-add{
+      margin-top: 0px;
+    }
+    button{
+      width: 100%;
+    }
+    &.row{
+      .col-md-3{
+        padding: 0px;
+      }
+      .col-md-9{
+        padding-left: 0px;
+      }
+    }
+  }
 }
 
 .pd-maps-box{
@@ -294,6 +317,59 @@
   border: solid 1px #e4e4e4;
   width: 100%;
   position: relative;
+  &.transport{
+    .form-group{
+      padding: 0px;
+    }
+    .planbox-img{
+      border: solid 1px #e4e4e4;
+    }
+    .planbox-price{
+      width: 70%;
+      font-size: 18px;
+      span{
+        font-size: 15px;
+        line-height: 1.47;
+      }
+    }
+    .planbox-button-action{
+      width: 30%;
+    }
+  }
+  &.pemandu{
+    .form-group{
+      padding: 0px;
+    }
+    .planbox-description{
+      padding: 16px;
+    }
+    .planbox-destination{
+      padding-left: 8px;
+    }
+    .planbox-img{
+      border: solid 1px #e4e4e4;
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+      margin-bottom: 16px;
+      border : 4px solid #F0F0F0 ;
+      img{
+        height: 100%;
+        width: auto;
+      }
+    }
+    .planbox-price{
+      width: 40%;
+      font-size: 18px;
+      span{
+        font-size: 15px;
+        line-height: 1.47;
+      }
+    }
+    .planbox-button-action{
+      width: 60%;
+    }
+  }
   .btn-delete{
     position: absolute;
     top: 16px;
@@ -327,6 +403,9 @@
     box-shadow: 0 1px 0 0 #e4e4e4, 0 -1px 0 0 #e4e4e4;
     position: relative;
     display: none;
+    &.show{
+      display: block;
+    }
     .pcbb-head{
       height: 58px;
       line-height: 58px;
@@ -335,12 +414,71 @@
       border-bottom: solid 1px #e4e4e4;
       text-transform: uppercase;
     }
+    .pcbb-img{
+      width: 100px;
+      height: 100px;
+      border-radius: 2px;
+      overflow: hidden;
+      img{
+        width: 100%;
+        position: absolute;
+        left: 50%;
+        top:50%;
+        transform: translate(-50% , -50%);
+      }
+    }
+    .pcbb-extra{
+      margin-top: 11px;
+      padding: 14px 0px;
+      margin-left: 52px;
+      width: calc(100% -52px);
+      display: block;
+      border-top:dashed 1px #e4e4e4;
+      h5{
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 1;
+        text-align: left;
+        color: #3d3d3d;
+        margin-bottom: 16px;
+      }
+      .pcbb-extra-input{
+        background-color: #ffffff;
+        box-shadow: 0 0 0 1px rgba(63, 63, 68, 0.05);
+        padding: 16px;
+        label{
+          margin: 0px;
+          font-weight: 300;
+        }
+        .price{
+          font-size: 15px;
+          font-weight: 600;
+          line-height: 1;
+          text-align: right;
+          color: #3d3d3d;
+          opacity: 0.5;
+          position: absolute;
+          right: 0;
+          transition: 0.4s ease ;
+        }
+        .checkbox-area{
+          .active{
+            .price{
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
     .pcbb-box{
-      display: flex;
-      flex-direction: row;
       border-bottom: solid 1px #e4e4e4;
       padding: 8px;
+      padding-left: 0px;
       position: relative;
+      .row{
+        width: 100%;
+        padding-top: 16px;
+      }
       h5{
         margin-top: 8px;
         & + h5{
@@ -364,7 +502,7 @@
       }
       .pcbbb-input{
         position: absolute;
-        left:8px;
+        left:0px;
         .checkbox-area label{
           height: 24px;
         }
@@ -373,6 +511,7 @@
         }
       }
       .pcbbb-label{
+        position: relative;
         padding-left: 52px;
       }
     }
@@ -425,6 +564,14 @@
         line-height: 1;
         color: #3d3d3d;
         margin: 0px;
+        & + p{
+          margin-top: 8px;
+          font-size: 15px;
+          font-weight: 300;
+          line-height: 1;
+          text-align: left;
+          color: #a4a4a4;
+        }
       }
     }
     .planbox-rating{
@@ -633,6 +780,51 @@
     margin-bottom: 32px;
     transition: 0.3s ease ;
     cursor: pointer;
+    &.transport{
+      .planbox-img{
+        border: solid 1px #e4e4e4;
+      }
+      .planbox-price{
+        width: 70%;
+        span{
+          font-size: 15px;
+          line-height: 1.47;
+        }
+      }
+      .planbox-button-action{
+        width: 30%;
+      }
+    }
+    &.pemandu{
+      .planbox-description{
+        padding: 16px;
+      }
+      .planbox-destination{
+        padding-left: 8px;
+      }
+      .planbox-img{
+        border: solid 1px #e4e4e4;
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+        border : 4px solid #F0F0F0 ;
+        img{
+          height: 100%;
+          width: auto;
+        }
+      }
+      .planbox-price{
+        width: 40%;
+        font-size: 18px;
+        span{
+          font-size: 15px;
+          line-height: 1.47;
+        }
+      }
+      .planbox-button-action{
+        width: 60%;
+      }
+    }
     .planbox-description{
       padding: 8px;
       width: 100%;
@@ -672,6 +864,14 @@
           line-height: 1;
           color: #3d3d3d;
           margin: 0px;
+          & + p{
+            margin-top: 8px;
+            font-size: 15px;
+            font-weight: 300;
+            line-height: 1;
+            text-align: left;
+            color: #a4a4a4;
+          }
         }
       }
       .planbox-rating{
@@ -704,10 +904,15 @@
       width: 60%;
       display: flex;
       flex-direction: row;
+      .btn--orange{
+        color: white !important;
+      }
       & > button{
+        max-width: 100%;
+        padding-left: 8px;
+        padding-right: 8px;
         flex-grow: 1 ;
         text-transform: capitalize;
-        padding: 8px;
         font-size: 12px;
         line-height: 1.25;
         text-align: center;

@@ -517,6 +517,7 @@ ul li {
 
 .container.container-body {
   min-height: 100vh;
+  padding-bottom: 48px;
 }
 
 .container.container--full {
@@ -617,9 +618,37 @@ ul li {
 }
 
 .noUi-target {
-  height: 3px;
+  height: 4px;
   border-radius: 100px;
+  border: 0px solid transparent;
+  box-shadow: none;
   background-color: #d8d8d8;
+}
+
+.noUi-target .noUi-connect {
+  background-color: #5c8ff3;
+}
+
+.noUi-target .noUi-background {
+  background-color: #d8d8d8;
+  box-shadow: none;
+}
+
+.noUi-target .noUi-handle {
+  width: 12px;
+  height: 12px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+  border: solid 1px #e4e4e4;
+  border-radius: 100%;
+  left: -1px;
+  top: -4px;
+  right: 0px;
+  cursor: pointer;
+}
+
+.noUi-target .noUi-handle:after, .noUi-target .noUi-handle:before {
+  display: none;
 }
 
 .btn-delete {
@@ -649,6 +678,45 @@ ul li {
 
 .btn-delete:hover:after, .btn-delete:hover:before {
   background-color: #ffb757 !important;
+}
+
+.social-share-container {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-align: center;
+      align-items: center;
+  margin-bottom: 24px;
+}
+
+.social-share-container .social-circle {
+  width: 28px;
+  height: 28px;
+  background-color: #ffffff;
+  border: solid 1px #e4e4e4;
+  line-height: 32px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 12px;
+  margin-right: 16px;
+  cursor: pointer;
+}
+
+.social-share-container .social-circle.facebook {
+  color: #49639e;
+}
+
+.social-share-container .social-circle.twitter {
+  color: #1da1f2;
+}
+
+.social-share-container .social-circle.pinterest {
+  color: #bd081c;
+}
+
+.social-share-container .social-circle.instagram {
+  color: #8a3ab9;
 }
 
 /**
@@ -704,6 +772,7 @@ p {
   line-height: 1;
   letter-spacing: 0.1px;
   color: #444447;
+  font-weight: 300;
 }
 
 span {
@@ -1691,16 +1760,18 @@ header.fixed-header .header-container {
   font-size: 12px;
   font-weight: 600;
   line-height: 1.25;
-  padding: 8px 54px;
+  padding: 12px 8px 4px 8px;
   border-radius: 4px;
   background-color: #ffffff;
   border: solid 1px #a4a4a4;
   cursor: pointer;
   text-transform: uppercase;
+  font-family: 'Hind Guntur', sans-serif;
+  position: relative;
 }
 
 .btn.small {
-  padding: 8px 20px;
+  padding: 12px 20px 4px 20px;
 }
 
 .btn.transparent {
@@ -1717,7 +1788,7 @@ header.fixed-header .header-container {
 }
 
 .btn.btn--medium {
-  padding: 16px 54px;
+  padding: 16px 16px 10px 16px;
   font-size: 15px;
 }
 
@@ -1740,7 +1811,7 @@ header.fixed-header .header-container {
   font-size: 15px;
   font-weight: 600;
   line-height: 1;
-  padding: 16px;
+  padding: 10px 16px 10px 16px;
 }
 
 .btn.btn-add .ico--plus, .btn.btn-add-2 .ico--plus {
@@ -3142,6 +3213,491 @@ header.fixed-header .header-container {
   margin: 50px 0 150px;
 }
 
+.word-navigation {
+  width: calc(65% + 60px);
+  border-bottom: solid 1px #e4e4e4;
+  margin-bottom: 20px;
+}
+
+.word-navigation ul {
+  margin: 0px;
+}
+
+.word-navigation ul li {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 1;
+  text-align: left;
+  color: #a4a4a4;
+  padding-right: 12px;
+  padding-bottom: 10px;
+  padding-top: 14px;
+  margin-right: 40px;
+  display: inline-block;
+}
+
+.word-navigation ul li.active {
+  font-weight: 700;
+  color: #5b8ef4;
+  border-bottom: 4px solid  #5b8ef4;
+}
+
+.img-square-box {
+  width: 100%;
+  border-radius: 2px;
+  overflow: hidden;
+  position: relative;
+}
+
+.img-square-box:after {
+  content: '';
+  display: block;
+  padding-top: 100%;
+}
+
+.img-square-box img {
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.img-round-box {
+  width: 100%;
+  border-radius: 50%;
+  border: solid 4px #f0f0f0;
+  overflow: hidden;
+  position: relative;
+}
+
+.img-round-box:after {
+  content: '';
+  display: block;
+  padding-top: 100%;
+}
+
+.img-round-box img {
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.itinerary .container-body {
+  padding-top: 36px;
+}
+
+.itinerary .plan-destinasi-mb-inner {
+  padding: 24px 16px;
+}
+
+.itinerary .plan-destinasi-mb-inner .row {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.itinerary .itn-text {
+  margin-bottom: 24px;
+}
+
+.itinerary .itn-text p {
+  line-height: 1.33;
+  text-align: left;
+  color: #637381;
+  font-weight: 300;
+  margin: 0px;
+}
+
+.itinerary .itn-content {
+  margin-bottom: 70px;
+}
+
+.itinerary .point-square-bottom {
+  margin-bottom: 100px;
+  margin-top: 24px;
+}
+
+.itinerary .itn-body-child {
+  padding: 16px;
+  background-color: #f9f9fb;
+  border: solid 1px #e4e4e4;
+}
+
+.itinerary .pd-cp-box.label {
+  text-align: center;
+  display: block;
+}
+
+.itinerary .pd-cp-box.label h5 {
+  color: white;
+  display: block;
+  margin-bottom: 14px;
+}
+
+.itinerary .pd-cp-box.label p {
+  display: block;
+  font-size: 15px;
+  line-height: 1;
+  text-align: center;
+  color: #ffffff;
+  font-weight: 300;
+  text-transform: none;
+}
+
+.itinerary .pd-cp-itn {
+  padding: 24px 16px;
+  padding-bottom: 0px;
+}
+
+.itinerary .pd-cp-itn p {
+  margin-bottom: 4px;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.2;
+  text-align: left;
+  color: #5b8ef4;
+}
+
+.itinerary .pd-cp-itn p + p {
+  font-size: 18px;
+  line-height: 1;
+  text-align: left;
+  color: #3d3d3d;
+  margin-bottom: 0px;
+  font-weight: 300;
+}
+
+.itinerary .pd-cp-itn .row {
+  margin-left: -15px;
+  margin-right: -15px;
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+.itinerary .pd-cp-itn .row .col-md-8 {
+  padding-left: 0px;
+}
+
+.itinerary .pd-cp-itn-footer {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  background-color: #fafafa;
+  margin-top: 24px;
+}
+
+.itinerary .pd-cp-itn-footer .itn-foot-box {
+  position: relative;
+  height: 60px;
+  border: solid 1px #e4e4e4;
+  -ms-flex-positive: 1;
+      flex-grow: 1;
+  cursor: pointer;
+}
+
+.itinerary .pd-cp-itn-footer .itn-foot-box:hover svg g {
+  fill: #ffb757;
+}
+
+.itinerary .pd-cp-itn-footer .itn-foot-box:hover p {
+  color: #ffb757;
+}
+
+.itinerary .pd-cp-itn-footer .itn-foot-inner {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  white-space: nowrap;
+}
+
+.itinerary .pd-cp-itn-footer .itn-foot-inner p, .itinerary .pd-cp-itn-footer .itn-foot-inner img {
+  margin-bottom: 0px;
+}
+
+.itinerary .pd-cp-itn-footer .itn-foot-inner p {
+  margin-left: 8px;
+  margin-top: 4px;
+}
+
+.point-square {
+  position: relative;
+  margin: auto;
+  display: block;
+  width: 6px;
+  height: 6px;
+}
+
+.point-square:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 6px;
+  height: 6px;
+  z-index: 2;
+  background-color: #ffffff;
+  border: solid 1px #5b8ef4;
+  border-radius: 50%;
+}
+
+.point-square.point-square-top {
+  transform: translateY(-24px);
+  z-index: 3;
+}
+
+.point-connector {
+  position: absolute;
+  top: 3px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  width: 3px;
+  background-color: #5b8ef4;
+}
+
+.pembayaran .plan-destinasi-mb-inner {
+  padding: 0px;
+  padding-bottom: 30px;
+}
+
+.pembayaran .plan-destinasi-mb-inner .row {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.pembayaran .pd-mb-form .row {
+  margin-bottom: 14px;
+}
+
+.pembayaran .pd-mb-form .row:last-child {
+  margin-bottom: 0px;
+}
+
+.pembayaran .pd-cp-itn + .pd-cp-box {
+  border-top: solid 1px #e9e9eb;
+  margin-top: 24px;
+}
+
+.pembayaran .pd-cp-box.subtotal .pd-cp-container {
+  margin-bottom: 0px !important;
+}
+
+.pembayaran .pembayaran-step {
+  display: none;
+}
+
+.pembayaran .pembayaran-step.active {
+  display: block;
+}
+
+.pembayaran-next {
+  padding-right: 34px;
+}
+
+.pembayaran-next button {
+  width: 100%;
+}
+
+.bayar-container {
+  padding-top: 32px;
+}
+
+.bayar-container button {
+  width: 100%;
+}
+
+.pd-mb-form {
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.pd-mb-form .pd-mb-form-box {
+  padding: 16px;
+  border-radius: 4px;
+  background-color: #ffffff;
+  border: solid 1px #e4e4e4;
+}
+
+.pd-mb-form .pd-mb-form-box h5 {
+  margin-bottom: 20px;
+}
+
+.pd-cp-isolate-box {
+  width: 100%;
+  padding: 12px;
+}
+
+.pd-cp-isolate-box .pdi-inner {
+  background-color: #f9f9fb;
+  border: solid 1px #e4e4e4;
+  padding: 12px;
+}
+
+.pd-cp-isolate-box .pdi-inner .checkbox-area label {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  height: auto;
+}
+
+.pd-cp-isolate-box .pdi-inner .checkbox-area label:before {
+  top: 0;
+  transform: translate(0);
+}
+
+.pd-cp-isolate-box .pdi-inner .checkbox-area label:after {
+  top: 10px;
+}
+
+.pd-cp-isolate-box .pdi-inner p {
+  font-size: 15px;
+  line-height: 1.33;
+  text-align: left;
+  color: #637381;
+  margin-bottom: 4px;
+}
+
+.pd-cp-isolate-box .pdi-inner p + p {
+  font-weight: 700;
+  color: #3d3d3d;
+}
+
+.pd-cp-isolate-box .pdi-inner a {
+  margin-top: 24px;
+  display: block;
+  font-size: 15px;
+  line-height: 1;
+  text-align: left;
+  color: #5b8ef4;
+  font-weight: 300;
+}
+
+.acordeon-box {
+  position: relative;
+}
+
+.acordeon-box .acordeon-head {
+  padding: 24px;
+  border-bottom: solid 1px #e4e4e4;
+}
+
+.acordeon-box .acordeon-head label {
+  margin-bottom: 0px;
+}
+
+.acordeon-box .acordeon-body {
+  background-color: #f9f9fb;
+  border-bottom: solid 1px #e4e4e4;
+}
+
+.acordeon-body-list {
+  padding: 24px;
+  padding-left: 39px;
+  padding-right: 0px;
+}
+
+.acordeon-body-list h5 {
+  font-size: 15px;
+  line-height: 20px;
+  color: #3d3d3d;
+  margin-bottom: 10px;
+}
+
+.acordeon-body-list p {
+  line-height: 20px;
+  color: #637381;
+  margin-bottom: 10px;
+}
+
+.acordeon-body-list p:last-child {
+  margin-bottom: 0px;
+}
+
+.pembayaran-thanks {
+  width: 100%;
+  max-width: 500px;
+  background-color: #ffffff;
+  box-shadow: 0 1px 3px 0 rgba(63, 63, 68, 0.15), 0 0 0 1px rgba(63, 63, 68, 0.05);
+}
+
+.pembayaran-thanks .pt-head {
+  background-color: #5b8ef4;
+  text-align: center;
+  padding: 28px;
+}
+
+.pembayaran-thanks .pt-head h1 {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.33;
+  text-align: center;
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+
+.pembayaran-thanks .pt-head h5 {
+  font-size: 18px;
+  line-height: 1;
+  text-align: center;
+  color: #ffffff;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+
+.pembayaran-thanks .pt-body {
+  padding: 32px;
+}
+
+.pembayaran-thanks .pt-body .od-detail {
+  max-width: 70%;
+  display: block;
+  margin: auto;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.pembayaran-thanks .pt-body .od-detail span {
+  font-weight: 700;
+  color: #3d3d3d;
+}
+
+.pembayaran-thanks .pt-body .od-detail h2 {
+  font-weight: 700;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  letter-spacing: 2px;
+  color: #434343;
+}
+
+.pembayaran-thanks .pt-body .od-detail strong {
+  font-weight: 700;
+}
+
+.pembayaran-thanks .pt-body .od-detail p {
+  line-height: 1.5;
+  color: #434343;
+}
+
+.pembayaran-thanks .pt-footer {
+  border-top: solid 1px #e4e4e4;
+  text-align: center;
+  padding: 24px;
+}
+
+.pembayaran-thanks .pt-footer p {
+  line-height: 1.33;
+  text-align: center;
+  color: #637381;
+  margin-bottom: 24px;
+}
+
+.pembayaran-thanks .pt-footer button {
+  margin-bottom: 16px;
+}
+
 .plan-destinasi-board {
   background-color: #ffffff;
   padding: 16px 0px;
@@ -3352,9 +3908,12 @@ header.fixed-header .header-container {
 .plan-destinasi .pd-mb-body .empty-state h5 + button {
   margin-top: 25px;
   margin-bottom: 24px;
+  padding-left: 24px;
+  padding-right: 24px;
 }
 
 .plan-destinasi .pd-mb-body .empty-state a {
+  display: block;
   font-size: 15px;
   line-height: 1;
   color: #5b8ef4;
@@ -3372,8 +3931,12 @@ header.fixed-header .header-container {
 
 .plan-destinasi .plan-destinasi-cart-price {
   width: calc(35% - 76px);
+}
+
+.plan-destinasi .plan-destinasi-cart-price .pd-cp-inner {
   background-color: #ffffff;
   box-shadow: 0 1px 3px 0 rgba(63, 63, 68, 0.15), 0 0 0 1px rgba(63, 63, 68, 0.05);
+  margin-bottom: 16px;
 }
 
 .plan-destinasi .pd-cp-box {
@@ -3481,6 +4044,26 @@ header.fixed-header .header-container {
   width: 100%;
 }
 
+.plan-destinasi .button-place {
+  margin-top: 24px;
+}
+
+.plan-destinasi .button-place .btn-add {
+  margin-top: 0px;
+}
+
+.plan-destinasi .button-place button {
+  width: 100%;
+}
+
+.plan-destinasi .button-place.row .col-md-3 {
+  padding: 0px;
+}
+
+.plan-destinasi .button-place.row .col-md-9 {
+  padding-left: 0px;
+}
+
 .pd-maps-box {
   position: relative;
   width: 100%;
@@ -3494,6 +4077,68 @@ header.fixed-header .header-container {
   border: solid 1px #e4e4e4;
   width: 100%;
   position: relative;
+}
+
+.plan-cart-box.transport .form-group {
+  padding: 0px;
+}
+
+.plan-cart-box.transport .planbox-img {
+  border: solid 1px #e4e4e4;
+}
+
+.plan-cart-box.transport .planbox-price {
+  width: 70%;
+  font-size: 18px;
+}
+
+.plan-cart-box.transport .planbox-price span {
+  font-size: 15px;
+  line-height: 1.47;
+}
+
+.plan-cart-box.transport .planbox-button-action {
+  width: 30%;
+}
+
+.plan-cart-box.pemandu .form-group {
+  padding: 0px;
+}
+
+.plan-cart-box.pemandu .planbox-description {
+  padding: 16px;
+}
+
+.plan-cart-box.pemandu .planbox-destination {
+  padding-left: 8px;
+}
+
+.plan-cart-box.pemandu .planbox-img {
+  border: solid 1px #e4e4e4;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 16px;
+  border: 4px solid #F0F0F0;
+}
+
+.plan-cart-box.pemandu .planbox-img img {
+  height: 100%;
+  width: auto;
+}
+
+.plan-cart-box.pemandu .planbox-price {
+  width: 40%;
+  font-size: 18px;
+}
+
+.plan-cart-box.pemandu .planbox-price span {
+  font-size: 15px;
+  line-height: 1.47;
+}
+
+.plan-cart-box.pemandu .planbox-button-action {
+  width: 60%;
 }
 
 .plan-cart-box .btn-delete {
@@ -3538,6 +4183,10 @@ header.fixed-header .header-container {
   display: none;
 }
 
+.plan-cart-box .pcb-body.show {
+  display: block;
+}
+
 .plan-cart-box .pcb-body .pcbb-head {
   height: 58px;
   line-height: 58px;
@@ -3547,14 +4196,76 @@ header.fixed-header .header-container {
   text-transform: uppercase;
 }
 
+.plan-cart-box .pcb-body .pcbb-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.plan-cart-box .pcb-body .pcbb-img img {
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.plan-cart-box .pcb-body .pcbb-extra {
+  margin-top: 11px;
+  padding: 14px 0px;
+  margin-left: 52px;
+  width: calc(100% -52px);
+  display: block;
+  border-top: dashed 1px #e4e4e4;
+}
+
+.plan-cart-box .pcb-body .pcbb-extra h5 {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1;
+  text-align: left;
+  color: #3d3d3d;
+  margin-bottom: 16px;
+}
+
+.plan-cart-box .pcb-body .pcbb-extra .pcbb-extra-input {
+  background-color: #ffffff;
+  box-shadow: 0 0 0 1px rgba(63, 63, 68, 0.05);
+  padding: 16px;
+}
+
+.plan-cart-box .pcb-body .pcbb-extra .pcbb-extra-input label {
+  margin: 0px;
+  font-weight: 300;
+}
+
+.plan-cart-box .pcb-body .pcbb-extra .pcbb-extra-input .price {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1;
+  text-align: right;
+  color: #3d3d3d;
+  opacity: 0.5;
+  position: absolute;
+  right: 0;
+  transition: 0.4s ease;
+}
+
+.plan-cart-box .pcb-body .pcbb-extra .pcbb-extra-input .checkbox-area .active .price {
+  opacity: 1;
+}
+
 .plan-cart-box .pcb-body .pcbb-box {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: row;
-      flex-direction: row;
   border-bottom: solid 1px #e4e4e4;
   padding: 8px;
+  padding-left: 0px;
   position: relative;
+}
+
+.plan-cart-box .pcb-body .pcbb-box .row {
+  width: 100%;
+  padding-top: 16px;
 }
 
 .plan-cart-box .pcb-body .pcbb-box h5 {
@@ -3585,7 +4296,7 @@ header.fixed-header .header-container {
 
 .plan-cart-box .pcb-body .pcbb-box .pcbbb-input {
   position: absolute;
-  left: 8px;
+  left: 0px;
 }
 
 .plan-cart-box .pcb-body .pcbb-box .pcbbb-input .checkbox-area label {
@@ -3597,6 +4308,7 @@ header.fixed-header .header-container {
 }
 
 .plan-cart-box .pcb-body .pcbb-box .pcbbb-label {
+  position: relative;
   padding-left: 52px;
 }
 
@@ -3654,6 +4366,15 @@ header.fixed-header .header-container {
   line-height: 1;
   color: #3d3d3d;
   margin: 0px;
+}
+
+.plan-cart-box .planbox-text .planbox-destination p + p {
+  margin-top: 8px;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1;
+  text-align: left;
+  color: #a4a4a4;
 }
 
 .plan-cart-box .planbox-text .planbox-rating {
@@ -3888,6 +4609,58 @@ header.fixed-header .header-container {
   cursor: pointer;
 }
 
+.modal-plan-destinasi .modal-pd-planbox.transport .planbox-img {
+  border: solid 1px #e4e4e4;
+}
+
+.modal-plan-destinasi .modal-pd-planbox.transport .planbox-price {
+  width: 70%;
+}
+
+.modal-plan-destinasi .modal-pd-planbox.transport .planbox-price span {
+  font-size: 15px;
+  line-height: 1.47;
+}
+
+.modal-plan-destinasi .modal-pd-planbox.transport .planbox-button-action {
+  width: 30%;
+}
+
+.modal-plan-destinasi .modal-pd-planbox.pemandu .planbox-description {
+  padding: 16px;
+}
+
+.modal-plan-destinasi .modal-pd-planbox.pemandu .planbox-destination {
+  padding-left: 8px;
+}
+
+.modal-plan-destinasi .modal-pd-planbox.pemandu .planbox-img {
+  border: solid 1px #e4e4e4;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  border: 4px solid #F0F0F0;
+}
+
+.modal-plan-destinasi .modal-pd-planbox.pemandu .planbox-img img {
+  height: 100%;
+  width: auto;
+}
+
+.modal-plan-destinasi .modal-pd-planbox.pemandu .planbox-price {
+  width: 40%;
+  font-size: 18px;
+}
+
+.modal-plan-destinasi .modal-pd-planbox.pemandu .planbox-price span {
+  font-size: 15px;
+  line-height: 1.47;
+}
+
+.modal-plan-destinasi .modal-pd-planbox.pemandu .planbox-button-action {
+  width: 60%;
+}
+
 .modal-plan-destinasi .modal-pd-planbox .planbox-description {
   padding: 8px;
   width: 100%;
@@ -3937,6 +4710,15 @@ header.fixed-header .header-container {
   margin: 0px;
 }
 
+.modal-plan-destinasi .modal-pd-planbox .planbox-text .planbox-destination p + p {
+  margin-top: 8px;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1;
+  text-align: left;
+  color: #a4a4a4;
+}
+
 .modal-plan-destinasi .modal-pd-planbox .planbox-text .planbox-rating {
   position: absolute;
   bottom: 0px;
@@ -3977,11 +4759,17 @@ header.fixed-header .header-container {
       flex-direction: row;
 }
 
+.modal-plan-destinasi .planbox-action .planbox-button-action .btn--orange {
+  color: white !important;
+}
+
 .modal-plan-destinasi .planbox-action .planbox-button-action > button {
+  max-width: 100%;
+  padding-left: 8px;
+  padding-right: 8px;
   -ms-flex-positive: 1;
       flex-grow: 1;
   text-transform: capitalize;
-  padding: 8px;
   font-size: 12px;
   line-height: 1.25;
   text-align: center;
