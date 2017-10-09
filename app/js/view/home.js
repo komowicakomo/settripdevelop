@@ -68,6 +68,7 @@
 
     textSwiper.params.control = imgSwiper;  
 
+    // full calendar
     $('.calendar__content').fullCalendar({
     	header: {
     		left:   'prev',
@@ -78,7 +79,97 @@
     		month: {
     			titleFormat: 'MMMM'
     		}
-    	}
+    	},
+    	bootstrapGlyphicons: {
+    		next: 'fa fa fa-long-arrow-right',
+    		prev: 'fa fa fa-long-arrow-left'
+    	},
+    	eventSources: [
+    		{
+	    		events: [
+			        {
+			        	event_id: 1,
+			            start: '2017-10-02',
+			            title: 'Mulai Dari',
+			            priceStart: 'Rp1.500.000',
+			            priceEnd: 'Rp10.000.000',
+			            available: '24'
+			        },
+			        {
+			        	event_id: 2,
+			            start: '2017-10-17',
+			            title: 'Mulai Dari',
+			            priceStart: 'Rp2.500.000',
+			            priceEnd: 'Rp20.000.000',
+			            available: '5'
+			        },
+			        {
+			        	event_id: 3,
+			            start: '2017-10-18',
+			            title: 'Mulai Dari',
+			            priceStart: 'Rp500.000',
+			            priceEnd: 'Rp5.000.000',
+			            available: '2'
+			        },
+			        {
+			        	event_id: 4,
+			            start: '2017-10-19',
+			            title: 'Mulai Dari',
+			            priceStart: 'Rp1.000.000',
+			            priceEnd: 'Rp10.000.000',
+			            available: '20'
+			        },
+			        {
+			        	event_id: 5,
+			            start: '2017-10-20',
+			            title: 'Mulai Dari',
+			            priceStart: 'Rp500.000',
+			            priceEnd: 'Rp2.000.000',
+			            available: '8'
+			        }
+			    ]
+			}
+		],
+	    eventRender: function(event, element) {
+	    	var target = $('[data-date='+event.start._i+']');
+	    	target.addClass('home-calendar__hasEvent event_'+event.event_id+'');
+
+	    	$('.home-calendar__hasEvent.fc-day').append('<div class="home-calendar__hover"></div>');
+
+	    	$('.event_'+event.event_id+'').mouseover(function(){
+	    		$('.hover_'+event.event_id+'').addClass('active');
+	    	})
+	    	$('.event_'+event.event_id+'').mouseleave(function(){
+	    		$('.hover_'+event.event_id+'').removeClass('active');
+	    	})
+	    	$('.event_'+event.event_id+'').click(function(){
+	    		overlayin();
+	    		$('.modal-open-trip').addClass('active');
+	    	})
+
+	        var eventContent = `<div class="home-calendar__event">
+									<span>`+event.title+`</span>
+									<p>`+event.priceStart+`</p>
+	        					</div>`;
+	        var hoverContent = `<div class="home-calendar__event-hover hover_`+event.event_id+`">
+									<div class="home-calendar__hover-text">
+										<p>`+event.available+` Open trip tersedia</p>
+										<span class="fa fa-long-arrow-right"></span>
+									</div>
+									<h5>`+event.priceStart+` - `+event.priceEnd+`</h5>
+	        					</div>`
+	        var container = `<div class="home-calendar__event-content">
+								`+eventContent+`
+								`+hoverContent+`
+	        				</div>`
+
+	        return container
+	    },
+    	themeSystem: 'bootstrap3',
+    	dayNames: ['MINGGU', 'SENIN', 'SELASA', 'RABU',
+ 'KAMIS', 'JUMAT', 'SABTU'],
+ 		dayNamesShort: ['MINGGU', 'SENIN', 'SELASA', 'RABU',
+ 'KAMIS', 'JUMAT', 'SABTU']
     })
 });
 
@@ -135,6 +226,11 @@ $(document).mouseup(function(e) {
         $('.home-datetime__qty').removeClass('home-datetime__qty--active');
     }
 });
+
+$('.home-datetime__option').on('click', function(){
+	var parent = $(this).parent();
+	parent.find('.input-icon').addClass('active');
+})
 
 // maps
 var map;

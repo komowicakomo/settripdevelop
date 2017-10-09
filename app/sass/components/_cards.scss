@@ -55,7 +55,8 @@
 	}
 	.card__desc{
 		color: #637381;
-		height: 45px;
+		padding-top: 2px;
+		height: 45px; 
 		display: block;
 		overflow: hidden;
 		text-overflow: ellipsis;
@@ -81,6 +82,10 @@
 		margin: 0;
 		font-weight: bold;
 	}
+	p{
+		margin: 0 0 10px;
+		font-weight: bold;
+	}
 	span{
 		color: #637381;
 		font-size: 15px;
@@ -94,5 +99,36 @@
 		top: 50%;
 		right: 15px;
 		transform: translateY(-50%);
+	}
+}
+.card__pricewrap--row{
+	border: none;
+	height: 100%;
+}
+.card__price-middle{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.card__modalinfo{
+	padding: 15px;
+}
+.card__modallocation{
+	margin: 0 -15px;
+}
+.card__modallocation-content{
+	img,svg{
+		display: inline-block;
+	}
+	span{
+		vertical-align: text-top;
+		font-size: 14px;
+		color: #a4a4a4;
+	}
+}
+.card__row{
+	.card__desc{
+		height: 29px;
+		padding-right: 10px;
 	}
 }

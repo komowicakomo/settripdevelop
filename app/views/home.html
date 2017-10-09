@@ -45,9 +45,9 @@
 					<div class="form-group">
 						<div class="input-group select with-icon">
 					        <div class="input-icon">
-					          <img src="images/icon/ic-location.svg" alt="Location icon">
+					          <img class="svg-image" src="images/icon/ic-location.svg" alt="Location icon">
 					        </div>
-					        <select class="" name="">
+					        <select class="home-datetime__option" name="">
 					          <option value="" disabled selected>Kemana?</option>
 					        </select>
 					    </div>
@@ -57,9 +57,9 @@
 					<div class="form-group">
 						<div class="input-group select with-icon">
 					        <div class="input-icon">
-					          <img src="images/icon/ic-calendar-default.svg" alt="Calendar icon">
+					          <img class="svg-image" src="images/icon/ic-calendar-default.svg" alt="Calendar icon">
 					        </div>
-					        <input type="text" mode="daterange" readonly>
+					        <input class="home-datetime__option" type="text" mode="daterange" readonly>
 					    </div>
 					</div>
 				</div>
@@ -67,9 +67,9 @@
 					<div class="form-group">
 						<div class="input-group select with-icon">
 					        <div class="input-icon">
-					          <img src="images/icon/ic-person.svg" alt="Person icon">
+					          <img class="svg-image" src="images/icon/ic-person.svg" alt="Person icon">
 					        </div>
-					        <input type="text" mode="increment" readonly value="Peserta?">
+					        <input class="home-datetime__option" type="text" mode="increment" readonly value="Peserta?">
 					    </div>
 					</div>
 					<div id="qty" class="home-datetime__qty">
@@ -745,6 +745,284 @@
 		</div>
 	</div>
 </div>
+<div class="modal-overlay modal-open-trip">
+  <div class="close-modal-container">
+    <div class="btn-js-action close-btn" data-action="close-modal">
+    </div>
+  </div>
+  <div class="op-modal">
+  	<div class="container">
+  		<div class="op-modal__title">
+	  		<h1>14 April 2017</h1>
+	  		<h4>8 Open Trip Tersedia</h4>
+	  	</div>
+	  	<div class="op-modal__highlight">
+	  		<div class="op-modal__highlight-wrap row">
+	  			<div class="col-md-4">
+	  				<div class="card card--full">
+	  					<div class="card__slider">
+	  						<img src="./images/image-card.jpeg" alt="modal-image">
+	  					</div>
+	  					<div class="card__modalinfo card__location card__infowrap">
+	  						<h5>Paket Keluarga di Pulau Macan</h5>
+	  						<p class="card__desc">Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod.</p>
+	  						<div class="card__modallocation row">
+	  							<div class="card__modallocation-content col-md-6">
+	  								<img class="svg-image" src="images/icon/ic-calendar-default.svg" alt="Calendar icon">
+	  								<span>14 - 17 APRIL</span>
+	  							</div>
+	  							<div class="card__modallocation-content col-md-6">
+	  								<img class="svg-image" src="images/icon/ic-location.svg" alt="Location icon">
+	  								<span>Kepulauan Seribu</span>
+	  							</div>
+	  						</div>
+	  					</div>
+	  					<div class="card__pricewrap relative">
+	  						<p>8 Orang Terdaftar</p>
+							<h2>Rp200.000</h2>
+							<img class="svg-image" src="./images/icon/home-arrow-b.svg" alt="">
+						</div>
+	  				</div>
+	  			</div>
+	  			<div class="col-md-4">
+	  				<div class="card card--full">
+	  					<div class="card__slider">
+	  						<img src="./images/image-card.jpeg" alt="modal-image">
+	  					</div>
+	  					<div class="card__modalinfo card__location card__infowrap">
+	  						<h5>Paket Keluarga di Pulau Macan</h5>
+	  						<p class="card__desc">Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod.</p>
+	  						<div class="card__modallocation row">
+	  							<div class="card__modallocation-content col-md-6">
+	  								<img class="svg-image" src="images/icon/ic-calendar-default.svg" alt="Calendar icon">
+	  								<span>14 - 17 APRIL</span>
+	  							</div>
+	  							<div class="card__modallocation-content col-md-6">
+	  								<img class="svg-image" src="images/icon/ic-location.svg" alt="Location icon">
+	  								<span>Kepulauan Seribu</span>
+	  							</div>
+	  						</div>
+	  					</div>
+	  					<div class="card__pricewrap relative">
+	  						<p>8 Orang Terdaftar</p>
+							<h2>Rp200.000</h2>
+							<img class="svg-image" src="./images/icon/home-arrow-b.svg" alt="">
+						</div>
+	  				</div>
+	  			</div>
+	  			<div class="col-md-4">
+	  				<div class="card card--full">
+	  					<div class="card__slider">
+	  						<img src="./images/image-card.jpeg" alt="modal-image">
+	  					</div>
+	  					<div class="card__modalinfo card__location card__infowrap">
+	  						<h5>Paket Keluarga di Pulau Macan</h5>
+	  						<p class="card__desc">Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod.</p>
+	  						<div class="card__modallocation row">
+	  							<div class="card__modallocation-content col-md-6">
+	  								<img class="svg-image" src="images/icon/ic-calendar-default.svg" alt="Calendar icon">
+	  								<span>14 - 17 APRIL</span>
+	  							</div>
+	  							<div class="card__modallocation-content col-md-6">
+	  								<img class="svg-image" src="images/icon/ic-location.svg" alt="Location icon">
+	  								<span>Kepulauan Seribu</span>
+	  							</div>
+	  						</div>
+	  					</div>
+	  					<div class="card__pricewrap relative">
+	  						<p>8 Orang Terdaftar</p>
+							<h2>Rp200.000</h2>
+							<img class="svg-image" src="./images/icon/home-arrow-b.svg" alt="">
+						</div>
+	  				</div>
+	  			</div>
+	  		</div>
+	  	</div>
+	  	<div class="op-modal__other">
+	  		<div class="op-modal__other-title">
+	  			<h3>Lainnya</h3>
+	  		</div>
+	  		<div class="op-modal__other-container">
+	  			<div class="op-modal__other-content">
+	  				<div class="op-modal__other-content-wrap row">
+	  					<div class="col-md-8">
+	  						<div class="card__row card__location card__infowrap">
+		  						<h5>Paket Keluarga di Pulau Macan</h5>
+		  						<p class="card__desc">Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod.</p>
+		  						<div class="card__modallocation row">
+		  							<div class="card__modallocation-content col-md-4">
+		  								<img class="svg-image" src="images/icon/ic-calendar-default.svg" alt="Calendar icon">
+		  								<span>14 - 17 APRIL</span>
+		  							</div>
+		  							<div class="card__modallocation-content col-md-4">
+		  								<img class="svg-image" src="images/icon/ic-location.svg" alt="Location icon">
+		  								<span>Kepulauan Seribu</span>
+		  							</div>
+		  						</div>
+		  					</div>
+	  					</div>
+	  					<div class="col-md-4">
+	  						<div class="card__pricewrap card__pricewrap--row relative">
+	  							<div class="card__price-middle">
+	  								<p>2 Orang Terdaftar</p>
+									<h2>Rp200.000</h2>
+	  							</div>
+								<img class="svg-image" src="./images/icon/home-arrow-b.svg" alt="">
+							</div>
+	  					</div>
+	  				</div>
+	  			</div>
+	  			<div class="op-modal__other-content">
+	  				<div class="op-modal__other-content-wrap row">
+	  					<div class="col-md-8">
+	  						<div class="card__row card__location card__infowrap">
+		  						<h5>Paket Keluarga di Pulau Macan</h5>
+		  						<p class="card__desc">Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod.</p>
+		  						<div class="card__modallocation row">
+		  							<div class="card__modallocation-content col-md-4">
+		  								<img class="svg-image" src="images/icon/ic-calendar-default.svg" alt="Calendar icon">
+		  								<span>14 - 17 APRIL</span>
+		  							</div>
+		  							<div class="card__modallocation-content col-md-4">
+		  								<img class="svg-image" src="images/icon/ic-location.svg" alt="Location icon">
+		  								<span>Kepulauan Seribu</span>
+		  							</div>
+		  						</div>
+		  					</div>
+	  					</div>
+	  					<div class="col-md-4">
+	  						<div class="card__pricewrap card__pricewrap--row relative">
+	  							<div class="card__price-middle">
+	  								<p>2 Orang Terdaftar</p>
+									<h2>Rp200.000</h2>
+	  							</div>
+								<img class="svg-image" src="./images/icon/home-arrow-b.svg" alt="">
+							</div>
+	  					</div>
+	  				</div>
+	  			</div>
+	  			<div class="op-modal__other-content">
+	  				<div class="op-modal__other-content-wrap row">
+	  					<div class="col-md-8">
+	  						<div class="card__row card__location card__infowrap">
+		  						<h5>Paket Keluarga di Pulau Macan</h5>
+		  						<p class="card__desc">Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod.</p>
+		  						<div class="card__modallocation row">
+		  							<div class="card__modallocation-content col-md-4">
+		  								<img class="svg-image" src="images/icon/ic-calendar-default.svg" alt="Calendar icon">
+		  								<span>14 - 17 APRIL</span>
+		  							</div>
+		  							<div class="card__modallocation-content col-md-4">
+		  								<img class="svg-image" src="images/icon/ic-location.svg" alt="Location icon">
+		  								<span>Kepulauan Seribu</span>
+		  							</div>
+		  						</div>
+		  					</div>
+	  					</div>
+	  					<div class="col-md-4">
+	  						<div class="card__pricewrap card__pricewrap--row relative">
+	  							<div class="card__price-middle">
+	  								<p>2 Orang Terdaftar</p>
+									<h2>Rp200.000</h2>
+	  							</div>
+								<img class="svg-image" src="./images/icon/home-arrow-b.svg" alt="">
+							</div>
+	  					</div>
+	  				</div>
+	  			</div>
+	  			<div class="op-modal__other-content">
+	  				<div class="op-modal__other-content-wrap row">
+	  					<div class="col-md-8">
+	  						<div class="card__row card__location card__infowrap">
+		  						<h5>Paket Keluarga di Pulau Macan</h5>
+		  						<p class="card__desc">Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod.</p>
+		  						<div class="card__modallocation row">
+		  							<div class="card__modallocation-content col-md-4">
+		  								<img class="svg-image" src="images/icon/ic-calendar-default.svg" alt="Calendar icon">
+		  								<span>14 - 17 APRIL</span>
+		  							</div>
+		  							<div class="card__modallocation-content col-md-4">
+		  								<img class="svg-image" src="images/icon/ic-location.svg" alt="Location icon">
+		  								<span>Kepulauan Seribu</span>
+		  							</div>
+		  						</div>
+		  					</div>
+	  					</div>
+	  					<div class="col-md-4">
+	  						<div class="card__pricewrap card__pricewrap--row relative">
+	  							<div class="card__price-middle">
+	  								<p>2 Orang Terdaftar</p>
+									<h2>Rp200.000</h2>
+	  							</div>
+								<img class="svg-image" src="./images/icon/home-arrow-b.svg" alt="">
+							</div>
+	  					</div>
+	  				</div>
+	  			</div>
+	  			<div class="op-modal__other-content">
+	  				<div class="op-modal__other-content-wrap row">
+	  					<div class="col-md-8">
+	  						<div class="card__row card__location card__infowrap">
+		  						<h5>Paket Keluarga di Pulau Macan</h5>
+		  						<p class="card__desc">Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod.</p>
+		  						<div class="card__modallocation row">
+		  							<div class="card__modallocation-content col-md-4">
+		  								<img class="svg-image" src="images/icon/ic-calendar-default.svg" alt="Calendar icon">
+		  								<span>14 - 17 APRIL</span>
+		  							</div>
+		  							<div class="card__modallocation-content col-md-4">
+		  								<img class="svg-image" src="images/icon/ic-location.svg" alt="Location icon">
+		  								<span>Kepulauan Seribu</span>
+		  							</div>
+		  						</div>
+		  					</div>
+	  					</div>
+	  					<div class="col-md-4">
+	  						<div class="card__pricewrap card__pricewrap--row relative">
+	  							<div class="card__price-middle">
+	  								<p>2 Orang Terdaftar</p>
+									<h2>Rp200.000</h2>
+	  							</div>
+								<img class="svg-image" src="./images/icon/home-arrow-b.svg" alt="">
+							</div>
+	  					</div>
+	  				</div>
+	  			</div>
+	  			<div class="op-modal__other-content">
+	  				<div class="op-modal__other-content-wrap row">
+	  					<div class="col-md-8">
+	  						<div class="card__row card__location card__infowrap">
+		  						<h5>Paket Keluarga di Pulau Macan</h5>
+		  						<p class="card__desc">Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod.</p>
+		  						<div class="card__modallocation row">
+		  							<div class="card__modallocation-content col-md-4">
+		  								<img class="svg-image" src="images/icon/ic-calendar-default.svg" alt="Calendar icon">
+		  								<span>14 - 17 APRIL</span>
+		  							</div>
+		  							<div class="card__modallocation-content col-md-4">
+		  								<img class="svg-image" src="images/icon/ic-location.svg" alt="Location icon">
+		  								<span>Kepulauan Seribu</span>
+		  							</div>
+		  						</div>
+		  					</div>
+	  					</div>
+	  					<div class="col-md-4">
+	  						<div class="card__pricewrap card__pricewrap--row relative">
+	  							<div class="card__price-middle">
+	  								<p>2 Orang Terdaftar</p>
+									<h2>Rp200.000</h2>
+	  							</div>
+								<img class="svg-image" src="./images/icon/home-arrow-b.svg" alt="">
+							</div>
+	  					</div>
+	  				</div>
+	  			</div>
+	  		</div>
+	  	</div>
+  	</div>
+  </div>
+</div>
+
 <script src="js/plugins/moment.min.js" charset="utf-8"></script>
 <script src="js/plugins/daterangepicker.js" charset="utf-8"></script>
 <script src="js/plugins/swiper.min.js" charset="utf-8"></script>
