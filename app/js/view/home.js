@@ -21,6 +21,7 @@
       direction: 'horizontal',
       speed: 800,
 
+      initialSlide: 1,
       slidesPerView: 4,
 	  centeredSlides: true,
 	  spaceBetween: 30,
