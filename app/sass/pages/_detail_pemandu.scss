@@ -1,0 +1,57 @@
+.guide-container{
+	padding-bottom: 300px;
+}
+.guide-detail{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.guide-detail__person{
+	display: inline-block;
+	width: 150px;
+	height: 150px;
+	padding: 4px;
+	background-color: #fff;
+	border-radius: 50%;
+	text-align: center;
+	img{
+		width: 100%;
+		height: 100%;
+		border-radius: 50%;
+	}
+}
+.guide-detail__info{
+	display: inline-block;
+	padding-left: 16px;
+	vertical-align: middle;
+	p, h3{
+		color: #fff;
+	}
+	p{
+		font-size: 18px;
+		margin: 0;
+	}
+	h3{
+		margin: 8px 0;
+	}
+}
+.guide-detail__icon{
+	position: absolute;
+	top: 50%;
+	right: 15%;
+	transform: translateY(-50%);
+	img, svg{
+		g{
+			fill: #fff;
+		}
+	}
+}
+.guide-detail__desc{
+	margin: 36px 0 36px 170px;
+	max-width: 500px;
+	p{
+		line-height: 1.33;
+		color: #637381;
+		margin-bottom: 36px;
+	}
+}

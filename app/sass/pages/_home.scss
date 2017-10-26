@@ -113,6 +113,34 @@
 				content: none;
 			}
 		}
+		.twitter-typeahead{
+			width: 100%;
+			color: #282828;
+			margin-top: 0;
+			font-size: 15px;
+			line-height: inherit;
+			input{
+				padding-top: 0;
+			}
+		}
+	}
+}
+.home-datetime__option{
+	&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+		opacity: 1;
+	  	color: #282828;
+	}
+	&::-moz-placeholder { /* Firefox 19+ */
+	  	opacity: 1;
+	  	color: #282828;
+	}
+	&:-ms-input-placeholder { /* IE 10+ */
+	  	opacity: 1;
+	  	color: #282828;
+	}
+	&:-moz-placeholder { /* Firefox 18- */
+	  	opacity: 1;
+	  	color: #282828;
 	}
 }
 .daterangepicker_input{
@@ -160,6 +188,36 @@
 		height: 100%;
 		padding: 8px 25px;
 		font-size: 14px;
+	}
+}
+.input-icon.active{
+	&.icon-a{
+		svg{
+			path{
+				fill: #5B8EF4;
+			}
+		}
+	}
+	&.icon-b{
+		svg{
+			path{
+				fill: #5B8EF4;
+			}
+			rect{
+				fill: #5B8EF4;
+			}
+			rect[width="16"]{
+				fill: none;
+				stroke: #5B8EF4;
+			}
+		}
+	}
+	&.icon-c{
+		svg{
+			g{
+				fill: #5B8EF4;
+			}
+		}
 	}
 }
 
@@ -355,10 +413,19 @@
 	position: relative;
 	top: 0;
 	transform: none;
-	img{
+	img,svg{
 		position: absolute;
 		top: 10px;
 		right: 15px;
+		&:hover{
+			circle{
+				fill: #5b8ef4;
+				stroke: #fff;
+			}
+			path{
+				stroke: #fff;
+			}
+		}
 	}
 }
 .home-biggrid__infowrap{
@@ -592,13 +659,6 @@
 	.fc-bg{
 		z-index: 5;
 	}
-	.fc-today{
-		background-color: transparent;
-		span{
-			color: #5b8ef4;
-			font-weight: bold;
-		}
-	}
 	.fc-scroller{
 		overflow: visible !important;
 	}
@@ -697,6 +757,13 @@
 					border: 2px solid #5b8ef4;
 				}
 			}
+		}
+	}
+	.fc-today{
+		background-color: transparent;
+		span{
+			color: #5b8ef4;
+			font-weight: bold;
 		}
 	}
 }
