@@ -2023,6 +2023,150 @@ header.fixed-header .header-container {
   padding-right: 10px;
 }
 
+.general--modal {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+}
+
+.general--modal .panel {
+  margin-bottom: 21px;
+  background-color: #fff;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+
+.general--modal .mt--body {
+  line-height: 1.5em;
+}
+
+.general--modal.info .modal-container {
+  border-color: #2f80e7;
+}
+
+.general--modal.info .modal--info {
+  display: block;
+}
+
+.general--modal.error .modal-container {
+  border-color: #f05050;
+}
+
+.general--modal.error .modal--error {
+  display: block;
+}
+
+.general--modal.confirmation .modal-container {
+  border-color: #32ac8e;
+}
+
+.general--modal.confirmation .modal--confirmation {
+  display: block;
+}
+
+.general--modal.confirmation--notes .modal-container {
+  border-color: #32ac8e;
+}
+
+.general--modal.confirmation--notes .modal--confirmation--notes {
+  display: block;
+}
+
+.general--modal .modal-container {
+  max-width: 480px;
+  width: calc(100% - 20px);
+  height: auto;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  padding: 24px;
+}
+
+.general--modal .modal--child {
+  width: 100%;
+  min-height: 120px;
+  display: none;
+  padding-top: 24px;
+}
+
+.general--modal .close--modal {
+  cursor: pointer;
+  position: absolute;
+  right: 12px;
+  top: 8px;
+  opacity: 0.6;
+  font-size: 16px;
+  transition: 0.6s ease;
+}
+
+.general--modal .close--modal:hover {
+  opacity: 1;
+}
+
+.general--modal .modal--img {
+  display: block;
+  margin: auto;
+  width: 80px;
+  height: 80px;
+  margin-bottom: 24px;
+  font-size: 80px;
+  line-height: 80px;
+  text-align: center;
+}
+
+.general--modal .modal--info .modal--img {
+  color: #2f80e7;
+}
+
+.general--modal .modal--error .modal--img {
+  color: #f05050;
+}
+
+.general--modal .modal--text {
+  text-align: center;
+}
+
+.general--modal .modal--text .mt--head {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.general--modal .modal--text .mt--body {
+  font-size: 13px;
+}
+
+.general--modal .modal--button {
+  margin-top: 32px;
+  text-align: center;
+}
+
+.general--modal .modal--button button {
+  display: inline-block;
+}
+
+.general--modal .modal--button button + button {
+  margin-left: 24px;
+}
+
+.general--modal .mt--notes {
+  padding-top: 24px;
+  text-align: left;
+}
+
+.general--modal .mt--notes textarea {
+  width: 100%;
+  resize: none;
+  border-radius: 3px;
+}
+
 .form-group {
   display: block;
 }
