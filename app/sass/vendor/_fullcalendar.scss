@@ -1,0 +1,62 @@
+.table-condensed{
+	thead, tbody{
+		tr{
+			height: 36px;
+		}
+	}
+	thead{
+		tr:last-child{
+			color: #a4a4a4;
+			opacity: 0.65;
+		}
+		th{
+			font-weight: normal;
+		}
+	}
+	td{
+		width: 36px;
+		&.off{
+			color: #e1e4e7;
+		}
+		&.available{
+			padding-top: 4px;
+			&:hover{
+				background-color: #FFDBAB;
+			}
+		}
+		&.available.active{
+			&:hover{
+				background-color: #FFB757;
+			}
+		}
+		&.in-range{
+			background-color: #FFDBAB;
+		}
+		&.start-date, &.end-date{
+			background-color: #FFB757;
+		}
+	}
+	.month{
+		font-size: 15px;
+	}
+	th{
+		&.prev, &.next{
+			i{
+				position: relative;
+				padding: 10px 12px;
+				font-size: 12px;
+				border-radius: 50%;
+				font-size: 14px;
+				color: #A4A4A4;
+				background-color: #F9F9FB;
+			}
+			&:hover{
+				background-color: transparent;
+				i{
+					background-color:  #A4A4A4;
+					color: #fff;
+				}
+			}
+		}
+	}
+}

@@ -10,7 +10,9 @@
 
 // 2. Vendors
 @import
-  'vendor/normalize';
+  'vendor/normalize',
+  'vendor/fullcalendar',
+  'vendor/typeahead';
 
 // 3. Base stuff
 @import
@@ -52,6 +54,8 @@
   'pages/itinerary',
   'pages/pembayaran',
   'pages/detail_atraksi',
+  'pages/detail_pemandu',
+  'pages/detail_opentrip',
   'pages/plan_destinasi';
 
 // 7. Themes

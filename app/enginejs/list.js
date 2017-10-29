@@ -53,5 +53,11 @@ var lists = [
   } , {
         "name": "Detail Atraksi",
         "path": "index-solid.html?view=detail_atraksi"
+  } , {
+        "name": "Detail Pemandu",
+        "path": "index-solid.html?view=detail_pemandu"
+  } , {
+        "name": "Detail Open Trip",
+        "path": "index-solid.html?view=detail_opentrip"
   }
 ];

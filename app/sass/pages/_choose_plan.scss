@@ -38,7 +38,7 @@
 	margin: auto;
 }
 .cp__container{
-	margin: -50px 0 100px;
+	margin: -4% 0 100px;
 }
 .cp__wrapper{
 	margin: 0 -20px;
@@ -57,15 +57,13 @@
   	&:hover{
 		transform: translateY(-10px);
 		box-shadow: 0px 6px 10px 0px rgba(63,63,68,0.15);
-		.card__pricewrap{
-			svg{
-				circle{
-					fill: #5b8ef4;
-					stroke: #fff;
-				}
-				path{
-					stroke: #fff;
-				}
+		svg{
+			circle{
+				fill: #5b8ef4;
+				stroke: #fff;
+			}
+			path{
+				stroke: #fff;
 			}
 		}
 	}
@@ -84,4 +82,12 @@
 .cp__icon{
 	width: 80px;
 	height: 80px;
+}
+
+@media(max-width: 1440px){
+	.cp__banner{
+		&:before{
+			padding-top: 25%;
+		}
+	}
 }

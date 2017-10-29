@@ -22,6 +22,15 @@
     display: block;
     background-color: rgba(0,0,0,0.3)
   }
+  &.guide{
+    background-color: #5b8ef4;
+    &:after{
+      content: '';
+      padding-top: 15%;
+      display: block;
+      background-color: transparent;
+    }
+  }
   .container{
     position: absolute;
     height: 100%;
