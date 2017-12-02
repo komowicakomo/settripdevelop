@@ -2109,8 +2109,10 @@ header.fixed-header .header-container {
   top: 0;
   bottom: 0;
   z-index: 999;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(30, 48, 97, 0.6);
   display: none;
+  overflow-x: none;
+  overflow-y: auto;
 }
 
 .general--modal .panel {
@@ -2157,15 +2159,64 @@ header.fixed-header .header-container {
   display: block;
 }
 
+.general--modal.login .modal--login {
+  display: block;
+}
+
+.general--modal.login .close--modal {
+  display: none;
+}
+
+.general--modal.login .close--modal.close--custom {
+  display: block;
+}
+
+.general--modal.register .modal--register {
+  display: block;
+}
+
+.general--modal.register .close--modal {
+  display: none;
+}
+
+.general--modal.register .close--modal.close--custom {
+  display: block;
+}
+
+.general--modal.forgot .modal--forgot {
+  display: block;
+}
+
+.general--modal.forgot .close--modal {
+  display: none;
+}
+
+.general--modal.forgot .close--modal.close--custom {
+  display: block;
+}
+
+.general--modal.success .modal--success {
+  display: block;
+}
+
+.general--modal.success .close--modal {
+  display: none;
+}
+
+.general--modal.success .close--modal.close--custom {
+  display: block;
+}
+
 .general--modal .modal-container {
-  max-width: 480px;
+  max-width: 530px;
   width: calc(100% - 20px);
   height: auto;
   left: 50%;
   top: 50%;
   position: absolute;
   transform: translate(-50%, -50%);
-  padding: 24px;
+  padding: 24px 50px;
+  margin-top: 25px;
 }
 
 .general--modal .modal--child {
@@ -2178,15 +2229,17 @@ header.fixed-header .header-container {
 .general--modal .close--modal {
   cursor: pointer;
   position: absolute;
-  right: 12px;
-  top: 8px;
-  opacity: 0.6;
   font-size: 16px;
   transition: 0.6s ease;
+  opacity: 0.6;
+  right: -27px;
+  top: -27px;
+  opacity: 1;
 }
 
-.general--modal .close--modal:hover {
-  opacity: 1;
+.general--modal .close--modal img, .general--modal .close--modal svg {
+  width: 60px;
+  height: 60px;
 }
 
 .general--modal .modal--img {
@@ -2246,6 +2299,135 @@ header.fixed-header .header-container {
   border-radius: 3px;
 }
 
+.modal-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.modal-or {
+  position: relative;
+  text-align: center;
+  padding: 35px 0;
+}
+
+.modal-or:after, .modal-or:before {
+  position: absolute;
+  top: 50%;
+}
+
+.modal-or:before {
+  content: "";
+  left: 0;
+  transform: translateY(-50%);
+  width: 100%;
+  height: 1px;
+  background-color: #e4e4e4;
+}
+
+.modal-or:after {
+  content: "ATAU";
+  left: 50%;
+  transform: translate(-50%, -45%);
+  padding: 0 8px;
+  background-color: white;
+  font-size: 12px;
+  color: #e4e4e4;
+}
+
+.modal-btn {
+  width: 100%;
+  margin: 32px 0 24px;
+}
+
+.modal-smregis {
+  border-top: 1px solid #e4e4e4;
+  padding: 24px 0;
+  font-size: 15px;
+  text-align: center;
+}
+
+.modal-smregis a {
+  color: #5b8ef4;
+}
+
+.modal-sosmed {
+  margin-top: 30px;
+}
+
+.modal-sosmed__wrapper {
+  padding-left: 0;
+}
+
+.modal-sosmed__wrapper + .modal-sosmed__wrapper {
+  padding-right: 0;
+}
+
+.log-sosmed {
+  padding: 8px;
+  width: 100%;
+}
+
+.log-sosmed.log-sosmed__facebook {
+  border: 1px solid #49639e;
+}
+
+.log-sosmed.log-sosmed__facebook .log-sosmed__icon {
+  background-color: #49639e;
+}
+
+.log-sosmed.log-sosmed__facebook .log-sosmed__text {
+  color: #49639e;
+}
+
+.log-sosmed.log-sosmed__google {
+  border: 1px solid #da4b42;
+}
+
+.log-sosmed.log-sosmed__google .log-sosmed__icon {
+  background-color: #da4b42;
+}
+
+.log-sosmed.log-sosmed__google .log-sosmed__text {
+  color: #da4b42;
+}
+
+.log-sosmed__icon {
+  display: inline-block;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  vertical-align: middle;
+}
+
+.log-sosmed__icon span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.log-sosmed__text {
+  padding-left: 4px;
+  vertical-align: middle;
+}
+
+.modal-form .form-group {
+  margin-bottom: 30px;
+}
+
+.modal-form .form-group:last-of-type {
+  margin-bottom: 0;
+}
+
+.open--login, .open--register, .open--forgot {
+  cursor: pointer;
+}
+
+.mt--forgot {
+  margin-bottom: 50px;
+}
+
 .form-group {
   display: block;
 }
@@ -2257,6 +2439,11 @@ header.fixed-header .header-container {
   text-align: left;
   color: #3d3d3d;
   display: block;
+}
+
+.form-group a {
+  color: #a4a4a4;
+  text-decoration: none;
 }
 
 .form-group .input-group {
@@ -4782,10 +4969,33 @@ header.fixed-header .header-container {
   stroke: #fff;
 }
 
-.op-detail__info-top {
+.op-detail__info {
+  position: relative;
+  top: -85px;
+}
+
+.op-detail__info-top, .op-detail__info-bottom {
   padding: 10px 16px;
   border: 1px solid #e4e4e4;
   background-color: #fff;
+  height: 85px;
+}
+
+.op-detail__info-top.info-top--blue, .op-detail__info-bottom.info-top--blue {
+  background-color: #5b8ef4;
+  border-color: #5b8ef4;
+}
+
+.op-detail__info-top.info-top--blue p, .op-detail__info-top.info-top--blue h3, .op-detail__info-bottom.info-top--blue p, .op-detail__info-bottom.info-top--blue h3 {
+  color: white;
+}
+
+.op-detail__info-top.info-top--blue p, .op-detail__info-bottom.info-top--blue p {
+  font-weight: normal;
+}
+
+.op-detail__info-top.info-top--blue h3, .op-detail__info-bottom.info-top--blue h3 {
+  bottom: 5px;
 }
 
 .op-detail__infoprofile {
@@ -4811,12 +5021,12 @@ header.fixed-header .header-container {
   vertical-align: middle;
 }
 
-.op-detail__infoprofiledesc p, .op-detail__infoprofiledesc h5 {
+.op-detail__infoprofiledesc p, .op-detail__infoprofiledesc h5, .op-detail__infoprofiledesc h3 {
   display: inline-block;
   margin: 0;
 }
 
-.op-detail__infoprofiledesc h5 {
+.op-detail__infoprofiledesc h5, .op-detail__infoprofiledesc h3 {
   position: absolute;
   bottom: 10px;
   left: 0;
@@ -4829,8 +5039,35 @@ header.fixed-header .header-container {
   top: 10px;
   left: 0;
   color: #5b8ef4;
+  width: 300px;
   font-weight: bold;
   font-size: 15px;
+}
+
+.op-detail__info-bottom {
+  padding: 24px 16px;
+  border-top: none;
+  height: auto;
+}
+
+.op-detail__info-bottom .social-share-container {
+  margin-top: 0;
+}
+
+.op-detail__info-bottom .qty-form {
+  margin: 10px auto;
+}
+
+.op-detail__info-bottom .info-bottom__participate {
+  margin-top: 30px;
+}
+
+.op-detail__info-bottom b {
+  font-weight: bold;
+}
+
+.op-detail__info-bottom .op-detal__btn {
+  width: 100%;
 }
 
 .plan-destinasi-board {

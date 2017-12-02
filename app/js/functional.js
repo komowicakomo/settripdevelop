@@ -42,6 +42,7 @@ var closeModal = function(){
 	$('#general--modal').fadeOut()
 	$('#general--modal').removeClass()
 	$('#general--modal').addClass('general--modal')
+  $('body').css('overflow', 'auto');
 }
 
 var modalContainer = $('#general--modal')
@@ -114,10 +115,157 @@ $.confirm = function (message , title , yes, no, ) {
 			closeModal()
 
 	})
-
-
-
 }
+
+// update 2/Des/2017
+
+// need update for param ok, action, redir_url
+$.login = function (ok, action, redir_url) {
+  // alert(message)
+
+  modalContainer.fadeIn()
+  modalContainer.addClass('login')
+
+  $(".btnInfoOk").unbind("click")
+  $(".open--register").unbind("click")
+  $(".open--forgot").unbind("click")
+
+  $(".btnInfoOk").click(function (e) {
+
+    e.preventDefault()
+
+    if (ok !== undefined && typeof (ok) === 'function'){
+      ok()
+    }
+
+    if (action !== undefined && typeof (action) === 'function'){
+      action()
+    }
+
+    if (redir_url){
+
+      $.redirect(redir_url)
+
+    }
+
+    closeModal()
+
+  })
+
+  $('.open--register').on('click', function(e){
+    e.preventDefault()
+
+    closeModal();
+
+    setTimeout(function(){
+      $.register();
+    }, 300);
+  })
+
+  $('.open--forgot').on('click', function(e){
+    e.preventDefault()
+
+    closeModal();
+
+    setTimeout(function(){
+      $.forgot();
+    }, 300);
+  })
+}
+
+// need update for param ok, action, redir_url
+$.register = function (ok, action, redir_url) {
+  // alert(message)
+
+  $('body').css('overflow', 'hidden');
+
+  modalContainer.fadeIn()
+  modalContainer.addClass('register')
+
+  $(".btnInfoOk").unbind("click")
+  $(".open--login").unbind("click")
+
+  $(".btnInfoOk").click(function (e) {
+
+    e.preventDefault()
+
+    if (ok !== undefined && typeof (ok) === 'function'){
+      ok()
+    }
+
+    if (action !== undefined && typeof (action) === 'function'){
+      action()
+    }
+
+    if (redir_url){
+
+      $.redirect(redir_url)
+
+    }
+
+    closeModal()
+
+  })
+
+  $('.open--login').on('click', function(e){
+    e.preventDefault()
+
+    closeModal();
+
+    setTimeout(function(){
+      $.login();
+    }, 300);
+  })
+}
+
+// need update for param ok and action
+$.forgot = function (ok, action) {
+  // alert(message)
+
+  modalContainer.fadeIn()
+  modalContainer.addClass('forgot')
+
+  $(".btnInfoOk").unbind("click")
+
+  $(".btnInfoOk").click(function (e) {
+
+    e.preventDefault()
+
+    if (ok !== undefined && typeof (ok) === 'function'){
+      ok()
+    }
+
+    if (action !== undefined && typeof (action) === 'function'){
+      action()
+    }
+
+    if (redir_url){
+
+      $.redirect(redir_url)
+
+    }
+
+    closeModal()
+
+  })
+}
+
+$.success = function (message, title) {
+  // alert(message)
+
+  modalContainer.fadeIn()
+  modalContainer.addClass('success')
+
+  if(message !== undefined){
+    modalContainer.find('.mt--body').html(message)
+  }
+
+  if(title !== undefined){
+    modalContainer.find('.mt--head').html(title)
+  }
+}
+
+// end update
 
 
 $.prompt = function (message, ok) {
@@ -238,7 +386,7 @@ $(document).on('click','.qtyminus',function (e) {
         $(fieldName).val(currentVal - 1)
     } else {
         // Otherwise put a 0 there
-        $(fieldName).val(1)
+        $(fieldName).val(0)
     }
     $(fieldName).change();
 })

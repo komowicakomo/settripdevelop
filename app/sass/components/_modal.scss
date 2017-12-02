@@ -5,8 +5,10 @@
   top: 0;
   bottom: 0;
   z-index: 999;
-  background-color: rgba(0,0,0,0.8);
+  background-color: rgba(30, 48, 97,0.6);
   display: none;
+  overflow-x: none;
+  overflow-y: auto;
   .panel{
     margin-bottom: 21px;
     background-color: #fff;
@@ -49,15 +51,64 @@
       display: block;
     }
   }
+  &.login{
+    .modal--login{
+      display: block;
+    }
+    .close--modal{
+      display: none;
+      &.close--custom{
+        display: block;
+      }
+    }
+  }
+
+  &.register{
+    .modal--register{
+      display: block;
+    }
+    .close--modal{
+      display: none;
+      &.close--custom{
+        display: block;
+      }
+    }
+  }
+
+  &.forgot{
+    .modal--forgot{
+      display: block;
+    }
+    .close--modal{
+      display: none;
+      &.close--custom{
+        display: block;
+      }
+    }
+  }
+
+  &.success{
+    .modal--success{
+      display: block;
+    }
+    .close--modal{
+      display: none;
+      &.close--custom{
+        display: block;
+      }
+    }
+  }
+
   .modal-container{
-    max-width: 480px;
+    max-width: 530px;
     width: calc(100% - 20px);
     height: auto;
     left: 50%;
     top: 50%;
     position: absolute;
     transform: translate(-50% , -50%);
-    padding: 24px;
+    padding: 24px 50px;
+    margin-top: 25px;
   }
   .modal--child{
     width: 100%;
@@ -68,13 +119,15 @@
   .close--modal{
     cursor: pointer;
     position: absolute;
-    right: 12px;
-    top: 8px;
-    opacity: 0.6;
     font-size: 16px;
     transition: 0.6s ease ;
-    &:hover{
-      opacity: 1;
+    opacity: 0.6;
+    right: -27px;
+    top: -27px;
+    opacity: 1;
+    img,svg{
+      width: 60px;
+      height: 60px;
     }
   }
   .modal--img{
@@ -127,4 +180,116 @@
       border-radius: 3px;
     }
   }
+}
+
+.modal-title{
+  text-align: center;
+  margin-bottom: 50px;
+}
+.modal-or{
+  position: relative;
+  text-align: center;
+  padding: 35px 0;
+  &:after, &:before{
+    position: absolute;
+    top: 50%;
+  }
+  &:before{
+    content: "";
+    left: 0;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 1px;
+    background-color: #e4e4e4;
+  }
+  &:after{
+    content: "ATAU";
+    left: 50%;
+    transform: translate(-50%, -45%);
+    padding: 0 8px;
+    background-color: white;
+    font-size: 12px;
+    color: #e4e4e4;
+  }
+}
+.modal-btn{
+  width: 100%;
+  margin: 32px 0 24px;
+}
+.modal-smregis{
+  border-top: 1px solid #e4e4e4;
+  padding: 24px 0;
+  font-size: 15px;
+  text-align: center;
+  a{
+    color: #5b8ef4;
+  }
+}
+
+// social media modal
+.modal-sosmed{
+  margin-top: 30px;
+}
+.modal-sosmed__wrapper{
+  padding-left: 0;
+  & + &{
+    padding-right: 0;
+  }
+}
+.log-sosmed{
+  padding: 8px;
+  width: 100%;
+  &.log-sosmed__facebook{
+    border: 1px solid #49639e;
+    .log-sosmed__icon{
+      background-color: #49639e;
+    }
+    .log-sosmed__text{
+      color: #49639e;
+    }
+  }
+  &.log-sosmed__google{
+    border: 1px solid #da4b42;
+    .log-sosmed__icon{
+      background-color: #da4b42;
+    }
+    .log-sosmed__text{
+      color: #da4b42;
+    }
+  }
+}
+.log-sosmed__icon{
+  display: inline-block;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  vertical-align: middle;
+  span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+  }
+}
+.log-sosmed__text{
+  padding-left: 4px;
+  vertical-align: middle;
+}
+
+// modal form
+.modal-form{
+  .form-group{
+    margin-bottom: 30px;
+    &:last-of-type{
+      margin-bottom: 0;
+    }
+  }
+}
+
+.open--login, .open--register, .open--forgot{
+  cursor: pointer;
+}
+.mt--forgot{
+  margin-bottom: 50px;
 }
