@@ -119,7 +119,6 @@ $.confirm = function (message , title , yes, no, ) {
 
 }
 
-
 $.prompt = function (message, ok) {
 	return prompt(message)
 }
@@ -214,7 +213,7 @@ $(document).on('click','.qtyplus',function (e) {
     var fieldName = $(this).parents('.qty-form').find('.qty')
     // Get its current value
     var currentVal = parseInt($(fieldName).val())
-    // If is not undefined 
+    // If is not undefined
     if (!isNaN(currentVal) && currentVal < max) {
         // Increment
         $(fieldName).val(currentVal + 1)

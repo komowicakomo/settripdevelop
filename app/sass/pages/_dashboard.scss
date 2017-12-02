@@ -1,0 +1,142 @@
+.dashpanel{
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0 1px 3px 0 rgba(63, 63, 68, 0.15), 0 0 0 1px rgba(63, 63, 68, 0.05);
+  & + .dashpanel{
+    margin-top: 24px;
+  }
+}
+
+.dashboard{
+  padding-top: 32px;
+  padding-bottom: 32px;
+  .profile-body{
+    padding: 0px;
+    .panel-head{
+      padding: 0px 32px 0px 32px;
+      border-bottom: solid 1px #e4e4e4;
+      ul{
+        margin: 0px;
+        li{
+          display: inline-block;
+          padding: 26px 0px 18px 0px;
+          font-size: 18px;
+          line-height: 0.78;
+          font-weight: 300;
+          text-align: left;
+          color: #a4a4a4;
+          cursor: pointer;
+          &.active{
+            color: $blue;
+            border-bottom: 3px solid $blue ;
+          }
+          &:hover{
+            color: $blue ;
+          }
+          & + li {
+            margin-left: 44px;
+          }
+        }
+      }
+    }
+    .panel-body{
+      position: relative;
+      .panel-body__inner{
+        width: 100%;
+        padding: 32px 32px 64px 32px;
+        border-bottom: solid 1px #e4e4e4;
+      }
+      .panel-footer{
+        padding: 24px 32px 24px 32px;
+      }
+    }
+  }
+  .form-group{
+    margin-bottom: 34px;
+    padding-left: 0px;
+  }
+}
+
+.dashpanel {
+  &.profile{
+    padding: 30px 43px 30px 43px ;
+  }
+  .profile-picture{
+    width: 100%;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    border-radius: 100%;
+    margin-bottom: 24px;
+    img{
+      position: absolute;
+      width: 100%;
+      max-height: 100%;
+    }
+    &:after{
+      content: '';
+      display: block;
+      padding-top: 100%;
+    }
+  }
+  .profile-name{
+    width: 100%;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.01;
+    text-align: center;
+    color: #3d3d3d;
+  }
+}
+
+.dashboard-navigation{
+  padding-top: 12px;
+  padding-bottom: 12px;
+  ul{
+    margin: 0px;
+  }
+  li{
+    padding: 18px 16px 12px 16px;
+    i{
+      font-size: 18px;
+    }
+    &.active{
+      background-color: #ffffff;
+      box-shadow: 0 1px 3px 0 rgba(63, 63, 68, 0.15), 0 0 0 1px rgba(63, 63, 68, 0.05);
+      i{
+        color: $blue;
+      }
+    }
+    .dn-text{
+      display: inline-block;
+      font-size: 18px;
+      font-weight: 300;
+      line-height: 1;
+      text-align: left;
+      color: #3d3d3d;
+      padding-left: 8px;
+    }
+  }
+}
+
+.dashpanel{
+  &.join-mitra{
+    position: relative;
+    padding: 32px;
+    h5{
+      margin-bottom: 18px;
+    }
+    p{
+      line-height: 1.33;
+      text-align: left;
+      color: #637381;
+      margin-bottom: 0px;
+    }
+    .btn{
+      position: absolute;
+      right: 32px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}

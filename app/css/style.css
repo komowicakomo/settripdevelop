@@ -4833,6 +4833,170 @@ header.fixed-header .header-container {
   font-size: 15px;
 }
 
+.dashpanel {
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0 1px 3px 0 rgba(63, 63, 68, 0.15), 0 0 0 1px rgba(63, 63, 68, 0.05);
+}
+
+.dashpanel + .dashpanel {
+  margin-top: 24px;
+}
+
+.dashboard {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.dashboard .profile-body {
+  padding: 0px;
+}
+
+.dashboard .profile-body .panel-head {
+  padding: 0px 32px 0px 32px;
+  border-bottom: solid 1px #e4e4e4;
+}
+
+.dashboard .profile-body .panel-head ul {
+  margin: 0px;
+}
+
+.dashboard .profile-body .panel-head ul li {
+  display: inline-block;
+  padding: 26px 0px 18px 0px;
+  font-size: 18px;
+  line-height: 0.78;
+  font-weight: 300;
+  text-align: left;
+  color: #a4a4a4;
+  cursor: pointer;
+}
+
+.dashboard .profile-body .panel-head ul li.active {
+  color: #5c8ef3;
+  border-bottom: 3px solid #5c8ef3;
+}
+
+.dashboard .profile-body .panel-head ul li:hover {
+  color: #5c8ef3;
+}
+
+.dashboard .profile-body .panel-head ul li + li {
+  margin-left: 44px;
+}
+
+.dashboard .profile-body .panel-body {
+  position: relative;
+}
+
+.dashboard .profile-body .panel-body .panel-body__inner {
+  width: 100%;
+  padding: 32px 32px 64px 32px;
+  border-bottom: solid 1px #e4e4e4;
+}
+
+.dashboard .profile-body .panel-body .panel-footer {
+  padding: 24px 32px 24px 32px;
+}
+
+.dashboard .form-group {
+  margin-bottom: 34px;
+  padding-left: 0px;
+}
+
+.dashpanel.profile {
+  padding: 30px 43px 30px 43px;
+}
+
+.dashpanel .profile-picture {
+  width: 100%;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  border-radius: 100%;
+  margin-bottom: 24px;
+}
+
+.dashpanel .profile-picture img {
+  position: absolute;
+  width: 100%;
+  max-height: 100%;
+}
+
+.dashpanel .profile-picture:after {
+  content: '';
+  display: block;
+  padding-top: 100%;
+}
+
+.dashpanel .profile-name {
+  width: 100%;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.01;
+  text-align: center;
+  color: #3d3d3d;
+}
+
+.dashboard-navigation {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.dashboard-navigation ul {
+  margin: 0px;
+}
+
+.dashboard-navigation li {
+  padding: 18px 16px 12px 16px;
+}
+
+.dashboard-navigation li i {
+  font-size: 18px;
+}
+
+.dashboard-navigation li.active {
+  background-color: #ffffff;
+  box-shadow: 0 1px 3px 0 rgba(63, 63, 68, 0.15), 0 0 0 1px rgba(63, 63, 68, 0.05);
+}
+
+.dashboard-navigation li.active i {
+  color: #5c8ef3;
+}
+
+.dashboard-navigation li .dn-text {
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1;
+  text-align: left;
+  color: #3d3d3d;
+  padding-left: 8px;
+}
+
+.dashpanel.join-mitra {
+  position: relative;
+  padding: 32px;
+}
+
+.dashpanel.join-mitra h5 {
+  margin-bottom: 18px;
+}
+
+.dashpanel.join-mitra p {
+  line-height: 1.33;
+  text-align: left;
+  color: #637381;
+  margin-bottom: 0px;
+}
+
+.dashpanel.join-mitra .btn {
+  position: absolute;
+  right: 32px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 .plan-destinasi-board {
   background-color: #ffffff;
   padding: 16px 0px;

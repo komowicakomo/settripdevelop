@@ -59,5 +59,8 @@ var lists = [
   } , {
         "name": "Detail Open Trip",
         "path": "index-solid.html?view=detail_opentrip"
+  } , {
+        "name": "User Dashboard",
+        "path": "index-solid.html?view=user_dashboard"
   }
 ];
