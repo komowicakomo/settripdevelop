@@ -62,5 +62,17 @@ var lists = [
   } , {
         "name": "User Dashboard",
         "path": "index-solid.html?view=user_dashboard"
+  } , {
+        "name": "User Dashboard Riwayat",
+        "path": "index-solid.html?view=user_dashboard_history"
+  } , {
+        "name": "User Dashboard Wishlist",
+        "path": "index-solid.html?view=user_dashboard_wishlist"
+  } , {
+        "name": "Mitra",
+        "path": "index-solid.html?view=mitra"
+  } , {
+        "name": "Konfirmasi Pembayaran",
+        "path": "index-solid.html?view=konfirmasi_pembayaran"
   }
 ];

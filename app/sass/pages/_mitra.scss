@@ -1,0 +1,54 @@
+.mitra{
+  min-height: 100vh ;
+  h3{
+    padding-top: 40px;
+    padding-bottom: 30px;
+  }
+  .dashpanel{
+    .panel-head{
+      padding: 0px 32px 0px 32px;
+      border-bottom: solid 1px #e4e4e4;
+      h1{
+        padding-top: 20px;
+        padding-bottom: 20px;
+        font-size: 24px;
+        display: block;
+        margin: 0px;
+      }
+      ul{
+        margin: 0px;
+        li{
+          display: inline-block;
+          padding: 26px 0px 18px 0px;
+          font-size: 18px;
+          line-height: 0.78;
+          font-weight: 300;
+          text-align: left;
+          color: #a4a4a4;
+          cursor: pointer;
+          &.active{
+            color: $blue;
+            border-bottom: 3px solid $blue ;
+          }
+          &:hover{
+            color: $blue ;
+          }
+          & + li {
+            margin-left: 44px;
+          }
+        }
+      }
+    }
+    .panel-body{
+      position: relative;
+      .panel-body__inner{
+        width: 100%;
+        padding: 32px 32px 64px 32px;
+        border-bottom: solid 1px #e4e4e4;
+      }
+      .panel-footer{
+        padding: 24px 32px 24px 32px;
+      }
+    }
+  }
+}
