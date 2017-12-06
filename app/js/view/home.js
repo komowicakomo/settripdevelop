@@ -298,17 +298,3 @@ function initMap(location) {
 	}
 }
 initMap({lat: -25.363, lng: 131.044})
-
-// choose on click
-$('.home-datetime__option').click(function(){
-	var content = $(this).parents('.home-datetime__choose');
-	content.find('.input-icon').addClass('active');
-})
-$('.home-datetime__option').blur(function(){
-	var content = $(this).parents('.home-datetime__choose');
-	content.find('.input-icon').removeClass('active');
-})
-
-$('.open--login-head').on('click', function(){
-	$.login();
-})

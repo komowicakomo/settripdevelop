@@ -427,11 +427,23 @@ var renderStar = function() {
 
   container.each(function(){
     var Star = '<em class="fa fa-star" aria-hidden="true"></em>'
+    var StarGrey = '<em class="fa fa-star" aria-hidden="true" style="color: #d5d5d5;"></em>'
     var Count = $(this).attr('data-star')
+    var Gray = $(this).attr('data-grey')
     var StarContainer = $(this).find('.rating-container')
     var StarTemp = ''
-    for( var x = 0 ; x < Count ; x++ ){
-      StarTemp = StarTemp + Star
+    if(Gray == 'true'){
+      for( var x = 0 ; x < 5 ; x++ ){
+        if(x < Count){
+          StarTemp = StarTemp + Star
+        } else{
+          StarTemp = StarTemp + StarGrey
+        }
+      }
+    } else{
+      for( var x = 0 ; x < Count ; x++ ){
+        StarTemp = StarTemp + Star
+      }
     }
     StarContainer.append(StarTemp)
   })

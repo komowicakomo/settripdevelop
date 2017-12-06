@@ -688,6 +688,11 @@ ul li {
   margin: 0;
 }
 
+.row.row--withmargin {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
 .star-rating .rating-container {
   white-space: nowrap;
 }
@@ -2041,7 +2046,7 @@ header.fixed-header .header-container {
   border-bottom: solid 1px #e4e4e4;
 }
 
-.card__pricewrap h2 {
+.card__pricewrap h2, .card__pricewrap h3 {
   color: #ffb757;
   margin: 0;
   font-weight: bold;
@@ -4671,11 +4676,11 @@ header.fixed-header .header-container {
   color: #637381;
 }
 
-.detail-container .container--full.white h1 {
+.detail-container .container--full.white h1, .detail-container .container--full.grey h1 {
   margin-bottom: 0px;
 }
 
-.detail-container .container--full.white .ccw-body {
+.detail-container .container--full.white .ccw-body, .detail-container .container--full.grey .ccw-body {
   padding-top: 24px;
   padding-bottom: 32px;
   width: 100%;
@@ -4683,12 +4688,12 @@ header.fixed-header .header-container {
   border-top: solid 1px #e4e4e4;
 }
 
-.detail-container .container--full.white .ccw-body img {
+.detail-container .container--full.white .ccw-body img, .detail-container .container--full.grey .ccw-body img {
   display: -ms-inline-flexbox;
   display: inline-flex;
 }
 
-.detail-container .container--full.white .ccw-body p {
+.detail-container .container--full.white .ccw-body p, .detail-container .container--full.grey .ccw-body p {
   margin-top: 12px;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -4700,7 +4705,7 @@ header.fixed-header .header-container {
   margin-left: 8px;
 }
 
-.detail-container .container--full.white .ccw-body ul li {
+.detail-container .container--full.white .ccw-body ul li, .detail-container .container--full.grey .ccw-body ul li {
   font-size: 15px;
   line-height: 1.33;
   text-align: left;
@@ -4856,6 +4861,134 @@ header.fixed-header .header-container {
   color: #ffffff;
 }
 
+.comment {
+  background-color: #fff;
+  box-shadow: 0 1px 3px 0 rgba(170, 170, 170, 0.5);
+  padding: 18px 0;
+}
+
+.comment__padding {
+  padding: 0 18px;
+}
+
+.comment__head {
+  padding: 0px 18px 18px;
+  border-bottom: 1px solid #e4e4e4;
+}
+
+.comment__head h5 {
+  margin: 0;
+}
+
+.comment__content {
+  padding: 18px 0;
+  border-bottom: 1px solid #e4e4e4;
+}
+
+.comment__profile {
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.comment__rating {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+.comment__rating .star-rating em {
+  font-size: 24px;
+  margin-left: 12px;
+}
+
+.comment__person .guide-detail__person {
+  width: 50px;
+  height: 50px;
+}
+
+.comment__person .guide-detail__info {
+  padding-left: 4px;
+}
+
+.comment__person .guide-detail__info p {
+  font-size: 15px;
+  color: #444447;
+  font-weight: 600;
+}
+
+.near__content {
+  background-color: #fff;
+  border: solid 1px #e4e4e4;
+  margin-bottom: 24px;
+  padding: 8px 0;
+}
+
+.near__top {
+  padding: 0 8px 8px;
+}
+
+.near__bottom {
+  padding: 10px 8px 2px;
+  border-top: 1px solid #e4e4e4;
+}
+
+.near__bottom h5 {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  transform: translateY(-50%);
+  margin: 0;
+}
+
+.near__side {
+  padding: 0;
+}
+
+.near__side:last-child {
+  padding-left: 10px;
+}
+
+.near__side img {
+  width: 100%;
+}
+
+.near__side .btn {
+  padding: 12px 12px 8px 12px;
+  float: left;
+  width: calc(50% - 10px);
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.near__subtitle {
+  font-size: 10px;
+  color: #3d3d3d;
+}
+
+.near__title {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.15;
+  font-weight: 600;
+  height: 50px;
+}
+
+.near__rate {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.near__rate .rating-container {
+  display: inline-block;
+}
+
+.near__rate .planbox-rating span {
+  vertical-align: middle;
+}
+
 .guide-container {
   padding-bottom: 300px;
 }
@@ -4969,10 +5102,33 @@ header.fixed-header .header-container {
   stroke: #fff;
 }
 
-.op-detail__info-top {
+.op-detail__info {
+  position: relative;
+  top: -85px;
+}
+
+.op-detail__info-top, .op-detail__info-bottom {
   padding: 10px 16px;
   border: 1px solid #e4e4e4;
   background-color: #fff;
+  height: 85px;
+}
+
+.op-detail__info-top.info-top--blue, .op-detail__info-bottom.info-top--blue {
+  background-color: #5b8ef4;
+  border-color: #5b8ef4;
+}
+
+.op-detail__info-top.info-top--blue p, .op-detail__info-top.info-top--blue h3, .op-detail__info-bottom.info-top--blue p, .op-detail__info-bottom.info-top--blue h3 {
+  color: white;
+}
+
+.op-detail__info-top.info-top--blue p, .op-detail__info-bottom.info-top--blue p {
+  font-weight: normal;
+}
+
+.op-detail__info-top.info-top--blue h3, .op-detail__info-bottom.info-top--blue h3 {
+  bottom: 5px;
 }
 
 .op-detail__infoprofile {
@@ -4998,12 +5154,12 @@ header.fixed-header .header-container {
   vertical-align: middle;
 }
 
-.op-detail__infoprofiledesc p, .op-detail__infoprofiledesc h5 {
+.op-detail__infoprofiledesc p, .op-detail__infoprofiledesc h5, .op-detail__infoprofiledesc h3 {
   display: inline-block;
   margin: 0;
 }
 
-.op-detail__infoprofiledesc h5 {
+.op-detail__infoprofiledesc h5, .op-detail__infoprofiledesc h3 {
   position: absolute;
   bottom: 10px;
   left: 0;
@@ -5016,8 +5172,65 @@ header.fixed-header .header-container {
   top: 10px;
   left: 0;
   color: #5b8ef4;
+  width: 300px;
   font-weight: bold;
   font-size: 15px;
+}
+
+.op-detail__info-bottom {
+  padding: 24px 16px;
+  border-top: none;
+  height: auto;
+}
+
+.op-detail__info-bottom .social-share-container {
+  margin-top: 0;
+}
+
+.op-detail__info-bottom .qty-form {
+  margin: 10px auto;
+}
+
+.op-detail__info-bottom .info-bottom__participate {
+  margin-top: 30px;
+}
+
+.op-detail__info-bottom b {
+  font-weight: bold;
+}
+
+.op-detail__info-bottom .op-detal__btn {
+  width: 100%;
+}
+
+.op-destinasi.plan-destinasi .plan-destinasi-main-body {
+  margin-right: 0;
+  width: calc(100% - 16px - 60px);
+}
+
+.plan-destinasi-detail.plan-destinasi .plan-destinasi-main-body {
+  width: calc(65% - 16px - 60px);
+}
+
+.op-wrap {
+  margin: 0 -10px;
+  padding-bottom: 40px;
+}
+
+.op-infowrap {
+  padding: 16px 0;
+}
+
+.op-infowrap .card__infowrap {
+  padding: 0 16px;
+}
+
+.op-infowrap .col-md-6 {
+  padding: 0;
+}
+
+.op-infowrap .card__info p {
+  margin: 0;
 }
 
 .dashpanel {

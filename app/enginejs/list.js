@@ -51,14 +51,17 @@ var lists = [
         "name": "Pembayaran Thankyou",
         "path": "index-solid.html?view=pembayaran_thankyou"
   } , {
-        "name": "Detail Atraksi",
-        "path": "index-solid.html?view=detail_atraksi"
-  } , {
         "name": "Detail Pemandu",
         "path": "index-solid.html?view=detail_pemandu"
   } , {
         "name": "Detail Open Trip",
         "path": "index-solid.html?view=detail_opentrip"
+  } , {
+        "name": "Detail Atraksi",
+        "path": "index-solid.html?view=detail_atraksi"
+  } , {
+        "name": "Detail Hotel",
+        "path": "index-solid.html?view=detail_hotel"
   } , {
         "name": "User Dashboard",
         "path": "index-solid.html?view=user_dashboard"
