@@ -12,6 +12,9 @@ var lists = [
         "name": "Homepage",
         "path": "index-solid.html?view=home"
   } , {
+        "name": "Homepage Login",
+        "path": "index.html?view=home"
+  } , {
         "name": "Recomended Plan",
         "path": "index-solid.html?view=recomended_plan"
   } , {
@@ -77,5 +80,8 @@ var lists = [
   } , {
         "name": "Konfirmasi Pembayaran",
         "path": "index-solid.html?view=konfirmasi_pembayaran"
+  } , {
+        "name": "Static Page",
+        "path": "index-solid.html?view=static"
   }
 ];

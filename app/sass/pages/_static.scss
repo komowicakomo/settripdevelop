@@ -1,0 +1,39 @@
+.static{
+	padding-top: 48px;
+}
+.static__side{
+	padding: 0;
+	&:last-child{
+		padding-left: 15px;
+	}
+}
+.static__menu{
+	padding-right: 32px;
+	h3,h5{
+		margin: 0;
+	}
+	h5{
+		font-weight: 300;
+	}
+}
+.static__category{
+	padding: 28px 0;
+}
+.static__subcategory{
+	width: 100%;
+	padding: 18px;
+	margin: 4px 0;
+	cursor: pointer;
+	&:hover, &.active{
+		background-color: #fff;
+		box-shadow: 0 1px 3px 0 rgba(63, 63, 68, 0.15), 0 0 0 1px rgba(63, 63, 68, 0.05);
+	}
+}
+.static__content{
+	width: 100%;
+	height: 100%;
+	padding: 32px;
+	box-shadow: 0 1px 3px 0 rgba(63, 63, 68, 0.15), 0 0 0 1px rgba(63, 63, 68, 0.05);
+	background-color: #fff;
+
+}
