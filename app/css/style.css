@@ -2252,11 +2252,27 @@ header.fixed-header .header-container {
   display: block;
 }
 
+.general--modal.info .close--modal {
+  display: none;
+}
+
+.general--modal.info .close--modal.close--custom {
+  display: block;
+}
+
 .general--modal.error .modal-container {
   border-color: #f05050;
 }
 
 .general--modal.error .modal--error {
+  display: block;
+}
+
+.general--modal.error .close--modal {
+  display: none;
+}
+
+.general--modal.error .close--modal.close--custom {
   display: block;
 }
 
@@ -2268,11 +2284,27 @@ header.fixed-header .header-container {
   display: block;
 }
 
-.general--modal.confirmation--notes .modal-container {
-  border-color: #32ac8e;
+.general--modal.confirmation .close--modal {
+  display: none;
 }
 
-.general--modal.confirmation--notes .modal--confirmation--notes {
+.general--modal.confirmation .close--modal.close--custom {
+  display: block;
+}
+
+.general--modal.success .modal-container {
+  border-color: #73BD67;
+}
+
+.general--modal.success .modal--success {
+  display: block;
+}
+
+.general--modal.success .close--modal {
+  display: none;
+}
+
+.general--modal.success .close--modal.close--custom {
   display: block;
 }
 
@@ -2312,15 +2344,15 @@ header.fixed-header .header-container {
   display: block;
 }
 
-.general--modal.success .modal--success {
+.general--modal.sent .modal--sent {
   display: block;
 }
 
-.general--modal.success .close--modal {
+.general--modal.sent .close--modal {
   display: none;
 }
 
-.general--modal.success .close--modal.close--custom {
+.general--modal.sent .close--modal.close--custom {
   display: block;
 }
 
@@ -2378,6 +2410,10 @@ header.fixed-header .header-container {
   color: #f05050;
 }
 
+.general--modal .modal--success .modal--img {
+  color: #73BD67;
+}
+
 .general--modal .modal--text {
   text-align: center;
 }
@@ -2403,6 +2439,14 @@ header.fixed-header .header-container {
 
 .general--modal .modal--button button + button {
   margin-left: 24px;
+}
+
+.general--modal .modal--button .modal--button-full {
+  width: 100%;
+}
+
+.general--modal .modal--button .modal--button-half {
+  width: 45%;
 }
 
 .general--modal .mt--notes {

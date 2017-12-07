@@ -82,6 +82,56 @@ $.info = function (message, ok, title, redir_url) {
 	})
 }
 
+$.success = function (message, ok, title, redir_url) {
+  // alert(message)
+
+  modalContainer.fadeIn()
+  modalContainer.addClass('success')
+
+  if(message !== undefined){
+    modalContainer.find('.mt--body').html(message)
+  }
+
+  if(title !== undefined){
+    modalContainer.find('.mt--head').html(title)
+  }
+
+  $(".btnInfoOk").unbind("click")
+
+  $(".btnInfoOk").click(function (e) {
+
+    e.preventDefault()
+
+    if (ok !== undefined && typeof (ok) === 'function'){
+      ok()
+    }
+
+    if (redir_url){
+
+      $.redirect(redir_url)
+
+    }
+
+    closeModal()
+
+  })
+}
+
+$.sent = function (message, title) {
+  // alert(message)
+
+  modalContainer.fadeIn()
+  modalContainer.addClass('sent')
+
+  if(message !== undefined){
+    modalContainer.find('.mt--body').html(message)
+  }
+
+  if(title !== undefined){
+    modalContainer.find('.mt--head').html(title)
+  }
+}
+
 $.confirm = function (message , title , yes, no, ) {
 
 	modalContainer.fadeIn()

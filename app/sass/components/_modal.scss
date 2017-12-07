@@ -26,6 +26,12 @@
     .modal--info{
       display: block;
     }
+    .close--modal{
+      display: none;
+      &.close--custom{
+        display: block;
+      }
+    }
   }
   &.error{
     .modal-container{
@@ -33,6 +39,12 @@
     }
     .modal--error{
       display: block;
+    }
+    .close--modal{
+      display: none;
+      &.close--custom{
+        display: block;
+      }
     }
   }
   &.confirmation{
@@ -42,13 +54,25 @@
     .modal--confirmation{
       display: block;
     }
-  }
-  &.confirmation--notes{
-    .modal-container{
-      border-color: #32ac8e;
+    .close--modal{
+      display: none;
+      &.close--custom{
+        display: block;
+      }
     }
-    .modal--confirmation--notes{
+  }
+  &.success{
+    .modal-container{
+      border-color: #73BD67;
+    }
+    .modal--success{
       display: block;
+    }
+    .close--modal{
+      display: none;
+      &.close--custom{
+        display: block;
+      }
     }
   }
   &.login{
@@ -87,8 +111,8 @@
     }
   }
 
-  &.success{
-    .modal--success{
+  &.sent{
+    .modal--sent{
       display: block;
     }
     .close--modal{
@@ -150,6 +174,11 @@
       color: #f05050;
     }
   }
+  .modal--success{
+    .modal--img{
+      color: #73BD67;
+    }
+  }
   .modal--text{
     text-align: center;
     .mt--head{
@@ -169,6 +198,12 @@
       & + button{
         margin-left: 24px;
       }
+    }
+    .modal--button-full{
+      width: 100%;
+    }
+    .modal--button-half{
+      width: 45%;
     }
   }
   .mt--notes{
