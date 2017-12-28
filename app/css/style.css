@@ -4580,6 +4580,9 @@ header.fixed-header .header-container {
   max-width: 500px;
   background-color: #ffffff;
   box-shadow: 0 1px 3px 0 rgba(63, 63, 68, 0.15), 0 0 0 1px rgba(63, 63, 68, 0.05);
+  display: block;
+  margin: auto;
+  margin-top: 48px;
 }
 
 .pembayaran-thanks .pt-head {
@@ -5819,9 +5822,34 @@ header.fixed-header .header-container {
       align-items: flex-start;
 }
 
+@media (max-width: 800px) {
+  .plan-destinasi .row {
+    text-align: center;
+  }
+}
+
 .plan-destinasi .plan-destinasi-date {
   width: 60px;
   margin-right: 16px;
+}
+
+@media (max-width: 800px) {
+  .plan-destinasi .plan-destinasi-date {
+    width: auto;
+    display: inline-block;
+    margin: auto;
+    margin-bottom: 24px;
+  }
+  .plan-destinasi .plan-destinasi-date .pd-date-block {
+    width: 60px;
+    display: inline-block;
+    margin-left: -3px;
+    border: 1px solid #DDDDDD;
+    border-left: 0px solid transparent;
+  }
+  .plan-destinasi .plan-destinasi-date .pd-date-block:last-child {
+    border-bottom: 1px solid #DDDDDD;
+  }
 }
 
 .plan-destinasi .pd-date-block {
@@ -5865,6 +5893,14 @@ header.fixed-header .header-container {
 .plan-destinasi .plan-destinasi-main-body {
   width: calc(65% - 16px);
   margin-right: 16px;
+}
+
+@media (max-width: 800px) {
+  .plan-destinasi .plan-destinasi-main-body {
+    width: 100%;
+    margin: 0px;
+    margin-bottom: 16px;
+  }
 }
 
 .plan-destinasi .plan-destinasi-mb-inner {
@@ -5999,6 +6035,12 @@ header.fixed-header .header-container {
   background-color: #ffffff;
   box-shadow: 0 1px 3px 0 rgba(63, 63, 68, 0.15), 0 0 0 1px rgba(63, 63, 68, 0.05);
   margin-bottom: 16px;
+}
+
+@media (max-width: 800px) {
+  .plan-destinasi .plan-destinasi-cart-price {
+    width: 100%;
+  }
 }
 
 .plan-destinasi .pd-cp-box {
@@ -6522,6 +6564,12 @@ header.fixed-header .header-container {
   width: 70%;
 }
 
+@media (max-width: 993px) {
+  .modal-plan-destinasi .modal-pd-head .modal-pd-description {
+    width: 50%;
+  }
+}
+
 .modal-plan-destinasi .modal-pd-head .modal-pd-description span {
   font-size: 15px;
   line-height: 1;
@@ -6541,6 +6589,12 @@ header.fixed-header .header-container {
 .modal-plan-destinasi .modal-pd-head .modal-pd-filter {
   width: 30%;
   text-align: right;
+}
+
+@media (max-width: 993px) {
+  .modal-plan-destinasi .modal-pd-head .modal-pd-filter {
+    width: 50%;
+  }
 }
 
 .modal-plan-destinasi .modal-pd-head .modal-pd-filter .modal-pd-filter-inner {
@@ -6676,6 +6730,27 @@ header.fixed-header .header-container {
   width: calc(100% - 80px);
 }
 
+@media (max-width: 1080px) {
+  .modal-plan-destinasi .modal-pd-box-container {
+    width: calc(100% - 20px);
+  }
+}
+
+@media (max-width: 993px) {
+  .modal-plan-destinasi .modal-pd-box-container {
+    top: 0;
+    left: 0;
+    position: relative;
+    transform: translate(0, 0);
+    display: block;
+    margin: auto;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    overflow: auto;
+    height: 100%;
+  }
+}
+
 .modal-plan-destinasi .nav-btn {
   position: absolute;
   width: 50px;
@@ -6707,6 +6782,17 @@ header.fixed-header .header-container {
 .modal-plan-destinasi .nav-btn.nav-btn-right {
   right: 0;
   transform: translate(50%, -50%);
+}
+
+@media (max-width: 1200px) {
+  .modal-plan-destinasi .nav-btn.nav-btn-left {
+    left: 16px;
+    transform: translate(0, -50%);
+  }
+  .modal-plan-destinasi .nav-btn.nav-btn-right {
+    right: 16px;
+    transform: translate(0, -50%);
+  }
 }
 
 .modal-plan-destinasi .modal-pd-planbox {
@@ -6842,6 +6928,22 @@ header.fixed-header .header-container {
 .modal-plan-destinasi .modal-pd-planbox:hover {
   transform: translateY(-10px);
   box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 1200px) {
+  .modal-plan-destinasi .modal-pd-planbox .planbox-action .planbox-price {
+    font-size: 16px;
+    -ms-flex-align: center;
+        align-items: center;
+    padding-top: 0px;
+    position: relative;
+  }
+  .modal-plan-destinasi .modal-pd-planbox .planbox-action .planbox-price .price-box {
+    padding-top: 4px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 }
 
 .modal-plan-destinasi .planbox-action {
@@ -7145,6 +7247,12 @@ header.fixed-header .header-container {
   cursor: pointer;
 }
 
+@media (max-width: 600px) {
+  .mitra .dashpanel .panel-head ul li {
+    font-size: 14px;
+  }
+}
+
 .mitra .dashpanel .panel-head ul li.active {
   color: #5c8ef3;
   border-bottom: 3px solid #5c8ef3;
@@ -7170,6 +7278,18 @@ header.fixed-header .header-container {
 
 .mitra .dashpanel .panel-body .panel-footer {
   padding: 24px 32px 24px 32px;
+}
+
+@media (max-width: 600px) {
+  .mitra .dashpanel .panel-head {
+    padding: 0px 16px 0px 16px;
+  }
+  .mitra .dashpanel .panel-body .panel-body__inner {
+    padding: 16px;
+  }
+  .mitra .dashpanel .panel-body .panel-body__inner .form-group {
+    padding: 0px;
+  }
 }
 
 .static {

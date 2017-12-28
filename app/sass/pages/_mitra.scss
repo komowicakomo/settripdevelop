@@ -26,6 +26,9 @@
           text-align: left;
           color: #a4a4a4;
           cursor: pointer;
+          @media (max-width: 600px){
+            font-size: 14px;
+          }
           &.active{
             color: $blue;
             border-bottom: 3px solid $blue ;
@@ -48,6 +51,19 @@
       }
       .panel-footer{
         padding: 24px 32px 24px 32px;
+      }
+    }
+    @media (max-width: 600px){
+      .panel-head{
+        padding: 0px 16px 0px 16px;
+      }
+      .panel-body{
+        .panel-body__inner{
+          padding: 16px;
+          .form-group{
+            padding: 0px;
+          }
+        }
       }
     }
   }
