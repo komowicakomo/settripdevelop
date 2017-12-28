@@ -6191,9 +6191,12 @@ header.fixed-header .header-container {
   transition: 0.4s ease;
 }
 
-.modal-plan-destinasi .modal-pd-head .modal-pd-filter .modal-pd-filter-inner li.active {
+.modal-plan-destinasi .modal-pd-head .modal-pd-filter .modal-pd-filter-inner li.active p {
   color: #5c8ef3;
-  border-color: #5c8ef3;
+}
+
+.modal-plan-destinasi .modal-pd-head .modal-pd-filter .modal-pd-filter-inner li.active g {
+  stroke: #5c8ef3;
 }
 
 .modal-plan-destinasi .modal-pd-head .modal-pd-filter .modal-pd-filter-inner li p {
@@ -6231,19 +6234,24 @@ header.fixed-header .header-container {
   padding-left: 12px;
 }
 
-.modal-plan-destinasi .modal-pd-head .modal-pd-filter .modal-pd-filter-inner li.modal-pd-double img {
-  padding-right: 4px;
+.modal-plan-destinasi .modal-pd-head .modal-pd-filter .modal-pd-filter-inner li.modal-pd-double div {
+  display: inline-block;
 }
 
-.modal-plan-destinasi .modal-pd-head .modal-pd-filter .modal-pd-filter-inner li.modal-pd-double img + img {
-  padding-right: 0px;
+.modal-plan-destinasi .modal-pd-head .modal-pd-filter .modal-pd-filter-inner li.modal-pd-double div:hover g {
+  stroke: #ffb757;
 }
 
-.modal-plan-destinasi .modal-pd-head .modal-pd-filter .modal-pd-filter-inner li:hover p {
+.modal-plan-destinasi .modal-pd-head .modal-pd-filter .modal-pd-filter-inner li.modal-pd-double div + div {
+  padding-left: 4px;
+  border-left: solid 1px #e4e4e4;
+}
+
+.modal-plan-destinasi .modal-pd-head .modal-pd-filter .modal-pd-filter-inner li.mpd-single:hover p {
   color: #ffb757;
 }
 
-.modal-plan-destinasi .modal-pd-head .modal-pd-filter .modal-pd-filter-inner li:hover g {
+.modal-plan-destinasi .modal-pd-head .modal-pd-filter .modal-pd-filter-inner li.mpd-single:hover g {
   stroke: #ffb757;
 }
 
@@ -6252,6 +6260,46 @@ header.fixed-header .header-container {
   height: calc(100% - 102px);
   position: relative;
   transition: 0.4s ease;
+  display: none;
+}
+
+.modal-plan-destinasi .modal-pd-body.active {
+  display: block;
+}
+
+.modal-plan-destinasi .with--map.container {
+  overflow: hidden;
+}
+
+.modal-plan-destinasi .with--map > .row {
+  height: 100%;
+  position: relative;
+  margin-right: -40px;
+  padding-right: 30px;
+}
+
+.modal-plan-destinasi .with--map .planbox-container {
+  position: relative;
+  overflow: auto;
+  height: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.modal-plan-destinasi .with--map .map-place {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.modal-plan-destinasi .with--map .map-place-container {
+  position: absolute;
+  top: 50px;
+  bottom: 24px;
+  left: 0;
+  right: 0;
 }
 
 .modal-plan-destinasi .modal-pd-box-container {

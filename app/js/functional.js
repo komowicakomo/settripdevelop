@@ -438,23 +438,32 @@ var renderStar = function() {
 }
 
 
-function initMap ( locations , callback ) {
+function initMap ( container ,  locations , callback ) {
 
 	var location = locations
+	var containers = container !== undefined ? container : 'map'
+	var containerOuter = document.getElementById(containers)
 
-	var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 4,
-          center: location
-  })
+	console.log(containerOuter)
 
-	var marker = new google.maps.Marker({
-          position: location,
-          map: map
-  })
+	if ( containerOuter !== null){
+
+		var map = new google.maps.Map( containerOuter , {
+	          zoom: 4,
+	          center: location
+	  })
+
+		var marker = new google.maps.Marker({
+	          position: location ,
+	          map: map
+	  })
+
+	}
 
   if (callback !== undefined){
     callback()
   }
+
 }
 
 // js for plan filter
@@ -466,6 +475,7 @@ $(document).on('click','.modal-pd-filter .mpd-child',function(){
 })
 
 $(document).on('click','.js-open-filter',function(){
+	$(this).addClass('active')
   $(this).parents('.modal-plan-destinasi-ov-body').addClass('filter-show')
 })
 

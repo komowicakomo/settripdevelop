@@ -3,7 +3,6 @@ $(document).on('click','button' , function(){
   $(this).parents('body').find('.'+actionFor).addClass('active')
 })
 
-
 var keypressSlider = document.getElementById('keypress');
 var input0 = document.getElementById('input-with-keypress-0');
 var input1 = document.getElementById('input-with-keypress-1');
@@ -96,8 +95,21 @@ inputs.forEach(function(input, handle) {
 	});
 });
 
-initMap({lat: -25.363, lng: 131.044})
+initMap( 'marketplace-map' , {lat: -25.363, lng: 131.044})
+
+initMap( 'map' , {lat: -25.363, lng: 131.044})
 
 $(document).on('click','.planbox-body-action',function(){
   $(this).parents('.plan-cart-box').find('.pcb-body').slideToggle()
+})
+
+$(document).on('click','.modal-pd-double .mpd-single',function(){
+  $('.modal-pd-double .mpd-single').removeClass('active')
+  $(this).addClass('active')
+  var target = $(this).attr('data-target')
+  $('.modal-pd-body').removeClass('active')
+  $('#'+target).addClass('active')
+  if(target == 'with-map'){
+    google.maps.event.trigger( document.getElementById('marketplace-map') ,'resize')
+  }
 })

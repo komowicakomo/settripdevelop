@@ -157,11 +157,11 @@
         </div>
         <div class="modal-pd-filter">
           <ul class="modal-pd-filter-inner">
-              <li class="mpd-child js-open-filter"><p>FILTER</p><img src="images/icon/ic-filter.svg" alt="filter icon" class="svg-image"></li>
-              <li class="mpd-child"><p>SORT</p><img src="images/icon/ic-sort.svg" alt="sort icon" class="svg-image"></li>
+              <li class="mpd-child mpd-single js-open-filter"><p>FILTER</p><img src="images/icon/ic-filter.svg" alt="filter icon" class="svg-image"></li>
+              <li class="mpd-child mpd-single "><p>SORT</p><img src="images/icon/ic-sort.svg" alt="sort icon" class="svg-image"></li>
               <li class="mpd-child modal-pd-double">
-                <img src="images/icon/ic-hamburger.svg" alt="sort icon" class="svg-image">
-                <img src="images/icon/ic-map.svg" alt="sort icon" class="svg-image">
+                <div class="mpd-single" data-target="default"><img src="images/icon/ic-hamburger.svg" alt="sort icon" class="svg-image"></div>
+                <div class="mpd-single" data-target="with-map"><img src="images/icon/ic-map.svg" alt="sort icon" class="svg-image"></div>
               </li>
           </ul>
         </div>
@@ -289,7 +289,102 @@
         </div>
       </div>
     </div>
-    <div class="modal-pd-body container">
+    <div id="with-map" class="modal-pd-body container with--map">
+      <div class="row">
+        <div class="map-place col-md-8">
+          <div id="marketplace-map" class="map-place-container">
+
+          </div>
+        </div>
+        <div class="col-md-4 planbox-container ">
+          <div class="modal-pd-planbox">
+            <div class="planbox-description">
+              <div class="planbox-img">
+                <img class="middle-both" src="images/dummy/dummy.jpg" alt="dummy img">
+              </div>
+              <div class="planbox-text">
+                <div class="planbox-destination">
+                  <span>ATRAKSI</span>
+                  <p>Ranca Upas</p>
+                </div>
+                <div class="planbox-rating star-rating" data-star="5" >
+                  <div class="rating-container">
+
+                  </div>
+                  <span>240 reviews</span>
+                </div>
+              </div>
+            </div>
+            <div class="planbox-action">
+              <div class="planbox-price">
+                Rp 2.000.000
+              </div>
+              <div class="planbox-button-action">
+                <button class="btn small">Lihat Detail</button>
+                <button class="btn btn--orange small">Tambahkan</button>
+              </div>
+            </div>
+          </div>
+          <div class="modal-pd-planbox">
+            <div class="planbox-description">
+              <div class="planbox-img">
+                <img class="middle-both" src="images/dummy/dummy.jpg" alt="dummy img">
+              </div>
+              <div class="planbox-text">
+                <div class="planbox-destination">
+                  <span>ATRAKSI</span>
+                  <p>Ranca Upas</p>
+                </div>
+                <div class="planbox-rating star-rating" data-star="5" >
+                  <div class="rating-container">
+
+                  </div>
+                  <span>240 reviews</span>
+                </div>
+              </div>
+            </div>
+            <div class="planbox-action">
+              <div class="planbox-price">
+                Rp 2.000.000
+              </div>
+              <div class="planbox-button-action">
+                <button class="btn small">Lihat Detail</button>
+                <button class="btn btn--orange small">Tambahkan</button>
+              </div>
+            </div>
+          </div>
+          <div class="modal-pd-planbox">
+            <div class="planbox-description">
+              <div class="planbox-img">
+                <img class="middle-both" src="images/dummy/dummy.jpg" alt="dummy img">
+              </div>
+              <div class="planbox-text">
+                <div class="planbox-destination">
+                  <span>ATRAKSI</span>
+                  <p>Ranca Upas</p>
+                </div>
+                <div class="planbox-rating star-rating" data-star="5" >
+                  <div class="rating-container">
+
+                  </div>
+                  <span>240 reviews</span>
+                </div>
+              </div>
+            </div>
+            <div class="planbox-action">
+              <div class="planbox-price">
+                Rp 2.000.000
+              </div>
+              <div class="planbox-button-action">
+                <button class="btn small">Lihat Detail</button>
+                <button class="btn btn--orange small">Tambahkan</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="default" class="modal-pd-body container active">
         <div class="nav-btn nav-btn-left">
           <i class="fa fa-angle-left middle-both" aria-hidden="true"></i>
         </div>
