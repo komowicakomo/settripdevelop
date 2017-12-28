@@ -146,7 +146,7 @@
         }
       }
     }
-    &.white{
+    &.white, &.grey{
       h1{
         margin-bottom: 0px;
       }
@@ -320,6 +320,118 @@
         text-align: left;
         color: #ffffff;
       }
+    }
+  }
+}
+
+// comment section
+.comment{
+  background-color: #fff;
+  box-shadow: 0 1px 3px 0 rgba(170, 170, 170, 0.5);
+  padding: 18px 0;
+}
+.comment__padding{
+  padding: 0 18px;
+}
+.comment__head{
+  padding: 0px 18px 18px;
+  border-bottom: 1px solid #e4e4e4;
+  h5{
+    margin: 0;
+  }
+}
+.comment__content{
+  padding: 18px 0;
+  border-bottom: 1px solid #e4e4e4;
+}
+.comment__profile{
+  position: relative;
+  margin-bottom: 16px;
+}
+.comment__rating{
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  .star-rating em{
+    font-size: 24px;
+    margin-left: 12px;
+  }
+}
+.comment__person{
+  .guide-detail__person{
+    width: 50px;
+    height: 50px;
+  }
+  .guide-detail__info{
+    padding-left: 4px;
+    p{
+      font-size: 15px;
+      color: #444447;
+      font-weight: 600;
+    }
+  }
+}
+
+// near atraction section
+.near__content{
+  background-color: #fff;
+  border: solid 1px #e4e4e4;
+  margin-bottom: 24px;
+  padding: 8px 0;
+}
+.near__top{
+  padding: 0 8px 8px;
+}
+.near__bottom{
+  padding: 10px 8px 2px;
+  border-top: 1px solid #e4e4e4;
+  h5{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+    margin: 0;
+  }
+}
+.near__side{
+  padding: 0;
+  &:last-child{
+    padding-left: 10px;
+  }
+  img{
+    width: 100%;
+  }
+  .btn{
+    padding: 12px 12px 8px 12px;
+    float: left;
+    width: calc(50% - 10px);
+    display: inline-block;
+    margin: 0 5px;
+  }
+}
+.near__subtitle{
+  font-size: 10px;
+  color: #3d3d3d;
+}
+.near__title{
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.15;
+  font-weight: 600;
+  height: 50px;
+}
+.near__rate{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  .rating-container{
+    display: inline-block;
+  }
+  .planbox-rating{
+    span{
+      vertical-align: middle;
     }
   }
 }
