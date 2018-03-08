@@ -20,3 +20,13 @@ $('.open--login-head').on('click', function(){
 $('.header__login').on('click', function(){
 	$('.header__profile--menu').toggleClass('active')
 })
+
+// mobile menu
+function openMenuMobile(){
+	$('.sidemenu').addClass('active');
+	$('body').css('overflow', 'hidden');
+}
+function closeMenuMobile(){
+	$('.sidemenu').removeClass('active');
+	$('body').css('overflow', 'auto');
+}

@@ -530,20 +530,22 @@ function initMap ( container ,  locations , callback ) {
 
 // js for plan filter
 
-$(document).on('click','.modal-pd-filter .mpd-child',function(){
+// $(document).on('click','.modal-pd-filter .mpd-child',function(){
 
-  $(this).toggleClass('active')
+//   $(this).toggleClass('active')
 
-})
+// })
 
 $(document).on('click','.js-open-filter',function(){
-	$(this).addClass('active')
-  $(this).parents('.modal-plan-destinasi-ov-body').addClass('filter-show')
+	$(this).toggleClass('active')
+  $('.modal-pd-body').toggleClass('filter-show')
+  $('.modal-filter-body').toggleClass('filter-show')
 })
 
 $(document).on('click','.js-close-filter',function(){
   $('.js-open-filter').removeClass('active')
-  $(this).parents('.modal-plan-destinasi-ov-body').removeClass('filter-show')
+  $('.modal-pd-body').removeClass('filter-show')
+  $('.modal-filter-body').removeClass('filter-show')
 })
 
 $(document).on('click','.filter-menu-box',function(){

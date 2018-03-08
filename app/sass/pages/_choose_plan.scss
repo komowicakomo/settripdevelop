@@ -1,17 +1,20 @@
 .cp{
 	padding-top: 75px;
+	.container{
+		overflow: visible;
+	}
+	@media(max-width: 650px){
+		padding-top: 55px;
+	}
 }
 .cp__banner{
 	position: relative;
 	width: 100%;
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center center;
 	&:before{
 		content: '';
 		position: relative;
-		display: inline-block;
-		padding-top: 15%;
+		display: block;
+		padding-top: 20%;
 	}
 	h1, h3{
 		color: #fff;
@@ -28,6 +31,43 @@
 		margin-bottom: 0;
 		font-weight: normal;
 	}
+	@media(max-width: 1440px){
+		&:before{
+			padding-top: 25%;
+		}
+	}
+	@media(max-width: 968px){
+		&:before{
+			padding-top: 35%;
+		}
+	}
+	@media(max-width: 768px){
+		&:before{
+			padding-top: 45%;
+		}
+	}
+	@media(max-width: 450px){
+		text-align: center;
+		h1, span{
+			font-size: 24px;
+		}
+		h1{
+			margin-bottom: 16px;
+		}
+		&:before{
+			padding-top: 65%;
+		}
+	}
+}
+.cp__banner-img{
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
 }
 .cp__banner-text{
 	position: absolute;
@@ -39,14 +79,22 @@
 }
 .cp__container{
 	margin: -4% 0 100px;
+	@media(max-width: 768px){
+		margin: -12% 0 100px;
+	}
 }
 .cp__wrapper{
 	margin: 0 -20px;
 }
 .cp__content{
 	padding: 0 20px;
+	@media(max-width: 768px){
+  		padding: 0 10px;
+  		margin-bottom: 16px;
+  	}
 }
 .cp__content-wrap{
+	position: relative;
 	text-align: center;
 	border-radius: 4px;
   	background-color: #ffffff;
@@ -78,16 +126,42 @@
 		color: #637381;
 		line-height: 1.33;
   	}
+  	@media(max-width: 968px){
+  		padding: 30px 16px;
+  		p{
+  			max-width: 100%;
+  		}
+  	}
+  	@media(max-width: 768px){
+  		text-align: left;
+  		padding: 24px 16px;
+  		h3{
+  			margin: 0 0 10px;
+  		}
+  		.cp__icon{
+  			display: none;
+  		}
+  		svg{
+  			position: absolute;
+  			top: 18px;
+  			right: 16px;
+  			width: 32px;
+  			height: 32px;
+  			circle{
+				fill: #5b8ef4;
+				stroke: #fff;
+			}
+			path{
+				stroke: #fff;
+			}
+  		}
+  		&:hover{
+  			transform: none;
+  			box-shadow: 0 1px 3px 0 rgba(63, 63, 68, 0.15), 0 0 0 1px rgba(63, 63, 68, 0.05);
+  		}
+  	}
 }
 .cp__icon{
 	width: 80px;
 	height: 80px;
-}
-
-@media(max-width: 1440px){
-	.cp__banner{
-		&:before{
-			padding-top: 25%;
-		}
-	}
 }

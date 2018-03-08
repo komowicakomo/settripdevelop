@@ -10,11 +10,50 @@
 .dashboard{
   padding-top: 32px;
   padding-bottom: 32px;
+  & > .row > .col-sm-3 {
+    @media (max-width: 900px){
+      width: 250px;
+      flex : 0 0 250px;
+      max-width: 250px;
+    }
+    @media (max-width: 700px){
+      width: 100% ;
+      flex : 0 0  100% ;
+      max-width:  100% ;
+    }
+  }
+  & > .row > .col-sm-9 {
+    @media (max-width: 900px){
+      width: calc(100% - 250px);
+      flex : 0 0  calc(100% - 250px);
+      max-width:  calc(100% - 250px);
+      .form-group{
+        width: 100% ;
+        flex : 0 0  100% ;
+        max-width:  100% ;
+      }
+      .btn{
+        width: 100% ;
+        flex : 0 0  100% ;
+        max-width:  100% ;
+      }
+    }
+    @media (max-width: 700px){
+        width: 100% ;
+        flex : 0 0  100% ;
+        max-width:  100% ;
+
+    }
+  }
   .profile-body{
     padding: 0px;
+    @media (max-width: 700px){
+      margin-top: 24px;
+    }
     .panel-head{
       padding: 0px 32px 0px 32px;
       border-bottom: solid 1px #e4e4e4;
+
       h1{
         padding-top: 20px;
         padding-bottom: 20px;
@@ -45,6 +84,14 @@
           }
         }
       }
+      @media (max-width: 900px){
+        padding: 0px 16px 0px 16px;
+        ul{
+          li{
+            font-size: 14px;
+          }
+        }
+      }
     }
     .panel-body{
       position: relative;
@@ -52,9 +99,15 @@
         width: 100%;
         padding: 32px 32px 64px 32px;
         border-bottom: solid 1px #e4e4e4;
+        @media (max-width: 900px){
+          padding: 16px;
+        }
       }
       .panel-footer{
         padding: 24px 32px 24px 32px;
+        @media (max-width: 900px){
+          padding: 16px;
+        }
       }
     }
   }
@@ -124,7 +177,7 @@
       padding-left: 8px;
     }
   }
-}
+} 
 
 .dashpanel{
   &.join-mitra{
@@ -144,6 +197,23 @@
       right: 32px;
       top: 50%;
       transform: translateY(-50%);
+      @media (max-width: 900px){
+        position: relative;
+        right: auto;
+        top : auto;
+        transform: translate(0);
+        margin-top: 16px;
+      }
+    }
+    @media (max-width: 900px){
+      .col-sm-8{
+        width: 100% ;
+        flex : 0 0  100% ;
+        max-width:  100% ;
+      }
+    }
+    @media (max-width: 900px){
+      padding: 16px;
     }
   }
 }

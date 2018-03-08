@@ -50,6 +50,7 @@ ul{
   padding-left: 20px; /* 3 */
   padding-right: 20px; /* 3 */
   width: 100%; /* 1 */
+  overflow: hidden;
 
   &.container-body{
     min-height: 100vh ;
@@ -58,15 +59,19 @@ ul{
   &.container--full{
     max-width: 100%;
     padding: 0px;
-    &.grey{
-      background-color: #f9f9fb;
-    }
-    &.white{
-      background-color: white;
-    }
-    &.blue{
-      background-color: $blue;
-    }
+  }
+  &.grey{
+    background-color: #f9f9fb;
+  }
+  &.white{
+    background-color: white;
+  }
+  &.blue{
+    background-color: $blue;
+  }
+  @media(max-width: 400px){
+    padding-left: 16px;
+    padding-right: 16px;
   }
  }
 

@@ -81,7 +81,25 @@ var lists = [
         "name": "Konfirmasi Pembayaran",
         "path": "index-solid.html?view=konfirmasi_pembayaran"
   } , {
-        "name": "Static Page",
-        "path": "index-solid.html?view=static"
+        "name": "Static Term and Condition",
+        "path": "index-solid.html?view=static_tnc"
+  } , {
+        "name": "Static How It Works",
+        "path": "index-solid.html?view=static_how_it_works"
+  } , {
+        "name": "Static How It Works Detail",
+        "path": "index-solid.html?view=static_how_it_works_detail"
+  } , {
+        "name": "Static What Is",
+        "path": "index-solid.html?view=static_what_is"
+  } , {
+        "name": "Static Contact",
+        "path": "index-solid.html?view=static_contact"
+  } , {
+        "name": "Static FAQ",
+        "path": "index-solid.html?view=static_faq"
+  } , {
+        "name": "Static FAQ Choose",
+        "path": "index-solid.html?view=static_faq_choose"
   }
 ];

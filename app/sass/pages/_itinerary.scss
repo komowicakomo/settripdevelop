@@ -22,6 +22,15 @@
       }
     }
   }
+  @media (max-width: 600px){
+    ul{
+      white-space: nowrap;
+      li{
+        font-size: 14px;
+        margin-right: 16px;
+      }
+    }
+  }
 }
 
 .img-square-box{
@@ -143,6 +152,22 @@
         padding-left: 0px;
       }
     }
+    @media (max-width: 600px){
+      .img-round-box
+      {
+        margin-bottom: 16px;
+      }
+      .row{
+        text-align: center;
+      }
+      p{
+        text-align: center;
+        font-size: 14px;
+        & + p {
+          text-align: center;
+        }
+      }
+    }
   }
   .pd-cp-itn-footer{
     display: flex;
@@ -179,6 +204,11 @@
       }
     }
   }
+  .img-square-box{
+    @media (max-width: 600px){
+      margin-bottom: 24px;
+    }
+  }
 }
 
 .point-square{
@@ -203,6 +233,9 @@
     transform: translateY(-24px);
     z-index: 3;
   }
+  @media (max-width: 600px){
+    display: none;
+  }
 }
 
 .point-connector{
@@ -213,4 +246,7 @@
   z-index: 1;
   width: 3px;
   background-color: #5b8ef4;
+  @media (max-width: 600px){
+    display: none;
+  }
 }

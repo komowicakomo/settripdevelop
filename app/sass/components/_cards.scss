@@ -23,6 +23,9 @@
 	transition: transform 0.3s ease;
 	.card__slider{
 		height: 250px;
+		@media(max-width: 1100px){
+			height: 200px;
+		}
 	}
 	&:hover{
 		transform: translateY(-10px);
@@ -60,16 +63,33 @@
 		display: block;
 		overflow: hidden;
 		text-overflow: ellipsis;
+		@media(max-width: 580px){
+			margin: 0;
+			line-height: 15px;
+			height: auto;
+			max-height: 75px;
+		}
 	}
 }
 .card__info{
 	color: #a4a4a4;
+	@media(max-width: 580px){
+		display: none;
+	}
 	span, p{
 		display: inline-block;
 		color: #a4a4a4;
 	}
 	span{
 		margin-right: 5px;
+	}
+}
+.card__info--mobile{
+	display: none;
+	padding-top: 15px;
+    height: 30px;
+	@media(max-width: 580px){
+		display: block;
 	}
 }
 .card__pricewrap{
