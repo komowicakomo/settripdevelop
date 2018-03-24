@@ -50,6 +50,9 @@
 	.pd-maps-box{
 		height: 110px;
 	}
+	@media(max-width: 580px){
+		padding-left: 8px;
+	}
 }
 .card__infowrap{
 	h5{
@@ -69,6 +72,10 @@
 			height: auto;
 			max-height: 75px;
 		}
+	}
+	@media(max-width: 580px){
+		padding-left: 8px;
+		padding-right: 8px;
 	}
 }
 .card__info{

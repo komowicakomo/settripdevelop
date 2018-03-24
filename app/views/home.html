@@ -256,12 +256,91 @@
 						</div>
 					</div>
 				</div>
+				<div class="home-gridview__button">	
+					<button class="btn btn--medium">LIHAT LEBIH BANYAK</button>
+				</div>
 			</div>
 		</div>
 	</div>
 	<!-- recommend plan section -->
 	<div class="home-wrapper relative">
 		<h1 class="home-wrapper__title">Recommended Plan</h1>
+		<!-- recommend places -->
+		<div class="home-overflowview home-overflowview--places home-overflowview--desktop relative">
+			<div class="clearfix container row">
+				<div class="col-lg-6 home-overflowview--places__big">
+					<a href="#">
+						<div class="home-overflowview--places__content relative" style="background-image: url('/images/image-a.jpg')">
+							<div class="home-overflowview--places__text">Bandung</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-lg-6 home-overflowview--places_small">
+					<div class="row">
+						<div class="col-lg-6">
+							<a href="#">
+								<div class="home-overflowview--places__content relative" style="background-image: url('/images/plan-bg.jpeg')">
+									<div class="home-overflowview--places__text">Papua</div>
+								</div>
+							</a>
+						</div>
+						<div class="col-lg-6">
+							<a href="#">
+								<div class="home-overflowview--places__content relative" style="background-image: url('/images/image-b.jpg')">
+									<div class="home-overflowview--places__text">Pekanbaru</div>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-6">
+							<a href="#">
+								<div class="home-overflowview--places__content relative" style="background-image: url('/images/opentrip_bg.jpeg')">
+									<div class="home-overflowview--places__text">Bali</div>
+								</div>
+							</a>
+						</div>
+						<div class="col-lg-6">
+							<a href="#">
+								<div class="home-overflowview--places__content relative" style="background-image: url('/images/home-banner.jpeg')">
+									<div class="home-overflowview--places__text">Aceh</div>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- recommend places mobile -->
+		<div class="home-overflowview home-overflowview--places home-overflowview--mobile relative">
+			<div class="home-overflowview--places_wrapper">
+				<a href="#">
+					<div class="home-overflowview--places__content relative" style="background-image: url('/images/image-a.jpg')">
+						<div class="home-overflowview--places__text">Bandung</div>
+					</div>
+				</a>
+				<a href="#">
+					<div class="home-overflowview--places__content relative" style="background-image: url('/images/plan-bg.jpeg')">
+						<div class="home-overflowview--places__text">Papua</div>
+					</div>
+				</a>
+				<a href="#">
+					<div class="home-overflowview--places__content relative" style="background-image: url('/images/image-b.jpg')">
+						<div class="home-overflowview--places__text">Pekanbaru</div>
+					</div>
+				</a>
+				<a href="#">
+					<div class="home-overflowview--places__content relative" style="background-image: url('/images/opentrip_bg.jpeg')">
+						<div class="home-overflowview--places__text">Bali</div>
+					</div>
+				</a>
+				<a href="#">
+					<div class="home-overflowview--places__content relative" style="background-image: url('/images/home-banner.jpeg')">
+						<div class="home-overflowview--places__text">Aceh</div>
+					</div>
+				</a>
+			</div>
+		</div>
 		<!-- JS untuk overflow kiri dan kanan -->
 		<div class="home-overflowview relative">
 			<div class="swiper-container home-rp__slider">
@@ -289,16 +368,20 @@
 		    					<div class="swiper-pagination home-pagination card-pagination"></div>
 							</div>
 							<div class="card__location row">
-								<div class="card__map col-md-4">
+								<div class="card__map col-4">
 									<div id="map" class="pd-maps-box maps"></div>
 								</div>
-								<div class="card__infowrap col-md-8">
+								<div class="card__infowrap col-8">
 									<h5>Petualangan di raja ampat</h5>
 									<p class="card__desc">Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod.</p>
 									<div class="card__info">
 										<span class="fa fa-map-marker"></span>
 										<p>Sulawesi Selatan</p>
 									</div>
+								</div>
+								<div class="card__info card__info--mobile col-12">
+									<span class="fa fa-map-marker"></span>
+									<p>Sulawesi Selatan</p>
 								</div>
 							</div>
 							<div class="card__pricewrap relative">
@@ -328,16 +411,20 @@
 		    					<div class="swiper-pagination home-pagination card-pagination"></div>
 							</div>
 							<div class="card__location row">
-								<div class="card__map col-md-4">
+								<div class="card__map col-4">
 									<div id="map" class="pd-maps-box maps"></div>
 								</div>
-								<div class="card__infowrap col-md-8">
+								<div class="card__infowrap col-8">
 									<h5>Petualangan di raja ampat</h5>
 									<p class="card__desc">Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod.</p>
 									<div class="card__info">
 										<span class="fa fa-map-marker"></span>
 										<p>Sulawesi Selatan</p>
 									</div>
+								</div>
+								<div class="card__info card__info--mobile col-12">
+									<span class="fa fa-map-marker"></span>
+									<p>Sulawesi Selatan</p>
 								</div>
 							</div>
 							<div class="card__pricewrap relative">
@@ -367,16 +454,20 @@
 		    					<div class="swiper-pagination home-pagination card-pagination"></div>
 							</div>
 							<div class="card__location row">
-								<div class="card__map col-md-4">
+								<div class="card__map col-4">
 									<div id="map" class="pd-maps-box maps"></div>
 								</div>
-								<div class="card__infowrap col-md-8">
+								<div class="card__infowrap col-8">
 									<h5>Petualangan di raja ampat</h5>
 									<p class="card__desc">Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod.</p>
 									<div class="card__info">
 										<span class="fa fa-map-marker"></span>
 										<p>Sulawesi Selatan</p>
 									</div>
+								</div>
+								<div class="card__info card__info--mobile col-12">
+									<span class="fa fa-map-marker"></span>
+									<p>Sulawesi Selatan</p>
 								</div>
 							</div>
 							<div class="card__pricewrap relative">
@@ -406,16 +497,20 @@
 		    					<div class="swiper-pagination home-pagination card-pagination"></div>
 							</div>
 							<div class="card__location row">
-								<div class="card__map col-md-4">
+								<div class="card__map col-4">
 									<div id="map" class="pd-maps-box maps"></div>
 								</div>
-								<div class="card__infowrap col-md-8">
+								<div class="card__infowrap col-8">
 									<h5>Petualangan di raja ampat</h5>
 									<p class="card__desc">Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod.</p>
 									<div class="card__info">
 										<span class="fa fa-map-marker"></span>
 										<p>Sulawesi Selatan</p>
 									</div>
+								</div>
+								<div class="card__info card__info--mobile col-12">
+									<span class="fa fa-map-marker"></span>
+									<p>Sulawesi Selatan</p>
 								</div>
 							</div>
 							<div class="card__pricewrap relative">
@@ -445,16 +540,20 @@
 		    					<div class="swiper-pagination home-pagination card-pagination"></div>
 							</div>
 							<div class="card__location row">
-								<div class="card__map col-md-4">
+								<div class="card__map col-4">
 									<div id="map" class="pd-maps-box maps"></div>
 								</div>
-								<div class="card__infowrap col-md-8">
+								<div class="card__infowrap col-8">
 									<h5>Petualangan di raja ampat</h5>
 									<p class="card__desc">Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod.</p>
 									<div class="card__info">
 										<span class="fa fa-map-marker"></span>
 										<p>Sulawesi Selatan</p>
 									</div>
+								</div>
+								<div class="card__info card__info--mobile col-12">
+									<span class="fa fa-map-marker"></span>
+									<p>Sulawesi Selatan</p>
 								</div>
 							</div>
 							<div class="card__pricewrap relative">
@@ -484,16 +583,20 @@
 		    					<div class="swiper-pagination home-pagination card-pagination"></div>
 							</div>
 							<div class="card__location row">
-								<div class="card__map col-md-4">
+								<div class="card__map col-4">
 									<div id="map" class="pd-maps-box maps"></div>
 								</div>
-								<div class="card__infowrap col-md-8">
+								<div class="card__infowrap col-8">
 									<h5>Petualangan di raja ampat</h5>
 									<p class="card__desc">Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod.</p>
 									<div class="card__info">
 										<span class="fa fa-map-marker"></span>
 										<p>Sulawesi Selatan</p>
 									</div>
+								</div>
+								<div class="card__info card__info--mobile col-12">
+									<span class="fa fa-map-marker"></span>
+									<p>Sulawesi Selatan</p>
 								</div>
 							</div>
 							<div class="card__pricewrap relative">
@@ -523,16 +626,20 @@
 		    					<div class="swiper-pagination home-pagination card-pagination"></div>
 							</div>
 							<div class="card__location row">
-								<div class="card__map col-md-4">
+								<div class="card__map col-4">
 									<div id="map" class="pd-maps-box maps"></div>
 								</div>
-								<div class="card__infowrap col-md-8">
+								<div class="card__infowrap col-8">
 									<h5>Petualangan di raja ampat</h5>
 									<p class="card__desc">Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod.</p>
 									<div class="card__info">
 										<span class="fa fa-map-marker"></span>
 										<p>Sulawesi Selatan</p>
 									</div>
+								</div>
+								<div class="card__info card__info--mobile col-12">
+									<span class="fa fa-map-marker"></span>
+									<p>Sulawesi Selatan</p>
 								</div>
 							</div>
 							<div class="card__pricewrap relative">
@@ -562,16 +669,20 @@
 		    					<div class="swiper-pagination home-pagination card-pagination"></div>
 							</div>
 							<div class="card__location row">
-								<div class="card__map col-md-4">
+								<div class="card__map col-4">
 									<div id="map" class="pd-maps-box maps"></div>
 								</div>
-								<div class="card__infowrap col-md-8">
+								<div class="card__infowrap col-8">
 									<h5>Petualangan di raja ampat</h5>
 									<p class="card__desc">Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod.</p>
 									<div class="card__info">
 										<span class="fa fa-map-marker"></span>
 										<p>Sulawesi Selatan</p>
 									</div>
+								</div>
+								<div class="card__info card__info--mobile col-12">
+									<span class="fa fa-map-marker"></span>
+									<p>Sulawesi Selatan</p>
 								</div>
 							</div>
 							<div class="card__pricewrap relative">
@@ -601,16 +712,20 @@
 		    					<div class="swiper-pagination home-pagination card-pagination"></div>
 							</div>
 							<div class="card__location row">
-								<div class="card__map col-md-4">
+								<div class="card__map col-4">
 									<div id="map" class="pd-maps-box maps"></div>
 								</div>
-								<div class="card__infowrap col-md-8">
+								<div class="card__infowrap col-8">
 									<h5>Petualangan di raja ampat</h5>
 									<p class="card__desc">Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod.</p>
 									<div class="card__info">
 										<span class="fa fa-map-marker"></span>
 										<p>Sulawesi Selatan</p>
 									</div>
+								</div>
+								<div class="card__info card__info--mobile col-12">
+									<span class="fa fa-map-marker"></span>
+									<p>Sulawesi Selatan</p>
 								</div>
 							</div>
 							<div class="card__pricewrap relative">
@@ -632,7 +747,7 @@
 	</div>
 	<!-- slider section -->
 	<div class="home-wrapper">
-		<div class="container">
+		<div class="container overflow_visible">
 			<h1 class="home-wrapper__title">How It Works</h1>
 			<!-- efek slider masukkan disini -->
 			<div class="home-slider">
@@ -669,21 +784,21 @@
 						        	<div class="home-slider__content">
 										<h2 class="home-slider__number">1</h2>
 										<h3 class="home-slider__title">Pilih kota dan tanggal</h3>
-										<p>1. Google Trips makes it easier than ever to plan and organize your trips. It automatically maps out a half day or a full day with suggestions for things to see and do. Don’t like what you see? Tap the “magic wand” to see more nearby sights. Each tap of the wand gives you a fresh set of nearby attractions.</p>
+										<p>1. Google Trips makes it easier than ever to plan and organize your trips. It automatically maps out a half day or a full day with suggestions for things to see and do.</p>
 									</div>
 						        </div>
 						        <div class="swiper-slide">
 									<div class="home-slider__content">
 										<h2 class="home-slider__number">2</h2>
 										<h3 class="home-slider__title">Pilih kota dan tanggal</h3>
-										<p>2. Google Trips makes it easier than ever to plan and organize your trips. It automatically maps out a half day or a full day with suggestions for things to see and do. Don’t like what you see? Tap the “magic wand” to see more nearby sights. Each tap of the wand gives you a fresh set of nearby attractions.</p>
+										<p>2. Google Trips makes it easier than ever to plan and organize your trips. It automatically maps out a half day or a full day with suggestions for things to see and do.</p>
 									</div>
 						        </div>
 						        <div class="swiper-slide">
 									<div class="home-slider__content">
 										<h2 class="home-slider__number">3</h2>
 										<h3 class="home-slider__title">Pilih kota dan tanggal</h3>
-										<p>3. Google Trips makes it easier than ever to plan and organize your trips. It automatically maps out a half day or a full day with suggestions for things to see and do. Don’t like what you see? Tap the “magic wand” to see more nearby sights. Each tap of the wand gives you a fresh set of nearby attractions.</p>
+										<p>3. Google Trips makes it easier than ever to plan and organize your trips. It automatically maps out a half day or a full day with suggestions for things to see and do.</p>
 									</div>
 						        </div>
 						    </div>
@@ -721,6 +836,52 @@
 					</div>
 				</div>
 				<div class="calendar__content"></div>
+				<!-- mobile calendar -->
+				<div class="calendar__mobile">
+					<!-- data berubah jika klik arrow-left atau arrow right -->
+					<!-- tanggalnya hanya akan menampilkan yang terdapat opentrip -->
+					<div class="calendar__mobile-head">
+						<div class="row">
+							<div class="col-2 text-left">
+								<span class="fa fa-long-arrow-left"></span>
+							</div>
+							<div class="col-8 text-center">
+								<div class="calendar__month">APR</div>
+							</div>
+							<div class="col-2 text-right">
+								<span class="fa fa-long-arrow-right"></span>
+							</div>
+						</div>
+					</div>
+					<div class="calendar__mobile-date text-center">
+						<div class="calendar__mobile-date_big">
+							14
+						</div>
+						<div class="calendar__mobile-date_small">
+							<span>Mulai dari</span>
+							<b>Rp200.000</b>
+						</div>
+					</div>
+					<!-- maksimal content hanya ada 3 -->
+					<div class="calendar__mobile-content">
+						<div class="calendar__mobile-title">
+							<a href="#"><b>Petualangan di Karimun Jawa</b></a>
+						</div>
+						<div class="calendar__mobile-title">
+							<a href="#">
+								<b>Paket Open Trip Murah di Pulau Burung</b>
+							</a>
+						</div>
+						<!-- jika konten ada lebih dari 3 maka akan ada button LIHAT SELENGKAPNYA -->
+						<div class="calendar__mobile-title">
+							<a href="#">
+								<b>Paket Keluarga di Pulau Macan</b>
+							</a>
+							<!-- klik untuk membuka detail popup selengkapnya -->
+							<button class="btn btn--orange js-selengkapnya">LIHAT SELENGKAPNYA</button>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

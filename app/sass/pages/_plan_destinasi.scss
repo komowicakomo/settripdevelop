@@ -284,7 +284,7 @@
       overflow: hidden;
       z-index: 5;
       box-shadow: 0 -1px 4px 0 rgba(0, 0, 0, 0.06);
-      .pd-cp-box{
+      .pd-cp-box , .pd-cp-itn , .pd-cp-isolate-box{
         display: none;
         &.subtotal{
           display: block;
@@ -292,6 +292,9 @@
             margin-bottom: 8px;
           }
         }
+      }
+      &.pembayaran--cart{
+        height: 57px;
       }
     }
   }
@@ -394,6 +397,10 @@
       }
       .col-md-9{
         padding-left: 0px;
+        @media (max-width : 768px){
+          padding-right: 0px;
+          margin-bottom: 18px;
+        }
       }
     }
   }
@@ -477,6 +484,12 @@
     display: flex;
     flex-direction: row ;
     padding: 8px;
+    @media (max-width : 768px){
+      text-align: left;
+      .planbox-text{
+        width: calc(100% - 126px); 
+      }
+    }
   }
   .planbox-img{
     width: 20% ;
@@ -491,6 +504,10 @@
       display: block;
       padding-top: 100% ;
     }
+    @media (max-width: 768px){
+      height : 126px;
+      width : 126px;
+    }
   }
   .pcb-body{
     background-color: #f9f9fb;
@@ -498,6 +515,9 @@
     box-shadow: 0 1px 0 0 #e4e4e4, 0 -1px 0 0 #e4e4e4;
     position: relative;
     display: none;
+    @media (max-width : 768px){
+      text-align: left ; 
+    }
     &.show{
       display: block;
     }
@@ -513,7 +533,11 @@
       width: 100px;
       height: 100px;
       border-radius: 2px;
-      overflow: hidden;
+      position: relative;
+      overflow: hidden !important;
+      @media (max-width : 768px){
+        width: 100%;
+      }
       img{
         width: 100%;
         position: absolute;
@@ -570,6 +594,12 @@
       padding: 8px;
       padding-left: 0px;
       position: relative;
+      @media (max-width : 768px){
+        text-align: left;
+        .pcbb-label , h5{
+          text-align: left;
+        }
+      }
       .row{
         width: 100%;
         padding-top: 16px;
@@ -598,6 +628,7 @@
       .pcbbb-input{
         position: absolute;
         left:0px;
+        z-index : 2;
         .checkbox-area label{
           height: 24px;
         }

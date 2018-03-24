@@ -29,6 +29,24 @@
 	  breakpoints: {
 	  	1440: {
 	  		slidesPerView: 3,
+	  	},
+	  	968: {
+	  		slidesPerView: 2,
+	  		spaceBetween: 15
+	  	},
+	  	580: {
+	  		slidesPerView: 'auto',
+	  		initialSlide: 0
+	  	},
+	  	450: {
+	  		slidesPerView: 'auto',
+	  		initialSlide: 0,
+	  		spaceBetween: 15,
+	  	},
+	  	320: {
+	  		slidesPerView: 'auto',
+	  		initialSlide: 0,
+	  		slidesPerView: 1
 	  	}
 	  },
 	    
@@ -49,15 +67,15 @@
 	  pagination: '.card-pagination'
     })    
 
-    var imgSwiper = new Swiper ('.home-slider__imgslider', {
+    var imgSwiper = new Swiper(".home-slider__imgslider", {
       // Optional parameters
-      direction: 'vertical',
+      direction: "vertical",
       speed: 800,
 
-      effect: 'fade',
+      effect: "fade",
 
       spaceBetween: 20
-    })  
+    });  
 
     var textSwiper = new Swiper ('.home-slider__wrap', {
       // Optional parameters
@@ -297,4 +315,10 @@ function initMap(location) {
 		});
 	}
 }
+
+// selengkapnya
+$('.js-selengkapnya').click(function(){
+	overlayin();
+	$('.modal-open-trip').addClass('active');
+})
 initMap({lat: -25.363, lng: 131.044})

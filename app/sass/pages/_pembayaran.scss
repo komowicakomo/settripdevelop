@@ -14,7 +14,7 @@
         margin-bottom: 0px;
       }
     }
-  }
+  } 
   .pd-cp-itn{
     & + .pd-cp-box{
       border-top: solid 1px #e9e9eb;
@@ -31,6 +31,16 @@
   }
   .pembayaran-step{
     display: none;
+    .pembayaran-next , .bayar-container{
+      @media (max-width : 600px){
+        padding: 0px;
+        button{
+          max-width: calc(100% - 64px) ; 
+        display: block ; 
+        margin: auto ; 
+        }
+      }
+    }
     &.active{
       display: block;
     }

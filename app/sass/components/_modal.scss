@@ -604,6 +604,20 @@
     border-top: solid 1px #e4e4e4;
     border-bottom: solid 1px #e4e4e4;
     position: relative;
+    @media (max-width : 768px){
+      height: auto ;
+      .mcf-action.row.active{
+        padding-top: 24px;
+        padding-bottom: 24px;
+        position: relative;
+        transform: translate( 0, 0);
+        display : block ; 
+        .slider-group{
+          margin-top: 24px;
+          margin-bottom: 24px;
+        }
+      }
+    }
     .mcf-action{
       width: 100%;
       opacity: 0 ;
