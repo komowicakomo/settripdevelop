@@ -8,7 +8,8 @@
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
-	width: 100%;
+	left: 0;
+	right: 0;
 	p, h1, h3{
 		color: #fff;
 	}
@@ -38,6 +39,14 @@
 .op-detail__info{
 	position: relative;
 	top: -85px;
+	@media(max-width: 768px){
+		top: 0;
+		margin: 24px 0;
+		.col-md-8{
+			max-width: 100%;
+			flex: 0 0 100%;
+		}
+	}
 }
 .op-detail__info-top, .op-detail__info-bottom{
 	padding: 10px 16px;
@@ -97,6 +106,14 @@
 		font-weight: bold;
 		font-size: 15px;
 	}
+	&.op-detail__infoprofiledesc--price{
+		width: 100%;
+		margin: 0;
+		h5, h3, p{
+			width: auto;
+			right: 0;
+		}
+	}
 }
 .op-detail__info-bottom{
 	padding: 24px 16px;
@@ -117,6 +134,32 @@
 	.op-detal__btn{
 		width: 100%;
 	}
+	&.op-detail__info-bottom--mobile{
+		display: none;
+	}
+	@media(max-width: 768px){
+		.social-share-container{
+			display: none;
+		}
+		&.op-detail__info-bottom--mobile{
+			display: block;
+			background-color: transparent;
+			border: none;
+			padding: 0 0 16px;
+			.social-share-container{
+				display: block;
+				margin-bottom: 0;
+				text-align: center;
+			}
+			.social-circle{
+				width: 40px;
+				height: 40px;
+				display: inline-block;
+				font-size: 20px;
+				line-height: 46px;
+			}
+		}
+	}
 }
 .op-destinasi.plan-destinasi{
 	.plan-destinasi-main-body{
@@ -132,6 +175,12 @@
 .op-wrap{
 	margin: 0 -10px;
 	padding-bottom: 40px;
+	@media(max-width: 768px){
+		overflow-x: auto;
+		overflow-y: hidden;
+		width: 100%;
+		margin: 0;
+	}
 }
 .op-infowrap{
 	padding: 16px 0;
@@ -144,6 +193,139 @@
 	.card__info{
 		p{
 			margin: 0;
+		}
+	}
+}
+.op-wrap__nowrap{
+	.rp__content{
+		float: left;
+		display: inline-block;
+	}
+	@media(max-width: 768px){
+		white-space: nowrap;
+		.rp__content{
+			width: 400px;
+			display: inline-block;
+			flex: none;
+			max-width: 100%;
+			.card__infowrap{
+				max-width: 100%;
+				flex: 0 0 100%;
+			}
+		}
+		.card__desc{
+			white-space: normal;
+			height: 45px;
+			margin-bottom: 4px;
+		}
+	}
+	@media(max-width: 568px){
+		.rp__content{
+			width: 350px;
+			padding: 10px 4px;
+			float: none;
+			.card__modallocation-content{
+				padding: 0;
+				padding-right: 4px;
+				vertical-align: middle;
+			}
+		}
+	}
+}
+.op-detail__price{
+	@media(max-width: 768px){
+		display: none;
+	}
+}
+.plan-destinasi.op-plan-destinasi{
+	@media(max-width: 800px){
+		.row{
+			text-align: left;
+		}
+		.plan-destinasi-date{
+			display: block;
+			width: 100%;
+			text-align: center;
+		}
+		.plan-destinasi-main-body{
+			display: block;
+			width: 100%;
+		}
+	}
+}
+.detail-price{
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: #fff;
+	z-index: 6;
+	display: none;
+	@media(max-width: 768px){
+		display: block;
+	}
+	&.active{
+		.detail-price__participant{
+			display: block;
+		}
+		.detail-price__value{
+			span{
+				transform: rotate(180deg);
+			}
+		}
+	}
+}
+.detail-price__overlay{
+	display: none;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(0,0,0,0.4);
+	z-index: 5;
+	&.active{
+		display: block;
+	}
+}
+.detail-price__wrapper{
+	position: relative;
+	padding: 16px;
+}
+.detail-price__value{
+	position: relative;
+	padding: 8px 0;
+	margin-bottom: 8px;
+	.col-6{
+		padding: 0;
+		&:last-child{
+			text-align: right;
+			color: #73bd67;
+		}
+	}
+	span{
+		margin-left: 4px;
+		color: #C0C0C1;
+		transition: 0.3s ease;
+	}
+}
+.detail-price__button{
+	width: 100%;
+	vertical-align: middle;
+	span{
+		display: inline-block;
+		vertical-align: text-top;
+		font-size: 24px;
+		margin-right: 4px;
+	}
+}
+.detail-price__participant{
+	display: none;
+	.op-detail__info-bottom{
+		border: none;
+		padding: 0;
+		.info-bottom__participate{
+			margin-top: 0;
 		}
 	}
 }

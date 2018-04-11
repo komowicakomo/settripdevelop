@@ -24,6 +24,10 @@ var lists = [
     path: "index-solid.html?view=recomended_plan"
   },
   {
+    name: "Recomended Location",
+    path: "index-solid.html?view=recomended_location"
+  },
+  {
     name: "Choose Plan",
     path: "index-solid.html?view=choose_plan"
   },

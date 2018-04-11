@@ -141,7 +141,7 @@
             <img class="svg-image" src="images/logo/logo-dark.svg" alt="Setrip logo">
             <span class="fa fa-close sidemenu__close" onclick="closeMenuMobile()"></span>
           </div>
-          <div class="sidemenu__list">
+          <div class="sidemenu__content sidemenu__list">
             <div class="sidemenu__menu">
               <a href="#">ATRIKEL</a>
             </div>
@@ -153,6 +153,38 @@
             </div>
             <div class="sidemenu__menu">
               <a href="#">LOGIN/REGISTER</a>
+            </div>
+          </div>
+          <div class="sidemenu__content sidemenu__where">
+            <div class="sidemenu__content-title">Kemana?</div>
+            <div class="form-group">
+              <div class="input-group with-icon">
+                <div class="input-icon icon-a">
+                  <img class="svg-image" src="images/icon/ic-location.svg" alt="Location icon">
+                </div>
+                <input class="home-datetime__option" type="text" mode="typeahead_mobile">
+              </div>
+            </div>
+          </div>
+          <div class="sidemenu__content sidemenu__when">
+            <div class="sidemenu__content-title">Kapan?</div>
+            <div class="form-group">
+              <div class="input-group with-icon">
+                <div class="input-icon icon-b">
+                  <img class="svg-image" src="images/icon/ic-calendar-default.svg" alt="Calendar icon">
+                </div>
+                <input class="home-datetime__option" type="text" mode="daterange_mobile" readonly>
+              </div>
+            </div>
+          </div>
+          <div class="sidemenu__content sidemenu__who">
+            <div class="sidemenu__content-title">Peserta?</div>
+            <div id="qty" class="home-datetime__qty home-datetime__qty--active">
+              <div class="qty-form">
+                <button class="qtyminus"></button>
+                <input type="text" name="quantity" value="1" class="qty home-datetime__qty-form home-datetime__qty-form_mobile" readonly="readonly">
+                <button class="qtyplus"></button>
+              </div>
             </div>
           </div>
       </div>

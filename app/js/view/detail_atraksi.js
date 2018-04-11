@@ -6,13 +6,19 @@
        effect : 'fade'
    });
 
-   var galleryThumbs = new Swiper('.gallery-thumbs', {
-       spaceBetween: 20,
-       slidesPerView: 5,
-       slideToClickedSlide: true,
-       centeredSlides: true,
-       nextButton: '.swiper-button-next',
-       prevButton: '.swiper-button-prev',
+   var galleryThumbs = new Swiper(".gallery-thumbs", {
+     spaceBetween: 20,
+     slidesPerView: 5,
+     slideToClickedSlide: true,
+     centeredSlides: true,
+     nextButton: ".swiper-button-next",
+     prevButton: ".swiper-button-prev",
+     breakpoints: {
+       580: {
+         initialSlide: 0,
+         slidesPerView: 2
+       }
+     }
    });
    galleryTop.params.control = galleryThumbs;
    galleryThumbs.params.control = galleryTop;
@@ -31,5 +37,10 @@
     }
 
    initMap({lat: -25.363, lng: 131.044})
+
+   $(".js-value").click(function() {
+       $(".detail-price").toggleClass('active');
+       $(".detail-price__overlay").toggleClass("active");
+   })
 
  })

@@ -11,10 +11,35 @@
       </div>
     </div>
   </div>
-  <div class="container">
+  <div class="container overflow_visible">
     <div class="op-detail__info">
       <div class="row row--withmargin">
         <div class="col-md-8">
+          <!-- mobile media share -->
+          <div class="op-detail__info-bottom op-detail__info-bottom--mobile">
+            <div class="social-share-container">
+              <a href="">
+                <div class="social-circle facebook">
+                  <i class="fa fa-facebook" aria-hidden="true"></i>
+                </div>
+              </a>
+              <a href="">
+                <div class="social-circle twitter">
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                </div>
+              </a>
+              <a href="">
+                <div class="social-circle pinterest">
+                  <i class="fa fa-pinterest-p" aria-hidden="true"></i>
+                </div>
+              </a>
+              <a href="">
+                <div class="social-circle instagram">
+                  <i class="fa fa-instagram" aria-hidden="true"></i>
+                </div>
+              </a>
+            </div>
+          </div>
           <div class="op-detail__info-top">
             <div class="op-detail__infoprofile">
               <img src="images/guide.jpg" alt="">
@@ -44,9 +69,9 @@
             </div>
           </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4 op-detail__price">
           <div class="op-detail__info-top info-top--blue">
-              <div class="op-detail__infoprofiledesc clearfix text-center">
+              <div class="op-detail__infoprofiledesc op-detail__infoprofiledesc--price clearfix text-center">
                 <p>Harga</p>
                 <h3>Rp 1.280.000</h3>
               </div>
@@ -55,7 +80,7 @@
             <p><b>PESERTA</b></p>
             <div class="qty-form">
               <button class="qtyminus"></button>
-              <input type="text" name="quantity" value="0" class="qty" readonly="readonly">
+              <input type="text" name="quantity" value="2" class="qty" readonly="readonly">
               <button  class="qtyplus"></button>
             </div>
             <p>Harga satuan Rp 640.000</p>
@@ -66,7 +91,8 @@
       </div>
     </div>
   </div>
-  <div class="container container--full white plan-destinasi plan-destinasi-detail itinerary">
+  <!-- tambahkan class op-plan-destinasi untuk mobile site -->
+  <div class="container container--full white plan-destinasi plan-destinasi-detail op-plan-destinasi itinerary">
     <div class="container">
       <div class="ccw-head">
           <h1>Itinerary</h1>
@@ -251,90 +277,129 @@
           <h1>Open Trip Sejenis</h1>
       </div>
       <div class="rp__wrap op-wrap row">
-        <div class="rp__content col-md-4">
-          <div class="card card--full">
-            <div class="card__slider">
-              <img src="./images/image-card.jpeg" alt="">
-            </div>
-            <div class="card__location op-infowrap">
-              <div class="card__infowrap">
-                <h5>Petualangan di raja ampat</h5>
-                <p class="card__desc">Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod.</p>
-                <div class="row">
-                  <div class="card__modallocation-content col-md-6">
-                    <img class="svg-image" src="images/icon/ic-calendar-default.svg" alt="Calendar icon">
-                    <span>14 - 17 APRIL</span>
-                  </div>
-                  <div class="card__modallocation-content col-md-6">
-                    <img class="svg-image" src="images/icon/ic-location.svg" alt="Location icon">
-                    <span>Sulawesi Selatan</span>
+        <!-- bungkus dengan class op-wrap__nowrap untuk mobile -->
+        <div class="op-wrap__nowrap">
+          <div class="rp__content col-md-4">
+            <div class="card card--full">
+              <div class="card__slider">
+                <img src="./images/image-card.jpeg" alt="">
+              </div>
+              <div class="card__location op-infowrap">
+                <div class="card__infowrap">
+                  <h5>Petualangan di raja ampat</h5>
+                  <p class="card__desc">Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod.</p>
+                  <div class="row">
+                    <!-- ubah col-md-6 jadi col-6 -->
+                    <div class="card__modallocation-content col-6">
+                      <img class="svg-image" src="images/icon/ic-calendar-default.svg" alt="Calendar icon">
+                      <span>14 - 17 APRIL</span>
+                    </div>
+                    <div class="card__modallocation-content col-6">
+                      <img class="svg-image" src="images/icon/ic-location.svg" alt="Location icon">
+                      <span>Sulawesi Selatan</span>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="card__pricewrap relative">
-              <p>8 orang terdaftar</p>
-              <h3>Rp200.000</h3>
-              <img class="svg-image" src="./images/icon/home-arrow-b.svg" alt="">
+              <div class="card__pricewrap relative">
+                <p>8 orang terdaftar</p>
+                <h3>Rp200.000</h3>
+                <img class="svg-image" src="./images/icon/home-arrow-b.svg" alt="">
+              </div>
             </div>
           </div>
-        </div>
-        <div class="rp__content col-md-4">
-          <div class="card card--full">
-            <div class="card__slider">
-              <img src="./images/image-card.jpeg" alt="">
-            </div>
-            <div class="card__location op-infowrap">
-              <div class="card__infowrap">
-                <h5>Petualangan di raja ampat</h5>
-                <p class="card__desc">Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod.</p>
-                <div class="row">
-                  <div class="card__modallocation-content col-md-6">
-                    <img class="svg-image" src="images/icon/ic-calendar-default.svg" alt="Calendar icon">
-                    <span>14 - 17 APRIL</span>
-                  </div>
-                  <div class="card__modallocation-content col-md-6">
-                    <img class="svg-image" src="images/icon/ic-location.svg" alt="Location icon">
-                    <span>Sulawesi Selatan</span>
+          <div class="rp__content col-md-4">
+            <div class="card card--full">
+              <div class="card__slider">
+                <img src="./images/image-card.jpeg" alt="">
+              </div>
+              <div class="card__location op-infowrap">
+                <div class="card__infowrap">
+                  <h5>Petualangan di raja ampat</h5>
+                  <p class="card__desc">Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod.</p>
+                  <div class="row">
+                    <!-- ubah col-md-6 jadi col-6 -->
+                    <div class="card__modallocation-content col-6">
+                      <img class="svg-image" src="images/icon/ic-calendar-default.svg" alt="Calendar icon">
+                      <span>14 - 17 APRIL</span>
+                    </div>
+                    <div class="card__modallocation-content col-6">
+                      <img class="svg-image" src="images/icon/ic-location.svg" alt="Location icon">
+                      <span>Sulawesi Selatan</span>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="card__pricewrap relative">
-              <p>8 orang terdaftar</p>
-              <h3>Rp200.000</h3>
-              <img class="svg-image" src="./images/icon/home-arrow-b.svg" alt="">
+              <div class="card__pricewrap relative">
+                <p>8 orang terdaftar</p>
+                <h3>Rp200.000</h3>
+                <img class="svg-image" src="./images/icon/home-arrow-b.svg" alt="">
+              </div>
             </div>
           </div>
-        </div>
-        <div class="rp__content col-md-4">
-          <div class="card card--full">
-            <div class="card__slider">
-              <img src="./images/image-card.jpeg" alt="">
-            </div>
-            <div class="card__location op-infowrap">
-              <div class="card__infowrap">
-                <h5>Petualangan di raja ampat</h5>
-                <p class="card__desc">Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod.</p>
-                <div class="row">
-                  <div class="card__modallocation-content col-md-6">
-                    <img class="svg-image" src="images/icon/ic-calendar-default.svg" alt="Calendar icon">
-                    <span>14 - 17 APRIL</span>
-                  </div>
-                  <div class="card__modallocation-content col-md-6">
-                    <img class="svg-image" src="images/icon/ic-location.svg" alt="Location icon">
-                    <span>Sulawesi Selatan</span>
+          <div class="rp__content col-md-4">
+            <div class="card card--full">
+              <div class="card__slider">
+                <img src="./images/image-card.jpeg" alt="">
+              </div>
+              <div class="card__location op-infowrap">
+                <div class="card__infowrap">
+                  <h5>Petualangan di raja ampat</h5>
+                  <p class="card__desc">Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod.</p>
+                  <div class="row">
+                    <!-- ubah col-md-6 jadi col-6 -->
+                    <div class="card__modallocation-content col-6">
+                      <img class="svg-image" src="images/icon/ic-calendar-default.svg" alt="Calendar icon">
+                      <span>14 - 17 APRIL</span>
+                    </div>
+                    <div class="card__modallocation-content col-6">
+                      <img class="svg-image" src="images/icon/ic-location.svg" alt="Location icon">
+                      <span>Sulawesi Selatan</span>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="card__pricewrap relative">
-              <p>8 orang terdaftar</p>
-              <h3>Rp200.000</h3>
-              <img class="svg-image" src="./images/icon/home-arrow-b.svg" alt="">
+              <div class="card__pricewrap relative">
+                <p>8 orang terdaftar</p>
+                <h3>Rp200.000</h3>
+                <img class="svg-image" src="./images/icon/home-arrow-b.svg" alt="">
+              </div>
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+  <div class="detail-price__overlay"></div>
+  <div class="detail-price">
+    <div class="detail-price__wrapper">
+      <div class="detail-price__participant">
+        <div class="op-detail__info-bottom text-center">
+          <p>
+            <b>PESERTA</b>
+          </p>
+          <div class="qty-form">
+            <button class="qtyminus"></button>
+            <input type="text" name="quantity" value="2" class="qty" readonly="readonly">
+            <button class="qtyplus"></button>
+          </div>
+          <p>Harga satuan Rp 640.000</p>
+          <p class="info-bottom__participate">
+            <b>8 Orang telah mendaftar</b>
+          </p>
+        </div>
+      </div>
+      <div class="detail-price__content">
+        <div class="detail-price__value js-value row clearfix">
+          <div class="col-6">
+            Harga
+          </div>
+          <div class="col-6">
+            Rp 1.280.000
+            <span class="fa fa-chevron-down"></span>
+          </div>
+        </div>
+        <button class="detail-price__button btn btn--orange btn--medium">PESAN</button>
       </div>
     </div>
   </div>

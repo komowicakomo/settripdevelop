@@ -232,51 +232,118 @@ var states = ['Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California',
   'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming'
 ];
 
-$('input[mode="typeahead"]').typeahead({
-  highlight: true,
-  minLength: 1
-},
-{
-  name: 'states',
-  source: substringMatcher(states)
-});
+var width = $('body').width();
 
-// daterangepicker
-$('input[mode="daterange"]').daterangepicker({
-	"autoApply": true
-});
+if(width > 568){
+	// typeahead
+	$('input[mode="typeahead"]').typeahead({ highlight: true, minLength: 1 }, { name: "states", source: substringMatcher(states) });
 
-$('input[mode="daterange"]').val('Kapan?');
+	// daterangepicker
+	$('input[mode="daterange"]').daterangepicker({
+		"autoApply": true
+	});
 
-$('input[mode="daterange"]').on('apply.daterangepicker', function(ev, picker) {
-	var start = picker.startDate.format('MMM, D');
-	var end = picker.endDate.format('MMM, D');
-	if(start == end){
-		$(this).val(start);
-	} else{
-		$(this).val(start +' - '+ end);
+	$('input[mode="daterange"]').val('Kapan?');
+
+	$('input[mode="daterange"]').on('apply.daterangepicker', function(ev, picker) {
+		var start = picker.startDate.format('MMM, D');
+		var end = picker.endDate.format('MMM, D');
+		if(start == end){
+			$(this).val(start);
+		} else{
+			$(this).val(start +' - '+ end);
+		}
+	});
+
+	$('input[mode="daterange"]').on('hide.daterangepicker', function(ev, picker) {
+		var start = picker.startDate.format('MMM, D');
+		var end = picker.endDate.format('MMM, D');
+
+		if(start == end){
+			$(this).val(start);
+		} else{
+			$(this).val(start +' - '+ end);
+		}
+
+		var parent = $(this).parent();
+		parent.find('.input-icon').removeClass('active');
+	});
+
+	// increment
+	$('input[mode="increment"]').on("click", function() {
+		var value = $(".home-datetime__qty-form").val();
+
+		$(".home-datetime__qty").addClass("home-datetime__qty--active");
+		$('input[mode="increment"]').val(value);
+	});
+} else{
+	// typeahead mobile
+	$('input[mode="typeahead_mobile"]').typeahead({ highlight: true, minLength: 1 }, { name: "states", source: substringMatcher(states) });
+
+	// daterangepicker mobile
+	$('input[mode="daterange_mobile"]').daterangepicker({
+		"autoApply": true
+	});
+
+	$('input[mode="daterange"]').val("Kapan?");
+
+	$('input[mode="daterange_mobile"]').on('apply.daterangepicker', function(ev, picker) {
+		var start = picker.startDate.format('MMM, D');
+		var end = picker.endDate.format('MMM, D');
+		if(start == end){
+			$(this).val(start);
+			$('input[mode="daterange"]').val(start);
+		} else{
+			$(this).val(start +' - '+ end);
+			$('input[mode="daterange"]').val(start + " - " + end);
+		}
+	});
+
+	$('input[mode="daterange_mobile"]').on('hide.daterangepicker', function(ev, picker) {
+		var start = picker.startDate.format('MMM, D');
+		var end = picker.endDate.format('MMM, D');
+
+		if(start == end){
+			$(this).val(start);
+			$('input[mode="daterange"]').val(start);
+		} else{
+			$(this).val(start +' - '+ end);
+			$('input[mode="daterange"]').val(start + " - " + end);
+		}
+
+		var parent = $(this).parent();
+		parent.find('.input-icon').removeClass('active');
+	});
+
+	// increment mobile
+	$('input[mode="increment"]').on("click", function() {
+		var value = $(".home-datetime__qty-form_mobile").val();
+		$('input[mode="increment"]').val(value);
+		$(this).attr("readonly", true);
+    	openMenuMobile("who");
+	});
+}
+
+$('input[mode="typeahead"]').click(function(event){
+	if(width <= 568){
+		$('input[mode="typeahead"]').attr("readonly", true);
+		openMenuMobile('where');
+		$('input[mode="typeahead_mobile"]').on('input', function() {
+			var value = $(this).val();
+			$('input[mode="typeahead"]').val(value);
+		})
+		$('input[mode="typeahead_mobile"]').bind("typeahead:select", function(ev, suggestion) {
+			console.log("Selection: " + suggestion);
+			$('input[mode="typeahead"]').val(suggestion);
+		});
 	}
-});
+})
 
-$('input[mode="daterange"]').on('hide.daterangepicker', function(ev, picker) {
-	var start = picker.startDate.format('MMM, D');
-	var end = picker.endDate.format('MMM, D');
-
-	if(start == end){
-		$(this).val(start);
-	} else{
-		$(this).val(start +' - '+ end);
-	}
-
-	var parent = $(this).parent();
-	parent.find('.input-icon').removeClass('active');
-});
-
-$('input[mode="increment"]').on('click', function(){
-	var value = $('.home-datetime__qty-form').val();
-
-	$('.home-datetime__qty').addClass('home-datetime__qty--active');
-	$('input[mode="increment"]').val(value);
+$('input[mode="daterange"]').click(function(event) {
+  if (width <= 568) {
+    $('input[mode="daterange"]').attr("readonly", true);
+	openMenuMobile("when");
+  }
 });
 
 $('.home-datetime__qty-form').on('change', function(event){

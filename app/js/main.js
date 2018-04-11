@@ -22,11 +22,14 @@ $('.header__login').on('click', function(){
 })
 
 // mobile menu
-function openMenuMobile(){
-	$('.sidemenu').addClass('active');
+function openMenuMobile(mode){
+	if(!mode){
+		mode = 'menu'
+	}
+	$(".sidemenu").attr("mode", mode);
 	$('body').css('overflow', 'hidden');
 }
 function closeMenuMobile(){
-	$('.sidemenu').removeClass('active');
+	$(".sidemenu").attr("mode", "");
 	$('body').css('overflow', 'auto');
 }

@@ -95,42 +95,50 @@
       <div class="ccw-head">
           <h1>Aktifitas</h1>
       </div>
-      <div class="ccw-box">
-        <div class="row">
-          <div class="col-md-3">
-            <div class="ccw-img-container" style="background-image:url('./images/dummy/hotel-a.jpeg')">
-
+      <!-- untuk mobile berikan wrap activity-container dan activity-wrap -->
+      <div class="activity-container">
+        <div class="activity-wrap">
+          <div class="ccw-box">
+            <div class="row">
+              <div class="col-md-3">
+                <div class="ccw-img-container" style="background-image:url('./images/dummy/hotel-a.jpeg')">
+          
+                </div>
+              </div>
+              <div class="col-md-9">
+                <h5>Kolam Renang</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore Ad duis
+                  scripta qui. Detraxit ocurreret percipitur ex eos, mollis vocent recusabo te vim.</p>
+              </div>
             </div>
           </div>
-          <div class="col-md-9">
-            <h5>Kolam Renang</h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore Ad duis scripta qui. Detraxit ocurreret percipitur ex eos, mollis vocent recusabo te vim.</p>
-          </div>
-        </div>
-      </div>
-      <div class="ccw-box">
-        <div class="row">
-          <div class="col-md-3">
-            <div class="ccw-img-container" style="background-image:url('./images/dummy/op-pict1.jpeg')">
-
+          <div class="ccw-box">
+            <div class="row">
+              <div class="col-md-3">
+                <div class="ccw-img-container" style="background-image:url('./images/dummy/op-pict1.jpeg')">
+          
+                </div>
+              </div>
+              <div class="col-md-9">
+                <h5>Karaoke</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore Ad duis
+                  scripta qui. Detraxit ocurreret percipitur ex eos, mollis vocent recusabo te vim.</p>
+              </div>
             </div>
           </div>
-          <div class="col-md-9">
-            <h5>Karaoke</h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore Ad duis scripta qui. Detraxit ocurreret percipitur ex eos, mollis vocent recusabo te vim.</p>
-          </div>
-        </div>
-      </div>
-      <div class="ccw-box">
-        <div class="row">
-          <div class="col-md-3">
-            <div class="ccw-img-container" style="background-image:url('./images/dummy/hotel-b.jpeg')">
-
+          <div class="ccw-box">
+            <div class="row">
+              <div class="col-md-3">
+                <div class="ccw-img-container" style="background-image:url('./images/dummy/hotel-b.jpeg')">
+          
+                </div>
+              </div>
+              <div class="col-md-9">
+                <h5>Restoran</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore Ad duis
+                  scripta qui. Detraxit ocurreret percipitur ex eos, mollis vocent recusabo te vim.</p>
+              </div>
             </div>
-          </div>
-          <div class="col-md-9">
-            <h5>Restoran</h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore Ad duis scripta qui. Detraxit ocurreret percipitur ex eos, mollis vocent recusabo te vim.</p>
           </div>
         </div>
       </div>
@@ -223,9 +231,10 @@
     </div>
   </div>
   <!-- other info goes here -->
-  <div class="container container--full">
-    <div class="container">
-      <div class="row row--withmargin">
+  <div class="container container--full overflow_visible">
+    <div class="container overflow_visible">
+      <!-- tambahkan class comment-section -->
+      <div class="row row--withmargin comment-section">
         <div class="col-md-8">
           <div class="ccw-head">
               <h1>Ulasan</h1>
@@ -319,20 +328,27 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore percipitur ex eos, mollis vocent recusabo te vim. Ei duo delectus pertinacia adversarium. Vix et elitr appareat efficiantur, eu quo enim lucilius tractatos, et vix postea hendrerit sadipscing.</p>
                 <span>2 Hari yang lalu</span>
               </div>
+              <!-- tambahkan bagian ini -->
+              <div class="comment__content comment__content--mobile text-center">
+                <button class="btn">LIHAT LEBIH</button>
+              </div>
             </div>
           </div>
         </div>
-        <div class="col-md-4">
+        <!-- tambahkan class near-wrapper -->
+        <div class="col-md-4 near-wrapper">
           <div class="ccw-head">
               <h1>Atraksi Terdekat</h1>
           </div>
           <div class="near">
             <div class="near__content">
               <div class="row near__top">
-                <div class="col-md-4 near__side">
+                <!-- col-md-4 menjadi col-4 -->
+                <div class="col-4 near__side">
                   <img src="./images/dummy/recomended.jpeg" alt="atraksi" />
                 </div>
-                <div class="col-md-8 near__side relative">
+                <!-- col-md-8 menjadi col-8 -->
+                <div class="col-8 near__side relative">
                   <span class="near__subtitle">ATRAKSI</span>
                   <p class="near__title">Ranca Upas</p>
                   <div class="near__rate">
@@ -347,10 +363,12 @@
                 </div>
               </div>
               <div class="row near__bottom">
-                <div class="col-md-4 near__side relative">
+                <!-- col-md-4 menjadi col-4 -->
+                <div class="col-4 near__side relative">
                   <h5>Rp. 200.000</h5>
                 </div>
-                <div class="col-md-8 near__side clearfix">
+                <!-- col-md-8 menjadi col-8 -->
+                <div class="col-8 near__side clearfix">
                   <button class="btn">Lihat Detail</button>
                   <button class="btn btn--orange">Tambahkan</button>
                 </div>
@@ -358,10 +376,12 @@
             </div>
             <div class="near__content">
               <div class="row near__top">
-                <div class="col-md-4 near__side">
+                <!-- col-md-4 menjadi col-4 -->
+                <div class="col-4 near__side">
                   <img src="./images/dummy/recomended.jpeg" alt="atraksi" />
                 </div>
-                <div class="col-md-8 near__side relative">
+                <!-- col-md-8 menjadi col-8 -->
+                <div class="col-8 near__side relative">
                   <span class="near__subtitle">ATRAKSI</span>
                   <p class="near__title">Ranca Upas</p>
                   <div class="near__rate">
@@ -376,10 +396,12 @@
                 </div>
               </div>
               <div class="row near__bottom">
-                <div class="col-md-4 near__side relative">
+                <!-- col-md-4 menjadi col-4 -->
+                <div class="col-4 near__side relative">
                   <h5>Rp 5.000.000</h5>
                 </div>
-                <div class="col-md-8 near__side clearfix">
+                <!-- col-md-8 menjadi col-8 -->
+                <div class="col-8 near__side clearfix">
                   <button class="btn">Lihat Detail</button>
                   <button class="btn btn--orange">Tambahkan</button>
                 </div>
@@ -387,10 +409,12 @@
             </div>
             <div class="near__content">
               <div class="row near__top">
-                <div class="col-md-4 near__side">
+                <!-- col-md-4 menjadi col-4 -->
+                <div class="col-4 near__side">
                   <img src="./images/dummy/recomended.jpeg" alt="atraksi" />
                 </div>
-                <div class="col-md-8 near__side relative">
+                <!-- col-md-8 menjadi col-8 -->
+                <div class="col-8 near__side relative">
                   <span class="near__subtitle">ATRAKSI</span>
                   <p class="near__title">Tangkuban Perahu</p>
                   <div class="near__rate">
@@ -405,10 +429,12 @@
                 </div>
               </div>
               <div class="row near__bottom">
-                <div class="col-md-4 near__side relative">
+                <!-- col-md-4 menjadi col-4 -->
+                <div class="col-4 near__side relative">
                   <h5>Rp 50.000.000</h5>
                 </div>
-                <div class="col-md-8 near__side clearfix">
+                <!-- col-md-8 menjadi col-8 -->
+                <div class="col-8 near__side clearfix">
                   <button class="btn">Lihat Detail</button>
                   <button class="btn btn--orange">Tambahkan</button>
                 </div>
@@ -416,6 +442,22 @@
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+  <div class="detail-price">
+    <div class="detail-price__wrapper">
+      <div class="detail-price__content">
+        <div class="detail-price__value row clearfix">
+          <div class="col-6">
+            Mulai Dari
+          </div>
+          <div class="col-6">
+            Rp 400.000
+          </div>
+        </div>
+        <button class="detail-price__button btn btn--blue btn--medium">
+          <span class="fa fa-plus-circle"></span> TAMBAHKAN KE PLAN</button>
       </div>
     </div>
   </div>

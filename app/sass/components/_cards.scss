@@ -136,12 +136,20 @@
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
+	@media(max-width: 568px){
+		position: relative;
+		top: auto;
+		transform: none;
+	}
 }
 .card__modalinfo{
 	padding: 15px;
 }
 .card__modallocation{
 	margin: 0 -15px;
+	@media(max-width: 568px){
+		margin: 0;
+	}
 }
 .card__modallocation-content{
 	img,svg{
@@ -151,6 +159,9 @@
 		vertical-align: text-top;
 		font-size: 14px;
 		color: #a4a4a4;
+	}
+	@media(max-width: 568px){
+		padding: 0;
 	}
 }
 .card__row{

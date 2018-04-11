@@ -18,9 +18,24 @@
   }
   &:after{
     content: '';
-    padding-top: 24%;
+    padding-top: 25%;
     display: block;
-    background-color: rgba(0,0,0,0.3)
+    background-color: rgba(0,0,0,0.3);
+    @media(min-width: 2000px){
+      padding-top: 20%;
+    }
+    @media(max-width: 1440px){
+      padding-top: 32%;
+    }
+    @media(max-width: 1200px){
+      padding-top: 38%;
+    }
+    @media(max-width: 1024px){
+      padding-top: 42%;
+    }
+    @media(max-width: 850px){
+      padding-top: 50%;
+    }
   }
   &.guide{
     background-color: #5b8ef4;
@@ -29,6 +44,18 @@
       padding-top: 15%;
       display: block;
       background-color: transparent;
+      @media(max-width: 1440px){
+        padding-top: 20%;
+      }
+      @media(max-width: 1200px){
+        padding-top: 25%;
+      }
+      @media(max-width: 1024px){
+        padding-top: 30%;
+      }
+       @media(max-width: 850px){
+        padding-top: 35%;
+      }
     }
   }
   .container{
@@ -102,6 +129,10 @@
   .social-share-container{
     margin-top: 24px;
     margin-bottom: 24px;
+    @media(max-width: 568px){
+      display: block;
+      text-align: center;
+    }
   }
   .ddesc-content{
     max-width: 680px;
@@ -179,6 +210,21 @@
           }
         }
       }
+      @media(max-width: 768px){
+        max-width: 100%;
+      }
+      @media(max-width: 568px){
+        width: 350px;
+        max-width: initial;
+        display: inline-block;
+        margin-right: 8px;
+        &:last-child{
+          margin-right: 0;
+        }
+        p{
+          white-space: normal;
+        }
+      }
     }
     &.white, &.grey{
       h1{
@@ -214,13 +260,17 @@
             list-style: circle;
           }
           @media (max-width: 600px){
-            padding-left: 24px;
+            padding-left: 32px;
             padding-top: 24px;
           }
         }
         @media (max-width: 600px){
           padding-top: 16px;
           padding-bottom: 16px;
+          border-top: none;
+          .col-md-6{
+            padding: 0;
+          }
         }
       }
     }
@@ -247,11 +297,15 @@
   padding-bottom: 4px;
   display: inline-block;
   margin-right: 24px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
   span{
     font-size: 12px;
     line-height: 1;
     text-align: center;
     color: #8e8e8e;
+  }
+  @media(max-width: 768px){
+    margin-right: 8px;
   }
 }
 
@@ -274,6 +328,11 @@
           padding-top: 40%;
         }
       }
+      @media(max-width: 568px){
+        .slide-img-container{
+          display: none;
+        }
+      }
     }
   }
   .swiper-button-next , .swiper-button-prev{
@@ -286,6 +345,8 @@
     background-image: none;
     text-align: center;
     line-height: 36px;
+    transform: translateY(-50%);
+    margin-top: 0;
     .fa-chevron-right{
       margin-right: -4px;
     }
@@ -295,26 +356,29 @@
     &:before , &:after{
       display: none;
     }
-    @media (max-width: 600px){
-      display: none;
+  }
+  @media (max-width: 568px){
+    .swiper-button-next{
+      right: -10px;
+    }
+    .swiper-button-prev{
+      left: -10px;
     }
   }
-  // .swiper-button-next{
-  //   right: 0;
-  //   transform: translateX(50%);
-  // }
-  // .swiper-button-prev{
-  //   left: 0;
-  //   transform: translateX(-50%);
-  // }
   .gallery-thumbs{
     margin-top: 16px;
     .swiper-slide{
       opacity: 0.5;
       cursor: pointer;
+      @media(max-width: 568px){
+        opacity: 1;
+      }
       &.swiper-slide-active{
         opacity: 1;
         border: solid 4px #5b8ef4;
+        @media(max-width: 568px){
+          border: none;
+        }
       }
     }
     .slide-img-container{
@@ -331,6 +395,10 @@
     &.swiper-container{
       .swiper-wrapper{
         margin-left:calc(-40% - 5px);
+        @media(max-width: 568px){
+          padding-left: 15px;
+          margin-left:calc(-30% - 5px);
+        }
       }
     }
   }
@@ -366,10 +434,34 @@
         color: #ffffff;
       }
     }
+    @media(max-width: 768px){
+      padding-bottom: 0;
+      .container{
+        width: 100%;
+        padding-bottom: 32px;
+      }
+      .maps-container{
+        position: relative !important;
+        top: auto;
+        right: auto;
+        bottom: auto;
+        width: 100%;
+        height: 250px;
+      }
+    }
   }
 }
 
 // comment section
+.comment-section{
+  @media(max-width: 770px){
+    & > .col-md-8, & > .col-md-4{
+      flex: 0 0 100%;
+      max-width: 100%;
+      padding: 0;
+    }
+  }
+}
 .comment{
   background-color: #fff;
   box-shadow: 0 1px 3px 0 rgba(170, 170, 170, 0.5);
@@ -388,6 +480,15 @@
 .comment__content{
   padding: 18px 0;
   border-bottom: 1px solid #e4e4e4;
+  &.comment__content--mobile{
+    padding: 18px 0 0;
+    border-bottom: none;
+  }
+  button{
+    width: 250px;
+    max-width: 100%;
+    margin: 0 auto;
+  }
 }
 .comment__profile{
   position: relative;
@@ -401,6 +502,20 @@
   .star-rating em{
     font-size: 24px;
     margin-left: 12px;
+  }
+  @media(max-width: 568px){
+    position: relative;
+    display: block;
+    top: auto;
+    right: auto;
+    transform: none;
+    margin-top: 8px;
+    .star-rating em{
+      margin-left: 4px;
+      &:first-child{
+        margin-left: 0;
+      }
+    }
   }
 }
 .comment__person{
@@ -416,9 +531,29 @@
       font-weight: 600;
     }
   }
+  @media(max-width: 568px){
+    .guide-detail__person{
+      width: 60px;
+      height: 60px;
+      display: inline-block;
+      margin: 0;
+    }
+    .guide-detail__info{
+      display: inline-block;
+      margin: 0;
+    }
+  }
 }
 
 // near atraction section
+.near-wrapper{
+  &.col-md-4{
+    max-width: 600px;
+  }
+  @media(max-width: 768px){
+    margin-top: 32px;
+  }
+}
 .near__content{
   background-color: #fff;
   border: solid 1px #e4e4e4;
@@ -437,6 +572,31 @@
     width: 100%;
     transform: translateY(-50%);
     margin: 0;
+  }
+  @media(max-width: 320px){
+    .near__side{
+      flex: 0 0 100%;
+      max-width: 100%;
+      margin-bottom: 8px;
+      h5{
+        position: relative;
+        top: auto;
+        transform: none;
+      }
+      .btn{
+        width: calc(50% - 5px);
+        margin: 0;
+        margin-right: 5px;
+        & + .btn{
+          margin-left: 5px;
+          margin-right: 0;
+        }
+      }
+      &:last-child{
+        padding: 0;
+        margin-bottom: 0;
+      }
+    }
   }
 }
 .near__side{
@@ -478,5 +638,17 @@
     span{
       vertical-align: middle;
     }
+  }
+}
+.activity-container{
+  @media(max-width: 568px){
+    overflow-x: auto;
+    overflow-y: hidden;
+    display: block;
+  }
+}
+.activity-wrap{
+  @media(max-width: 568px){
+     white-space: nowrap;
   }
 }

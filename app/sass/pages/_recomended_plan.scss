@@ -81,8 +81,18 @@
 }
 .rp__content{
 	padding: 10px;
+	@media(max-width: 770px){
+		&.col-md-4{
+			max-width: 50%;
+			flex: 0 0 50%;
+		}
+	}
 	@media(max-width: 580px){
 		padding: 10px 20px;
+		&.col-md-4{
+			max-width: 100%;
+			flex: 0 0 100%;
+		}
 	}
 	.card--full{
 		.card__slider{

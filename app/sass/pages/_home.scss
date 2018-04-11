@@ -141,6 +141,9 @@
 		&:last-child{
 			border-bottom: 1px solid transparent;
 		}
+		button{
+			display: none;
+		}
 	}
 }
 .home-datetime__option{
@@ -1162,14 +1165,38 @@
 .op-modal__highlight{
 	padding: 20px 0 50px;
 	border-bottom: 1px solid #e4e4e4;
+	@media(max-width: 768px){
+		overflow-x: auto;
+		overflow-y: hidden;
+		display: block;
+	}
 }
 .op-modal__highlight-wrap{
 	margin: 0 -15px;
+	@media(max-width: 768px){
+		white-space: nowrap;
+		display: block;
+		padding-left: 8px;
+		.col-md-4{
+			display: inline-block;
+			max-width: initial;
+			width: 350px;
+			flex: none;
+			padding: 0 8px;
+		}
+		.card__desc{
+			white-space: normal;
+			margin-bottom: 8px;
+		}
+	}
 }
 .op-modal__other-title{
 	padding: 40px 0;
 	h3{
 		margin: 0;
+	}
+	@media(max-width: 568px){
+		padding: 40px 0 20px;
 	}
 }
 .op-modal__other-content{
@@ -1189,7 +1216,15 @@
 			}
 		}
 	}
+	@media(max-width: 568px){
+		margin-bottom: 0;
+	}
 }
 .op-modal__other-content-wrap{
 	margin: 0 -15px;
+	@media(max-width: 568px){
+		.card__desc{
+			margin-bottom: 8px;
+		}
+	}
 }
