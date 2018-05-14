@@ -1,4 +1,4 @@
-// slider
+// slider 
  $(document).ready(function () {
     //initialize swiper when document ready  
     var bannerSwiper = new Swiper ('.home-banner__slider', {

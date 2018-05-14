@@ -43,4 +43,8 @@
        $(".detail-price__overlay").toggleClass("active");
    })
 
+   $('.date-available').daterangepicker({
+      singleDatePicker: true,
+   });
+
  })

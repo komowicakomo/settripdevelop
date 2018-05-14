@@ -1,10 +1,18 @@
+<script src="js/plugins/moment.min.js" charset="utf-8"></script>
+<script src="js/plugins/daterangepicker.js" charset="utf-8"></script>
+<script src="js/view/detail_atraksi.js" ></script>
 <div class="detail-container container container--full grey">
   <div class="detail-head op-detail__head" style="background-image:url('./images/opentrip_bg.jpeg')">
+    <div class="videobackground">
+        <iframe
+        src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&controls=0&showinfo=0" frameborder="0">
+        </iframe>
+    </div>
     <div class="container">
       <div class="op-detail__headcontent text-center">
         <p>Open Trip</p>
         <h1>Petualangan di Karimun Jawa</h1>
-        <h3>
+        <h3> 
           <img class="svg-image" src="images/icon/ic-calendar-default.svg" alt="">
           14 - 17 April
         </h3>
@@ -91,6 +99,67 @@
       </div>
     </div>
   </div>
+  <div class="container container--full white available plan-destinasi plan-destinasi-detail op-plan-destinasi">
+      <div class="container">
+        <div class="ccw-head">
+            <h1>Package Options</h1>
+        </div>
+        <div class="ccw-body">
+            <div class="form-group col-sm-6">
+                <div class="input-group select with-icon">
+                  <div class="input-icon">
+                    <img src="images/icon/ic-calendar-default.svg" alt="Calendar icon">
+                  </div>
+                  <input class="date-available" type="text" placeholder="Check Availability">
+                </div>
+              </div>
+              <div class="options-cards col-xs-12">
+                  <div class="cards-head row">
+                    <div class="col-md-6">
+                      <div class="col-xs-12">
+                        <div class="cards-title">
+                            <h5>1-Day Ticket (Valid until June)</h5>
+                        </div>
+                      </div>
+                      <div class="col-xs-12">
+                          <div class="cards-detail">
+                              Package Details
+                          </div>
+                          <div class="cards-detail-body">
+                            <ul>
+                              <li>Schedule: 10:00am-8:30pm</li>
+                              <li>Valid until 30 June 2018</li>
+                            </ul>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 cards-price-detail">
+                      <div class="cards-price">
+                          <h5>Rp 960924</h5>
+                      </div>
+                      <div class="cards-discount">
+                          1099467
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cards-body">
+                    <div class="row">
+                        <div class="form-group col-sm-6">
+                            <label for="">Package quantity</label>
+                            <div class="input-group select with-icon">
+                              <div class="input-icon">
+                                <img src="images/icon/ic-person.svg" alt="person icon">
+                              </div>
+                              <select class="" name="">
+                                <option value="">Content</option>
+                              </select>
+                            </div>
+                          </div>
+                    </div>
+                  </div>
+                </div>
+        </div>
+    </div>
   <!-- tambahkan class op-plan-destinasi untuk mobile site -->
   <div class="container container--full white plan-destinasi plan-destinasi-detail op-plan-destinasi itinerary">
     <div class="container">

@@ -8419,6 +8419,12 @@ header.fixed-header .header-container {
   color: #73bd67;
 }
 
+@media (max-width: 600px) {
+  .plan-destinasi .pd-cp-box.subtotal .pd-cp-text-number {
+    padding-right: 32px;
+  }
+}
+
 .plan-destinasi .pd-cp-box.subtotal .pd-cp-container {
   width: 100%;
   display: -ms-flexbox;
@@ -8837,7 +8843,29 @@ header.fixed-header .header-container {
   color: #3d3d3d;
 }
 
-.modal-plan-destinasi .close-modal-container {
+.modal-plan-destinasi .close-modal-mobile, .modal-total .close-modal-mobile {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .modal-plan-destinasi .close-modal-mobile, .modal-total .close-modal-mobile {
+    display: block;
+  }
+  .modal-plan-destinasi .close-modal-mobile .close-btn, .modal-total .close-modal-mobile .close-btn {
+    left: 16px;
+    background-color: transparent;
+    width: 32px;
+    height: 32px;
+  }
+}
+
+@media (max-width: 600px) {
+  .modal-plan-destinasi .modal-pd-description, .modal-total .modal-pd-description {
+    padding-left: 40px;
+  }
+}
+
+.modal-plan-destinasi .close-modal-container, .modal-total .close-modal-container {
   position: absolute;
   left: 0;
   right: 0;
@@ -8845,13 +8873,19 @@ header.fixed-header .header-container {
   height: 20%;
 }
 
-.modal-plan-destinasi .close-modal-container .close-btn {
+.modal-plan-destinasi .close-modal-container .close-btn, .modal-total .close-modal-container .close-btn {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%) rotate(45deg);
 }
 
-.modal-plan-destinasi .modal-plan-destinasi-ov-body {
+@media (max-width: 600px) {
+  .modal-plan-destinasi .close-modal-container, .modal-total .close-modal-container {
+    display: none;
+  }
+}
+
+.modal-plan-destinasi .modal-plan-destinasi-ov-body, .modal-total .modal-plan-destinasi-ov-body {
   position: absolute;
   left: 0;
   right: 0;
@@ -8863,31 +8897,55 @@ header.fixed-header .header-container {
   overflow: hidden;
 }
 
-.modal-plan-destinasi.active .modal-plan-destinasi-ov-body {
+@media (max-width: 600px) {
+  .modal-plan-destinasi .modal-plan-destinasi-ov-body, .modal-total .modal-plan-destinasi-ov-body {
+    height: 100%;
+  }
+}
+
+.modal-plan-destinasi.active .modal-plan-destinasi-ov-body, .modal-total.active .modal-plan-destinasi-ov-body {
   transform: translate(0);
   transition: transform 0.4s ease 0.3s;
 }
 
-.modal-plan-destinasi .with--map.container {
+.modal-plan-destinasi .with--map.container, .modal-total .with--map.container {
   overflow: hidden;
 }
 
-.modal-plan-destinasi .with--map > .row {
+.modal-plan-destinasi .with--map > .row, .modal-total .with--map > .row {
   height: 100%;
   position: relative;
   margin-right: -40px;
   padding-right: 30px;
 }
 
-.modal-plan-destinasi .with--map .planbox-container {
+.modal-plan-destinasi .with--map .planbox-container, .modal-total .with--map .planbox-container {
   position: relative;
-  overflow: auto;
+  overflow: hidden;
   height: 100%;
-  padding-top: 50px;
-  padding-bottom: 50px;
 }
 
-.modal-plan-destinasi .with--map .map-place {
+@media (max-width: 768px) {
+  .modal-plan-destinasi .with--map .planbox-container, .modal-total .with--map .planbox-container {
+    height: 240px;
+    z-index: 4;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .modal-plan-destinasi .with--map .planbox-container, .modal-total .with--map .planbox-container {
+    height: 300px;
+    left: -16px;
+    right: -16px;
+    width: calc(100% + 32px);
+  }
+}
+
+.modal-plan-destinasi .with--map .map-place, .modal-total .with--map .map-place {
   padding-top: 50px;
   padding-bottom: 50px;
   width: 100%;
@@ -8895,7 +8953,13 @@ header.fixed-header .header-container {
   position: relative;
 }
 
-.modal-plan-destinasi .with--map .map-place-container {
+@media (max-width: 768px) {
+  .modal-plan-destinasi .with--map .map-place, .modal-total .with--map .map-place {
+    padding-bottom: 10px;
+  }
+}
+
+.modal-plan-destinasi .with--map .map-place-container, .modal-total .with--map .map-place-container {
   position: absolute;
   top: 50px;
   bottom: 24px;
@@ -8903,19 +8967,19 @@ header.fixed-header .header-container {
   right: 0;
 }
 
-.modal-plan-destinasi .modal-pd-box-container {
+.modal-plan-destinasi .modal-pd-box-container, .modal-total .modal-pd-box-container {
   position: absolute;
   width: calc(100% - 80px);
 }
 
 @media (max-width: 1080px) {
-  .modal-plan-destinasi .modal-pd-box-container {
+  .modal-plan-destinasi .modal-pd-box-container, .modal-total .modal-pd-box-container {
     width: calc(100% - 20px);
   }
 }
 
 @media (max-width: 993px) {
-  .modal-plan-destinasi .modal-pd-box-container {
+  .modal-plan-destinasi .modal-pd-box-container, .modal-total .modal-pd-box-container {
     top: 0;
     left: 0;
     position: relative;
@@ -8929,7 +8993,7 @@ header.fixed-header .header-container {
   }
 }
 
-.modal-plan-destinasi .nav-btn {
+.modal-plan-destinasi .nav-btn, .modal-total .nav-btn {
   position: absolute;
   width: 50px;
   height: 50px;
@@ -8942,44 +9006,44 @@ header.fixed-header .header-container {
   z-index: 2;
 }
 
-.modal-plan-destinasi .nav-btn i {
+.modal-plan-destinasi .nav-btn i, .modal-total .nav-btn i {
   position: absolute;
   font-size: 18px;
   transition: 0.3s ease;
 }
 
-.modal-plan-destinasi .nav-btn:hover i {
+.modal-plan-destinasi .nav-btn:hover i, .modal-total .nav-btn:hover i {
   color: #ffb757;
 }
 
-.modal-plan-destinasi .nav-btn.nav-btn-left {
+.modal-plan-destinasi .nav-btn.nav-btn-left, .modal-total .nav-btn.nav-btn-left {
   transform: translate(-50%, -50%);
   left: 0;
 }
 
-.modal-plan-destinasi .nav-btn.nav-btn-right {
+.modal-plan-destinasi .nav-btn.nav-btn-right, .modal-total .nav-btn.nav-btn-right {
   right: 0;
   transform: translate(50%, -50%);
 }
 
 @media (max-width: 1200px) {
-  .modal-plan-destinasi .nav-btn.nav-btn-left {
+  .modal-plan-destinasi .nav-btn.nav-btn-left, .modal-total .nav-btn.nav-btn-left {
     left: 16px;
     transform: translate(0, -50%);
   }
-  .modal-plan-destinasi .nav-btn.nav-btn-right {
+  .modal-plan-destinasi .nav-btn.nav-btn-right, .modal-total .nav-btn.nav-btn-right {
     right: 16px;
     transform: translate(0, -50%);
   }
 }
 
 @media (max-width: 600px) {
-  .modal-plan-destinasi .nav-btn {
+  .modal-plan-destinasi .nav-btn, .modal-total .nav-btn {
     display: none;
   }
 }
 
-.modal-plan-destinasi .modal-pd-planbox {
+.modal-plan-destinasi .modal-pd-planbox, .modal-total .modal-pd-planbox {
   width: 100%;
   background-color: #ffffff;
   border: solid 1px #e4e4e4;
@@ -8989,32 +9053,32 @@ header.fixed-header .header-container {
   cursor: pointer;
 }
 
-.modal-plan-destinasi .modal-pd-planbox.transport .planbox-img {
+.modal-plan-destinasi .modal-pd-planbox.transport .planbox-img, .modal-total .modal-pd-planbox.transport .planbox-img {
   border: solid 1px #e4e4e4;
 }
 
-.modal-plan-destinasi .modal-pd-planbox.transport .planbox-price {
+.modal-plan-destinasi .modal-pd-planbox.transport .planbox-price, .modal-total .modal-pd-planbox.transport .planbox-price {
   width: 70%;
 }
 
-.modal-plan-destinasi .modal-pd-planbox.transport .planbox-price span {
+.modal-plan-destinasi .modal-pd-planbox.transport .planbox-price span, .modal-total .modal-pd-planbox.transport .planbox-price span {
   font-size: 15px;
   line-height: 1.47;
 }
 
-.modal-plan-destinasi .modal-pd-planbox.transport .planbox-button-action {
+.modal-plan-destinasi .modal-pd-planbox.transport .planbox-button-action, .modal-total .modal-pd-planbox.transport .planbox-button-action {
   width: 30%;
 }
 
-.modal-plan-destinasi .modal-pd-planbox.pemandu .planbox-description {
+.modal-plan-destinasi .modal-pd-planbox.pemandu .planbox-description, .modal-total .modal-pd-planbox.pemandu .planbox-description {
   padding: 16px;
 }
 
-.modal-plan-destinasi .modal-pd-planbox.pemandu .planbox-destination {
+.modal-plan-destinasi .modal-pd-planbox.pemandu .planbox-destination, .modal-total .modal-pd-planbox.pemandu .planbox-destination {
   padding-left: 8px;
 }
 
-.modal-plan-destinasi .modal-pd-planbox.pemandu .planbox-img {
+.modal-plan-destinasi .modal-pd-planbox.pemandu .planbox-img, .modal-total .modal-pd-planbox.pemandu .planbox-img {
   border: solid 1px #e4e4e4;
   border-radius: 50%;
   width: 80px;
@@ -9022,26 +9086,26 @@ header.fixed-header .header-container {
   border: 4px solid #F0F0F0;
 }
 
-.modal-plan-destinasi .modal-pd-planbox.pemandu .planbox-img img {
+.modal-plan-destinasi .modal-pd-planbox.pemandu .planbox-img img, .modal-total .modal-pd-planbox.pemandu .planbox-img img {
   height: 100%;
   width: auto;
 }
 
-.modal-plan-destinasi .modal-pd-planbox.pemandu .planbox-price {
+.modal-plan-destinasi .modal-pd-planbox.pemandu .planbox-price, .modal-total .modal-pd-planbox.pemandu .planbox-price {
   width: 40%;
   font-size: 18px;
 }
 
-.modal-plan-destinasi .modal-pd-planbox.pemandu .planbox-price span {
+.modal-plan-destinasi .modal-pd-planbox.pemandu .planbox-price span, .modal-total .modal-pd-planbox.pemandu .planbox-price span {
   font-size: 15px;
   line-height: 1.47;
 }
 
-.modal-plan-destinasi .modal-pd-planbox.pemandu .planbox-button-action {
+.modal-plan-destinasi .modal-pd-planbox.pemandu .planbox-button-action, .modal-total .modal-pd-planbox.pemandu .planbox-button-action {
   width: 60%;
 }
 
-.modal-plan-destinasi .modal-pd-planbox .planbox-description {
+.modal-plan-destinasi .modal-pd-planbox .planbox-description, .modal-total .modal-pd-planbox .planbox-description {
   padding: 8px;
   width: 100%;
   border-bottom: solid 1px #e4e4e4;
@@ -9051,30 +9115,30 @@ header.fixed-header .header-container {
       flex-direction: row;
 }
 
-.modal-plan-destinasi .modal-pd-planbox .planbox-img {
+.modal-plan-destinasi .modal-pd-planbox .planbox-img, .modal-total .modal-pd-planbox .planbox-img {
   width: 30%;
   border-radius: 2px;
   position: relative;
   overflow: hidden;
 }
 
-.modal-plan-destinasi .modal-pd-planbox .planbox-img img {
+.modal-plan-destinasi .modal-pd-planbox .planbox-img img, .modal-total .modal-pd-planbox .planbox-img img {
   width: 100%;
 }
 
-.modal-plan-destinasi .modal-pd-planbox .planbox-img:after {
+.modal-plan-destinasi .modal-pd-planbox .planbox-img:after, .modal-total .modal-pd-planbox .planbox-img:after {
   content: '';
   display: block;
   padding-top: 100%;
 }
 
-.modal-plan-destinasi .modal-pd-planbox .planbox-text {
+.modal-plan-destinasi .modal-pd-planbox .planbox-text, .modal-total .modal-pd-planbox .planbox-text {
   padding-left: 8px;
   padding-top: 4px;
   position: relative;
 }
 
-.modal-plan-destinasi .modal-pd-planbox .planbox-text .planbox-destination span {
+.modal-plan-destinasi .modal-pd-planbox .planbox-text .planbox-destination span, .modal-total .modal-pd-planbox .planbox-text .planbox-destination span {
   font-size: 10px;
   line-height: 1.2;
   color: #3d3d3d;
@@ -9082,7 +9146,7 @@ header.fixed-header .header-container {
   display: block;
 }
 
-.modal-plan-destinasi .modal-pd-planbox .planbox-text .planbox-destination p {
+.modal-plan-destinasi .modal-pd-planbox .planbox-text .planbox-destination p, .modal-total .modal-pd-planbox .planbox-text .planbox-destination p {
   font-size: 15px;
   font-weight: 700;
   line-height: 1;
@@ -9090,7 +9154,7 @@ header.fixed-header .header-container {
   margin: 0px;
 }
 
-.modal-plan-destinasi .modal-pd-planbox .planbox-text .planbox-destination p + p {
+.modal-plan-destinasi .modal-pd-planbox .planbox-text .planbox-destination p + p, .modal-total .modal-pd-planbox .planbox-text .planbox-destination p + p {
   margin-top: 8px;
   font-size: 15px;
   font-weight: 300;
@@ -9099,30 +9163,30 @@ header.fixed-header .header-container {
   color: #a4a4a4;
 }
 
-.modal-plan-destinasi .modal-pd-planbox .planbox-text .planbox-rating {
+.modal-plan-destinasi .modal-pd-planbox .planbox-text .planbox-rating, .modal-total .modal-pd-planbox .planbox-text .planbox-rating {
   position: absolute;
   bottom: 0px;
   left: 8px;
 }
 
-.modal-plan-destinasi .modal-pd-planbox .planbox-text .planbox-rating span {
+.modal-plan-destinasi .modal-pd-planbox .planbox-text .planbox-rating span, .modal-total .modal-pd-planbox .planbox-text .planbox-rating span {
   color: #3c3c3c;
 }
 
-.modal-plan-destinasi .modal-pd-planbox:hover {
+.modal-plan-destinasi .modal-pd-planbox:hover, .modal-total .modal-pd-planbox:hover {
   transform: translateY(-10px);
   box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
 }
 
 @media (max-width: 1200px) {
-  .modal-plan-destinasi .modal-pd-planbox .planbox-action .planbox-price {
+  .modal-plan-destinasi .modal-pd-planbox .planbox-action .planbox-price, .modal-total .modal-pd-planbox .planbox-action .planbox-price {
     font-size: 16px;
     -ms-flex-align: center;
         align-items: center;
     padding-top: 0px;
     position: relative;
   }
-  .modal-plan-destinasi .modal-pd-planbox .planbox-action .planbox-price .price-box {
+  .modal-plan-destinasi .modal-pd-planbox .planbox-action .planbox-price .price-box, .modal-total .modal-pd-planbox .planbox-action .planbox-price .price-box {
     padding-top: 4px;
     position: absolute;
     top: 50%;
@@ -9130,7 +9194,7 @@ header.fixed-header .header-container {
   }
 }
 
-.modal-plan-destinasi .planbox-action {
+.modal-plan-destinasi .planbox-action, .modal-total .planbox-action {
   padding: 8px;
   display: -ms-flexbox;
   display: flex;
@@ -9138,7 +9202,7 @@ header.fixed-header .header-container {
       flex-direction: row;
 }
 
-.modal-plan-destinasi .planbox-action .planbox-price {
+.modal-plan-destinasi .planbox-action .planbox-price, .modal-total .planbox-action .planbox-price {
   font-size: 22px;
   line-height: 1;
   text-align: left;
@@ -9147,7 +9211,7 @@ header.fixed-header .header-container {
   padding-top: 8px;
 }
 
-.modal-plan-destinasi .planbox-action .planbox-button-action {
+.modal-plan-destinasi .planbox-action .planbox-button-action, .modal-total .planbox-action .planbox-button-action {
   width: 60%;
   display: -ms-flexbox;
   display: flex;
@@ -9155,11 +9219,11 @@ header.fixed-header .header-container {
       flex-direction: row;
 }
 
-.modal-plan-destinasi .planbox-action .planbox-button-action .btn--orange {
+.modal-plan-destinasi .planbox-action .planbox-button-action .btn--orange, .modal-total .planbox-action .planbox-button-action .btn--orange {
   color: white !important;
 }
 
-.modal-plan-destinasi .planbox-action .planbox-button-action > button {
+.modal-plan-destinasi .planbox-action .planbox-button-action > button, .modal-total .planbox-action .planbox-button-action > button {
   max-width: 100%;
   padding-left: 8px;
   padding-right: 8px;
@@ -9172,9 +9236,165 @@ header.fixed-header .header-container {
   color: #3d3d3d;
 }
 
-.modal-plan-destinasi .planbox-action .planbox-button-action > button + button {
+.modal-plan-destinasi .planbox-action .planbox-button-action > button + button, .modal-total .planbox-action .planbox-button-action > button + button {
   margin-left: 4px;
   color: white;
+}
+
+.modal--map_container {
+  position: absolute;
+  top: 50px;
+  left: 15px;
+  right: 0;
+  bottom: 0;
+}
+
+@media (max-width: 600px) {
+  .modal--map_container {
+    right: 15px;
+  }
+}
+
+.modal--map_container .swiper-container {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+@media (max-width: 600px) {
+  .modal--map_container .swiper-container {
+    width: calc(100% - 64px);
+    margin-left: 0px;
+  }
+}
+
+.modal--map_container .swiper-slide {
+  /* Center slide text vertically */
+}
+
+.modal--map_container .swiper-slide .modal-pd-planbox {
+  margin-bottom: 0px;
+}
+
+.modal--map_container .swiper-slide .modal-pd-planbox:hover {
+  transform: translate(0);
+  box-shadow: none;
+}
+
+@media (min-width: 600px) {
+  .modal--map_container .swiper-slide.swiper-slide-active .modal-pd-planbox {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+  }
+}
+
+@media (max-width: 600px) {
+  .modal--map_container .swiper-slide {
+    padding-right: 15px;
+  }
+}
+
+.modal-total .modal-pd-head .modal-pd-desc-label {
+  padding-top: 8px;
+}
+
+.modal-total .plan-destinasi-cart-price {
+  position: relative;
+  overflow: visible;
+  height: auto;
+}
+
+.modal-total .plan-destinasi-cart-price .pd-cp-box {
+  display: block;
+}
+
+.modal-total .subtotal {
+  position: absolute;
+  z-index: 2;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.modal-total .modal-pd-body {
+  height: calc(100% - 74px);
+  position: relative;
+}
+
+.open-modal-cart {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .open-modal-cart {
+    display: inline-block;
+    position: absolute;
+    right: 8px;
+    top: 4px;
+  }
+}
+
+.open-modal-cart button {
+  width: 24px;
+  height: 24px;
+}
+
+.open-modal-cart button.no-btn {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.videobackground {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+}
+
+.videobackground iframe {
+  position: absolute;
+  width: 100% !important;
+  height: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.available .ccw-body .options-cards {
+  background: white;
+  margin-bottom: 10px;
+  border: 1px solid #eee;
+  border-radius: 4px;
+}
+
+.available .ccw-body .options-cards .cards-head {
+  padding: 16px 20px;
+}
+
+.available .ccw-body .options-cards .cards-body {
+  border-top: 1px solid #eee;
+  padding: 16px 20px;
+}
+
+.available .ccw-body .options-cards ul {
+  margin: 0px;
+  padding-top: 16px;
+  padding-left: 32px;
+}
+
+.available .ccw-body .options-cards ul li {
+  margin-bottom: 8px !important;
+}
+
+.available .ccw-body .options-cards .cards-price-detail {
+  text-align: right;
+}
+
+.available .ccw-body .options-cards .cards-price-detail .cards-discount {
+  color: #888;
+  text-decoration: line-through;
 }
 
 .konfirmasi_pembayaran {

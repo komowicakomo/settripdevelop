@@ -367,6 +367,9 @@
         line-height: 1;
         text-align: right;
         color: #73bd67;
+        @media(max-width: 600px){
+          padding-right: 32px;
+        }
       }
       .pd-cp-container{
         width: 100%;
@@ -721,7 +724,24 @@
 
 // modal
 
-.modal-plan-destinasi{
+.modal-plan-destinasi , .modal-total{
+  .close-modal-mobile{
+    display: none; 
+    @media (max-width : 600px){
+      display: block;
+      .close-btn{
+        left: 16px;
+        background-color: transparent; 
+        width : 32px;
+        height : 32px;
+      }
+    }
+  }
+  .modal-pd-description{
+    @media (max-width : 600px){
+      padding-left: 40px;
+    }
+  }
   .close-modal-container{
     position: absolute;
     left: 0;
@@ -732,6 +752,9 @@
       left: 50% ;
       top: 50%;
       transform: translate(-50% , -50%) rotate(45deg);
+    }
+    @media (max-width : 600px){
+      display: none ; 
     }
   }
   .modal-plan-destinasi-ov-body{
@@ -744,6 +767,9 @@
     transform: translateY(100%);
     will-change: transform;
     overflow: hidden;
+    @media (max-width : 600px){
+      height: 100% ; 
+    }
     // &.filter-show{
     //   .modal-pd-body{
     //     opacity: 0.3;
@@ -776,10 +802,22 @@
     }
     .planbox-container{
       position: relative;
-      overflow: auto;
+      overflow: hidden ;
       height: 100%;
-      padding-top: 50px;
-      padding-bottom: 50px;
+      @media (max-width : 768px){
+        height: 240px ; 
+        z-index: 4 ;
+        position: absolute ; 
+        left: 0 ;
+        right: 0 ;
+        bottom: 0;
+      }
+      @media (max-width : 600px){
+        height : 300px;
+        left : -16px;
+        right : -16px;
+        width  :calc(100% + 32px);
+      }
     }
     .map-place{
       padding-top: 50px;
@@ -787,6 +825,9 @@
       width: 100%;
       height: 100%;
       position: relative;
+      @media (max-width : 768px){
+        padding-bottom: 10px;
+      }
     }
     .map-place-container{
       position: absolute;
@@ -1027,3 +1068,140 @@
     }
   }
 }
+
+.modal--map_container{
+  position:absolute;
+  top: 50px;
+  left: 15px;
+  right: 0;
+  bottom: 0;
+  @media (max-width : 600px){
+    right : 15px;
+  }
+  .swiper-container {
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    @media (max-width : 600px){
+      width: calc(100% - 64px);
+      margin-left: 0px;
+    }
+  }
+  .swiper-slide {
+    /* Center slide text vertically */
+    .modal-pd-planbox{
+      margin-bottom: 0px;
+      &:hover{
+        transform: translate(0);
+        box-shadow: none ; 
+      }
+    }
+    &.swiper-slide-active{
+      @media (min-width : 600px){
+        .modal-pd-planbox{
+          transform: translateY(-10px);
+          box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+        }
+      }
+    }
+    @media(max-width : 600px){
+      padding-right: 15px;
+    }
+  }
+}
+
+.modal-total{
+  .modal-pd-head{
+    .modal-pd-desc-label{
+      padding-top: 8px;
+    }
+  }
+  .plan-destinasi-cart-price{
+    position: relative;
+    overflow: visible;
+    height: auto;
+    .pd-cp-box{
+      display: block;
+    }
+  }
+  .subtotal{
+    position: absolute;
+    z-index: 2;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  .modal-pd-body{
+    height: calc(100% - 74px);
+    position: relative;
+  }
+}
+
+.open-modal-cart{
+  display: none;
+  @media (max-width : 600px){
+    display: inline-block;
+    position: absolute;
+    right : 8px ;
+    top : 4px;
+  }
+  button{
+    width:24px;
+    height: 24px;
+    &.no-btn{
+      background-color: transparent; 
+      border: none;
+      box-shadow: none;
+    }
+  }
+}
+
+.videobackground{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  iframe{
+    position: absolute;
+    width: 100% !important;
+    height : 100%;
+    left: 50%;
+    top:50%;
+    transform: translate(-50% , -50%);
+  }
+}
+
+.available{
+  .ccw-body{
+    .options-cards{
+      background: white;
+      margin-bottom: 10px;
+      border: 1px solid #eee;
+      border-radius: 4px;
+      .cards-head{
+        padding: 16px 20px;
+      }
+      .cards-body{
+        border-top :  1px solid #eee; 
+        padding: 16px 20px;
+      }
+      ul{
+        margin: 0px;
+        padding-top: 16px;
+        padding-left: 32px;
+        li{
+          margin-bottom: 8px !important;
+        }
+      }
+      .cards-price-detail{
+        text-align: right; 
+        .cards-discount{
+          color: #888;
+          text-decoration: line-through;
+        }
+      }
+    }
+  }
+}
+

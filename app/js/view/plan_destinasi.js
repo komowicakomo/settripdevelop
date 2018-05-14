@@ -31,7 +31,7 @@ function setSliderHandle(i, value) {
 	r[i] = value;
 	keypressSlider.noUiSlider.set(r);
 }
-
+ 
 // Listen to keydown events on the input field.
 inputs.forEach(function(input, handle) {
 
@@ -95,21 +95,75 @@ inputs.forEach(function(input, handle) {
 	});
 });
 
-initMap( 'marketplace-map' , {lat: -25.363, lng: 131.044})
+$(window).on('load' , function() {
+	
+	console.log('loaded')
 
-initMap( 'map' , {lat: -25.363, lng: 131.044})
+	var swiper = new Swiper('.swiper-container', {
+		direction: 'vertical',
+		autoResize: false,
+		resizeReInit: true,
+		centeredSlides: true,
+		slidesPerView: 2,
+		spaceBetween: 15,
+		initialSlide: 0,
+		breakpoints: {
+			1600: {
+				slidesPerView: 3,
+			},
+			1440: {
+				slidesPerView: 2,
+				spaceBetween: 15
+			},
+			768: {
+				slidesPerView: 2,
+				spaceBetween: 15, 
+				direction : 'horizontal'
+			}, 
+			600: {
+				slidesPerView: 1 ,
+				spaceBetween: 0 , 
+				direction : 'horizontal'
+			}
+		},
+	  });
 
-$(document).on('click','.planbox-body-action',function(){
-  $(this).parents('.plan-cart-box').find('.pcb-body').slideToggle()
+	initMap( 'marketplace-map' , {lat: -25.363, lng: 131.044})
+
+	initMap( 'map' , {lat: -25.363, lng: 131.044})
+
+	$(document).on('click','.planbox-body-action',function(){
+	$(this).parents('.plan-cart-box').find('.pcb-body').slideToggle()
+	})
+
+	$(document).on('click','.modal-pd-double .mpd-single',function(){
+	$('.modal-pd-double .mpd-single').removeClass('active')
+	$(this).addClass('active')
+	var target = $(this).attr('data-target')
+	$('.modal-pd-body').removeClass('active')
+	$('#'+target).addClass('active')
+	if(target == 'with-map'){
+		google.maps.event.trigger( document.getElementById('marketplace-map') ,'resize')
+		swiper.update()
+	}
+	})
+
+	$(window).resize(function(){
+		console.log(swiper)
+		console.log('holla')
+		swiper.updateSlidesSize()
+		swiper.updateContainerSize()
+	  })
+
 })
 
-$(document).on('click','.modal-pd-double .mpd-single',function(){
-  $('.modal-pd-double .mpd-single').removeClass('active')
-  $(this).addClass('active')
-  var target = $(this).attr('data-target')
-  $('.modal-pd-body').removeClass('active')
-  $('#'+target).addClass('active')
-  if(target == 'with-map'){
-    google.maps.event.trigger( document.getElementById('marketplace-map') ,'resize')
-  }
-})
+
+
+
+
+
+
+
+
+
+
