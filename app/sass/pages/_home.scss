@@ -570,6 +570,36 @@
 		}
 	}
 }
+.home-smallgrid__play{
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	span{
+		color: #fff;
+		font-size: 64px;
+		opacity: 0.6;
+	}
+	@media(max-width: 770px){
+		span{
+			font-size: 48px;
+		}
+	}
+	@media(max-width: 580px){
+		span{
+			font-size: 28px;
+		}
+	}
+}
+.home-smallgrid__play--small{
+	span{
+		font-size: 36px;
+	}
+	@media(max-width: 770px){
+		span{
+			font-size: 28px;
+		}
+	}
+}
 .home-smallgrid__default{
 	position: absolute;
 	top: 0;

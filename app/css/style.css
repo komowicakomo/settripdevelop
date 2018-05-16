@@ -4441,6 +4441,40 @@ header.fixed-header .header-container {
   }
 }
 
+.home-smallgrid__play {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.home-smallgrid__play span {
+  color: #fff;
+  font-size: 64px;
+  opacity: 0.6;
+}
+
+@media (max-width: 770px) {
+  .home-smallgrid__play span {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 580px) {
+  .home-smallgrid__play span {
+    font-size: 28px;
+  }
+}
+
+.home-smallgrid__play--small span {
+  font-size: 36px;
+}
+
+@media (max-width: 770px) {
+  .home-smallgrid__play--small span {
+    font-size: 28px;
+  }
+}
+
 .home-smallgrid__default {
   position: absolute;
   top: 0;
@@ -5635,6 +5669,108 @@ header.fixed-header .header-container {
 .rp__btn {
   text-align: center;
   margin: 50px 0 150px;
+}
+
+.rp__grid {
+  padding: 0 8px;
+}
+
+.rp__bigcontent {
+  padding: 0;
+}
+
+.rp__smgrid {
+  margin-bottom: 15px;
+  max-width: 100%;
+  -ms-flex: 0 0 100%;
+      flex: 0 0 100%;
+}
+
+.rp__smgrid .home-smallgrid {
+  height: 257px;
+}
+
+.rp__smgrid:last-child {
+  margin: 0;
+}
+
+.rp__subtitle {
+  margin-bottom: 30px;
+  padding: 0 20px;
+}
+
+.rp__subtitle .home-wrapper__title {
+  margin-bottom: 20px;
+}
+
+.rp__atraksi {
+  margin-bottom: 50px;
+}
+
+@media (max-width: 580px) {
+  .rp__atraksi {
+    margin-top: 42px;
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 770px) {
+  .rp__atraksi .rp__content.col-md-4 {
+    max-width: 33.33333%;
+    -ms-flex: 0 0 33.3333%;
+        flex: 0 0 33.3333%;
+  }
+}
+
+@media (max-width: 580px) {
+  .rp__atraksi .rp__content {
+    padding: 10px 20px;
+  }
+  .rp__atraksi .rp__content.col-md-4 {
+    max-width: 100%;
+    -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+  }
+}
+
+@media (max-width: 770px) {
+  .rp__atraksi .rp__grid {
+    max-width: 100%;
+    -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+  }
+  .rp__atraksi .rp__grid.col-md-4 {
+    margin-top: 15px;
+  }
+  .rp__atraksi .rp__grid.row {
+    padding: 0;
+  }
+  .rp__atraksi .rp__grid .rp__smgrid {
+    padding: 10px;
+    max-width: 50%;
+    -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 580px) {
+  .rp__atraksi .rp__grid.col-md-4 {
+    margin-top: 0px;
+    max-width: 100%;
+    -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+  }
+  .rp__atraksi .rp__grid.col-md-8 {
+    padding: 10px 20px;
+  }
+  .rp__atraksi .rp__grid .rp__smgrid {
+    padding: 10px 20px;
+    max-width: 100%;
+    -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+    margin-bottom: 0;
+  }
 }
 
 .word-navigation {
