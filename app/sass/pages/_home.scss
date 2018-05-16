@@ -737,9 +737,12 @@
 	.row{
 		margin: auto;
 	}
-	.col-lg-6{
+	.col-lg-6, .col-lg-3{
 		padding-left: 8px;
 		padding-right: 8px;
+	}
+	.home-overflowview--places_additonal{
+		margin-top: 8px;
 	}
 	@media(max-width: 980px){
 		width: 100%;
@@ -767,6 +770,9 @@
 	white-space: nowrap;
 }
 .home-overflowview--places_small{
+	&.col-lg-6{
+		padding: 0;
+	}
 	.row{
 		margin-bottom: 10px;
 		& + .row{
@@ -775,7 +781,7 @@
 	}
 }
 .home-overflowview--places__content{
-	border-radius: 20px;
+	border-radius: 4px;
 	width: 100%;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -802,6 +808,9 @@
 			padding-top: 30%;
 		}
 	}
+}
+.home-overflowview--places__content_small{
+	max-height: 130px;
 }
 .home-overflowview--places__text{
 	position: absolute;
