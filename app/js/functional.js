@@ -587,3 +587,7 @@ $(window).on('load',function(){
   })
 
 })
+
+$(document).on('click','.social-share-buttons',function(){
+	$(this).find('.social-share-body').toggleClass('active')
+})

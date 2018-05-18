@@ -268,14 +268,6 @@ if(width > 568){
 		var parent = $(this).parent();
 		parent.find('.input-icon').removeClass('active');
 	});
-
-	// increment
-	$('input[mode="increment"]').on("click", function() {
-		var value = $(".home-datetime__qty-form").val();
-
-		$(".home-datetime__qty").addClass("home-datetime__qty--active");
-		$('input[mode="increment"]').val(value);
-	});
 } else{
 	// typeahead mobile
 	$('input[mode="typeahead_mobile"]').typeahead({ highlight: true, minLength: 1 }, { name: "states", source: substringMatcher(states) });
@@ -316,13 +308,21 @@ if(width > 568){
 	});
 
 	// increment mobile
-	$('input[mode="increment"]').on("click", function() {
-		var value = $(".home-datetime__qty-form_mobile").val();
-		$('input[mode="increment"]').val(value);
-		$(this).attr("readonly", true);
-    	openMenuMobile("who");
-	});
+	// $('input[mode="increment"]').on("click", function() {
+	// 	var value = $(".home-datetime__qty-form_mobile").val();
+	// 	$('input[mode="increment"]').val(value);
+	// 	$(this).attr("readonly", true);
+    // 	openMenuMobile("who");
+	// });
 }
+
+// increment
+$('input[mode="increment"]').on("click", function () {
+	var value = $(".home-datetime__qty-form").val();
+
+	$(".home-datetime__qty").addClass("home-datetime__qty--active");
+	$('input[mode="increment"]').val(value);
+});
 
 $('input[mode="typeahead"]').click(function(event){
 	if(width <= 568){

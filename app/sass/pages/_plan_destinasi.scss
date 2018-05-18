@@ -205,6 +205,9 @@
       color: #9e9e9e;
       text-transform: uppercase;
       margin: 0px;
+      @media (max-width: 600px){
+        display: none;
+      }
     }
     &.active{
       background-color: #ffffff;
@@ -490,7 +493,7 @@
     @media (max-width : 768px){
       text-align: left;
       .planbox-text{
-        width: calc(100% - 126px); 
+        width: calc(100% - 126px);
       }
     }
   }
@@ -519,7 +522,7 @@
     position: relative;
     display: none;
     @media (max-width : 768px){
-      text-align: left ; 
+      text-align: left ;
     }
     &.show{
       display: block;
@@ -726,12 +729,12 @@
 
 .modal-plan-destinasi , .modal-total{
   .close-modal-mobile{
-    display: none; 
+    display: none;
     @media (max-width : 600px){
       display: block;
       .close-btn{
         left: 16px;
-        background-color: transparent; 
+        background-color: transparent;
         width : 32px;
         height : 32px;
       }
@@ -754,7 +757,7 @@
       transform: translate(-50% , -50%) rotate(45deg);
     }
     @media (max-width : 600px){
-      display: none ; 
+      display: none ;
     }
   }
   .modal-plan-destinasi-ov-body{
@@ -768,7 +771,7 @@
     will-change: transform;
     overflow: hidden;
     @media (max-width : 600px){
-      height: 100% ; 
+      height: 100% ;
     }
     // &.filter-show{
     //   .modal-pd-body{
@@ -805,9 +808,9 @@
       overflow: hidden ;
       height: 100%;
       @media (max-width : 768px){
-        height: 240px ; 
+        height: 240px ;
         z-index: 4 ;
-        position: absolute ; 
+        position: absolute ;
         left: 0 ;
         right: 0 ;
         bottom: 0;
@@ -1093,7 +1096,7 @@
       margin-bottom: 0px;
       &:hover{
         transform: translate(0);
-        box-shadow: none ; 
+        box-shadow: none ;
       }
     }
     &.swiper-slide-active{
@@ -1149,7 +1152,7 @@
     width:24px;
     height: 24px;
     &.no-btn{
-      background-color: transparent; 
+      background-color: transparent;
       border: none;
       box-shadow: none;
     }
@@ -1171,37 +1174,3 @@
     transform: translate(-50% , -50%);
   }
 }
-
-.available{
-  .ccw-body{
-    .options-cards{
-      background: white;
-      margin-bottom: 10px;
-      border: 1px solid #eee;
-      border-radius: 4px;
-      .cards-head{
-        padding: 16px 20px;
-      }
-      .cards-body{
-        border-top :  1px solid #eee; 
-        padding: 16px 20px;
-      }
-      ul{
-        margin: 0px;
-        padding-top: 16px;
-        padding-left: 32px;
-        li{
-          margin-bottom: 8px !important;
-        }
-      }
-      .cards-price-detail{
-        text-align: right; 
-        .cards-discount{
-          color: #888;
-          text-decoration: line-through;
-        }
-      }
-    }
-  }
-}
-

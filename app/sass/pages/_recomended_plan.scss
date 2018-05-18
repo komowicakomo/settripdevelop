@@ -81,6 +81,12 @@
 }
 .rp__content{
 	padding: 10px;
+	&.col-md-4{
+		padding: 20px 8px 0;
+		.home-smallgrid{
+			height: 254px;
+		}
+	}
 	@media(max-width: 770px){
 		&.col-md-4{
 			max-width: 50%;
@@ -142,11 +148,11 @@
 	padding: 0;
 }
 .rp__smgrid{
-	margin-bottom: 15px;
+	margin-bottom: 20px;
 	max-width: 100%;
 	flex: 0 0 100%;
 	.home-smallgrid{
-		height: 257px;
+		height: 254px;
 	}
 	&:last-child{
 		margin: 0;

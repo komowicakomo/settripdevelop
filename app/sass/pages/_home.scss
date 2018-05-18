@@ -4,11 +4,9 @@
 // banner section
 .home-banner{
 	position: relative;
-	margin-top: -60px;
 }
 .home-banner__slider{
 	width: 100%;
-	min-height: 600px;
 	.swiper-pagination{
 		bottom: 50px;
 	}
@@ -50,7 +48,30 @@
 .home-banner__wrapper{
 	width: 100%;
 	position: relative;
-	min-height: 600px;
+	&:before{
+		content: '';
+		display: block;
+		position: relative;
+		padding-top: 25%;
+		@media(min-width: 2000px){
+			padding-top: 20%;
+		}
+		@media(max-width: 1440px){
+			padding-top: 32%;
+		}
+		@media(max-width: 1200px){
+			padding-top: 38%;
+		}
+		@media(max-width: 1024px){
+			padding-top: 42%;
+		}
+		@media(max-width: 850px){
+			padding-top: 50%;
+		}
+	}
+	@media(max-width: 600px){
+		min-height: 300px;
+	}
 }
 .home-banner__img{
 	position: absolute;
@@ -80,6 +101,9 @@
 	color: #fff;
 	letter-spacing: 1.5px;
 	word-spacing: 5px;
+	@media(max-width: 600px){
+		font-size: 28px;
+	}
 }
 .home-banner__subtitle{
 	display: inline-block;
@@ -140,9 +164,6 @@
 		border-radius: 0;
 		&:last-child{
 			border-bottom: 1px solid transparent;
-		}
-		button{
-			display: none;
 		}
 	}
 }
@@ -383,7 +404,10 @@
 	margin-left: -5px;
 }
 .home-gridview__big{
-	margin-bottom: 20px;
+	margin-bottom: 16px;
+	.col-md-6{
+		padding: 0 8px;
+	}
 	@media(max-width: 768px){
 		.col-md-6{
 			padding: 0 5px;
@@ -524,6 +548,9 @@
 	}
 }
 .home-gridview__small{
+	.col-md-4{
+		padding: 0 8px;
+	}
 	@media(max-width: 768px){
 		.col-md-4{
 			padding: 0 5px;

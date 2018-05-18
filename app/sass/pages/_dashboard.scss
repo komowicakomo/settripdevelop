@@ -177,7 +177,7 @@
       padding-left: 8px;
     }
   }
-} 
+}
 
 .dashpanel{
   &.join-mitra{
@@ -278,6 +278,19 @@
       &:nth-of-type(odd){
         background-color: #fafbfc;
       }
+      @media (max-width: 980px){
+        display: block;
+      }
+    }
+    .flex--mobile--label{
+      display: none;
+      @media(max-width: 980px){
+        display: block;
+        position: absolute;
+        left: 12;
+        top: 50%;
+        transform: translateY(-50%);
+      }
     }
     .flex--column{
       border-right: 1px solid transparent;
@@ -285,6 +298,12 @@
       color: #3d3d3d;
       span{
         font-size: 15px;
+      }
+      @media(max-width: 980px){
+        display: block;
+        width: 100%;
+        position: relative;
+        text-align: right;
       }
     }
     .flex--row--footer{
@@ -315,6 +334,9 @@
       font-weight: 700;
       text-align: left ;
     }
+    @media(max-width: 980px){
+      display: none;
+    }
   }
 }
 
@@ -331,6 +353,11 @@
   border: solid 1px #e4e4e4;
   display: flex;
   align-items: center;
+  @media (max-width: 900px){
+    flex-direction: column;
+    align-content: stretch;
+    display: block;
+  }
   .wishlist-image{
     width: 100px;
     height: auto;
@@ -347,6 +374,13 @@
       width: 100%;
       top: 50%;
       transform: translateY(-50%);
+    }
+    @media (max-width: 930px){
+      flex-shrink: 0 ;
+      flex-grow:  0;
+    }
+    @media(max-width: 600px){
+      width: 100%;
     }
   }
   .wishlist-description{
@@ -367,7 +401,10 @@
       color: #a4a4a4;
       margin-bottom: 12px;
     }
-
+    @media (max-width: 900px){
+      margin-left: 0px;
+      margin-top: 16px;
+    }
   }
   .w-action{
     position: absolute;
@@ -379,5 +416,156 @@
         margin-left: 16px;
       }
     }
+    @media (max-width: 930px){
+      position: relative;
+      right: 0 ;
+      bottom: 0;
+      margin-top : 16px;
+      button{
+        & + button{
+          margin-left: 0px;
+          margin-top: 16px;
+        }
+      }
+    }
+  }
+}
+
+.social-share-buttons{
+  position: relative;
+  .social-share-body
+  {
+      position: absolute;
+      top: 100% ;
+      opacity: 0;
+      visibility: hidden;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 290px;
+      height: auto;
+      /*background: linear-gradient(#4F4F4F, #333333);*/
+      background-color: white;
+      box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+      z-index: 2;
+      border-radius: 4px;
+      padding: 20px;
+      a{
+        width: calc(100% - 40px);
+      }
+      &.active
+      {
+          top: calc(100% + 20px);
+          opacity: 1;
+          visibility: visible;
+          transition: 0.3s ease ;
+      }
+      h5
+      {
+          letter-spacing: 2px;
+          margin: 0px;
+          margin-bottom: 15px;
+          text-align: left;
+      }
+      &:after
+      {
+          bottom: 100%;
+          left: 50%;
+          border: solid transparent;
+          content: " ";
+          height: 0;
+          width: 0;
+          position: absolute;
+          pointer-events: none;
+          border-color: rgba(32, 38, 42, 0);
+          border-bottom-color: white;
+          border-width: 15px;
+          margin-left: -15px;
+          z-index: 2;
+      }
+      &:before
+      {
+          bottom: 100%;
+          left: 50%;
+          border: solid transparent;
+          content: " ";
+          height: 0;
+          width: 0;
+          position: absolute;
+          pointer-events: none;
+          border-color: rgba(32, 38, 42, 0);
+          border-bottom-color: rgba(32, 38, 42, 0.09);
+          border-width: 16px;
+          margin-left: -16px;
+          z-index: 1;
+      }
+      .social-box
+      {
+          width: 100%;
+          margin-bottom: 10px;
+          border-radius: 5px;
+          padding-top: 10px;
+          padding-bottom: 10px;
+          .row
+          {
+              width: 100%;
+              clear: both;
+          }
+          div
+          {
+              width: 40px;
+              display: inline-block;
+              position: relative;
+              &:after
+              {
+                  content: "";
+                  position: absolute;
+                  height: 42px;
+                  right: 0;
+                  top: -10px;
+                  bottom: 0;
+                  border-right: 1px solid $light-grey;
+              }
+              i , p
+              {
+                  color: white ;
+                  font-size: 14px;
+                  line-height: 20px;
+              }
+              p
+              {
+                  text-align: left;
+                  display: block;
+                  padding-left: 15px;
+                  margin: 0px;
+              }
+              & + div
+              {
+                  width: calc(100% - 50px);
+                  &:after{
+                    display: none;
+                  }
+
+              }
+          }
+          &.facebook
+          {
+              background-color: #3B5998;
+          }
+          &.twitter
+          {
+              background-color: #55ACEE;
+          }
+      }
+      input
+      {
+          height: 40px;
+          width: 100%;
+          border-radius: 5px;
+          border: 1px solid transparent;
+          text-align: center;
+          color: #666666;
+          box-shadow: inset 0 1px 5.5px rgba(0, 0, 0, 0.2);
+          background-color: #F2F2F2;
+      }
   }
 }
