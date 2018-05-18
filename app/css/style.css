@@ -8357,7 +8357,7 @@ header.fixed-header .header-container {
   bottom: 100%;
   left: 50%;
   border: solid transparent;
-  content: " ";
+  content: "";
   height: 0;
   width: 0;
   position: absolute;
@@ -9738,6 +9738,10 @@ header.fixed-header .header-container {
   left: 15px;
   right: 0;
   bottom: 0;
+}
+
+.modal--map_container.scrollable {
+  overflow: auto;
 }
 
 @media (max-width: 600px) {

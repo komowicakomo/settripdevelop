@@ -1078,6 +1078,9 @@
   left: 15px;
   right: 0;
   bottom: 0;
+  &.scrollable{
+    overflow: auto;
+  }
   @media (max-width : 600px){
     right : 15px;
   }
