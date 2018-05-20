@@ -1,6 +1,20 @@
 
 
  $(document).ready(function () {
+  var parents = $('.detail-container')
+  var pos = $('.op-detail__price').offset().left
+
+  console.log(pos)
+
+  $(".op-detail__price").stick_in_parent({
+    parent : parents,
+    offset_top : 80
+  }).on("sticky_kit:stick", function(e) {
+    e.target.style.left = pos + 'px'
+    console.log(e.target.style)
+  }).on("sticky_kit:unstick", function(e) {
+    e.target.style.left = 0 + 'px'
+  });
 
    var galleryTop = new Swiper('.gallery-top', {
        effect : 'fade'
@@ -16,12 +30,22 @@
      breakpoints: {
        580: {
          initialSlide: 0,
-         slidesPerView: 2
+         slidesPerView: 2,
+         simulateTouch: false
        }
      }
    });
    galleryTop.params.control = galleryThumbs;
    galleryThumbs.params.control = galleryTop;
+
+    // mobile only
+    let windowWidth = window.innerWidth
+
+    if (windowWidth < 760) {
+      $(".js-imagepopup").on("click", function () {
+        $.gallery();
+      });
+    }
 
     // maps
     var map;

@@ -38,8 +38,12 @@ $(document).on('click','.close--modal',function(){
 	closeModal()
 })
 
+$(document).on('click', '.close--overlay', function () {
+  closeModal()
+})
+
 var closeModal = function(){
-	$('#general--modal').fadeOut()
+	$('#general--modal').hide()
 	$('#general--modal').removeClass()
 	$('#general--modal').addClass('general--modal')
   $('body').css('overflow', 'auto');
@@ -299,6 +303,25 @@ $.forgot = function (ok, action) {
 
   })
 }
+
+// need update for param ok, action, redir_url
+// gallery
+$.gallery = function (ok, action, redir_url) {
+
+  modalContainer.fadeIn()
+  modalContainer.addClass('gallery')
+
+
+  var galleryThumbs = new Swiper(".gallery-popup", {
+    direction: 'horizontal',
+    loop: true,
+    centeredSlides: true,
+    nextButton: ".swiper-button-next",
+    prevButton: ".swiper-button-prev",
+    effect: 'fade'
+  });
+
+  }
 
 $.prompt = function (message, ok) {
 	return prompt(message)

@@ -2529,6 +2529,101 @@ header.fixed-header .header-container {
   display: block;
 }
 
+.general--modal.gallery .modal-container {
+  max-width: 80%;
+  padding: 0;
+  margin: 0;
+  z-index: 2;
+}
+
+@media (max-width: 568px) {
+  .general--modal.gallery .modal-container {
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 16px 12px;
+    width: 80%;
+  }
+}
+
+.general--modal.gallery .panel {
+  background-color: transparent;
+}
+
+.general--modal.gallery .modal--child {
+  padding-top: 0;
+}
+
+.general--modal.gallery .modal--gallery {
+  display: block;
+  text-align: center;
+}
+
+.general--modal.gallery .modal--gallery .slide-img-container {
+  max-width: 100%;
+  display: block;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0 auto;
+}
+
+.general--modal.gallery .modal--gallery .slide-img-container:before {
+  content: '';
+  display: block;
+  position: relative;
+  padding-top: calc((9/16) * 100%);
+}
+
+.general--modal.gallery .modal--gallery img {
+  max-width: 100%;
+}
+
+.general--modal.gallery .close--modal {
+  display: none;
+}
+
+.general--modal.gallery .close--overlay {
+  display: block;
+}
+
+.general--modal.gallery .swiper-button-next, .general--modal.gallery .swiper-button-prev {
+  width: 40.8px;
+  height: 40px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+  border: solid 1px #e4e4e4;
+  border-radius: 50%;
+  background-image: none;
+  text-align: center;
+  line-height: 44px;
+  transform: translateY(-50%);
+  margin-top: 0;
+}
+
+.general--modal.gallery .swiper-button-next .fa-chevron-right, .general--modal.gallery .swiper-button-prev .fa-chevron-right {
+  margin-right: -4px;
+}
+
+.general--modal.gallery .swiper-button-next .fa-chevron-left, .general--modal.gallery .swiper-button-prev .fa-chevron-left {
+  margin-left: -4px;
+}
+
+.general--modal.gallery .swiper-button-next:before, .general--modal.gallery .swiper-button-next:after, .general--modal.gallery .swiper-button-prev:before, .general--modal.gallery .swiper-button-prev:after {
+  display: none;
+}
+
+.general--modal.gallery .swiper-button-next {
+  right: -25px;
+}
+
+.general--modal.gallery .swiper-button-prev {
+  left: -25px;
+}
+
+.general--modal.gallery .swiper-container {
+  overflow: visible;
+}
+
 .general--modal .modal-container {
   max-width: 530px;
   width: calc(100% - 20px);
@@ -2571,6 +2666,18 @@ header.fixed-header .header-container {
 .general--modal .close--modal img, .general--modal .close--modal svg {
   width: 60px;
   height: 60px;
+}
+
+.general--modal .close--overlay {
+  position: absolute;
+  display: none;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
 }
 
 .general--modal .modal--img {
@@ -7594,6 +7701,10 @@ header.fixed-header .header-container {
   }
 }
 
+.op-detail__price {
+  z-index: 6;
+}
+
 @media (max-width: 768px) {
   .op-detail__price {
     display: none;
@@ -7759,8 +7870,18 @@ header.fixed-header .header-container {
 
 @media (max-width: 786px) {
   .options-cards .cards-head .btn--blue {
-    display: none;
+    position: relative;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    margin-top: 24px;
+    margin-bottom: 24px;
   }
+}
+
+.z15 {
+  position: relative;
+  z-index: 15;
 }
 
 .dashpanel {

@@ -233,6 +233,7 @@
 	}
 }
 .op-detail__price{
+	z-index: 6 ;
 	@media(max-width: 768px){
 		display: none;
 	}
@@ -375,8 +376,18 @@
 			right : 12px;
 			bottom : 12px;
 			@media (max-width: 786px){
-				display: none;
+				position: relative;
+				right: 0;
+				bottom: 0;
+				width: 100%;
+				margin-top: 24px;
+				margin-bottom: 24px;
 			}
 		}
 	}
+}
+
+.z15{
+	position: relative;
+	z-index: 15;
 }
